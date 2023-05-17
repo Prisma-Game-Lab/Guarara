@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 [System.Serializable]
 public class Sound : MonoBehaviour
 {
-    public string name;
+    public string soundName;
 
     public AudioClip clip;
 

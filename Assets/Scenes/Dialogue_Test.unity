@@ -209,7 +209,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a9226bbbf4223194f889198a3e03a91a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b2c5e8c0c418b84daef2b1d545281f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -244,48 +244,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 494394968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 158d73156c55e064197af7e00ceb7558, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c64cbd4c1665c54e9a392ab5c44a342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogPrefab: {fileID: 2219866467371073336, guid: 26a03fcc8e2e82743a54a30e938b2392, type: 3}
-  yPosAdd: 1
-  dialogueBox: {fileID: 8003560512321718030, guid: d0aafac052efd144c98548367759af12, type: 3}
-  NomePersonagem: "Seu Jo\xE3o"
+  dialogPrefab: {fileID: 0}
+  yPosAdd: 0
+  dialogueBox: {fileID: 0}
+  NomePersonagem: 
   NomeMainCharacter: Galo da Nu (mc)
   dialogoAtual: 0
-  listaDialogo:
-  - inFactDialogue:
-    - whoIsTalking: 0
-      dialogue: Seguinte passa tudo se nao tu ja sabe
-      textSpeed: 0
-    - whoIsTalking: 1
-      dialogue: e se eu nao passar?
-      textSpeed: 0
-    - whoIsTalking: 1
-      dialogue: '*morre de tuberculose*'
-      textSpeed: 2
-    - whoIsTalking: 0
-      dialogue: o capitalismo eh foda mano...
-      textSpeed: 2
-  - inFactDialogue:
-    - whoIsTalking: 0
-      dialogue: po eae manoo
-      textSpeed: 0
-    - whoIsTalking: 1
-      dialogue: eae como q ce vai???
-      textSpeed: 0
-    - whoIsTalking: 0
-      dialogue: po vo bem, ce viu oq aconteceu com o mario??
-      textSpeed: 0
-    - whoIsTalking: 1
-      dialogue: que mario??
-      textSpeed: 1
-    - whoIsTalking: 0
-      dialogue: o mario...    aquele que...   te comeu atras do armario....
-      textSpeed: 2
-    - whoIsTalking: 1
-      dialogue: '>:('
-      textSpeed: 2
+  listaDialogo: []
 --- !u!1 &876111939
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,10 +283,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 876111939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2a3a99f5e636f44dab8ca8eeae1e438, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c64cbd4c1665c54e9a392ab5c44a342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  dialogPrefab: {fileID: 0}
+  yPosAdd: 0
+  dialogueBox: {fileID: 0}
+  NomePersonagem: 
+  NomeMainCharacter: Galo da Nu (mc)
+  dialogoAtual: 0
+  listaDialogo: []
 --- !u!50 &876111941
 Rigidbody2D:
   serializedVersion: 4
@@ -381,7 +355,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b3878becf90ca2343b7b0aa1b072539e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f5e4d44ad9f39fd44a7f84e535213de5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -603,7 +577,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a9226bbbf4223194f889198a3e03a91a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b2c5e8c0c418b84daef2b1d545281f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -638,32 +612,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1700847170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 158d73156c55e064197af7e00ceb7558, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c64cbd4c1665c54e9a392ab5c44a342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogPrefab: {fileID: 2219866467371073336, guid: 26a03fcc8e2e82743a54a30e938b2392, type: 3}
-  yPosAdd: 1
-  dialogueBox: {fileID: 8003560512321718030, guid: d0aafac052efd144c98548367759af12, type: 3}
-  NomePersonagem: Mario da Quitanda
+  dialogPrefab: {fileID: 0}
+  yPosAdd: 0
+  dialogueBox: {fileID: 0}
+  NomePersonagem: 
   NomeMainCharacter: Galo da Nu (mc)
   dialogoAtual: 0
-  listaDialogo:
-  - inFactDialogue:
-    - whoIsTalking: 0
-      dialogue: eae mano quanto q ta o pao
-      textSpeed: 0
-    - whoIsTalking: 1
-      dialogue: 15 conto o pao
-      textSpeed: 0
-    - whoIsTalking: 0
-      dialogue: "caralho a infla\xE7ao ta foda em"
-      textSpeed: 2
-    - whoIsTalking: 1
-      dialogue: e pse
-      textSpeed: 2
-    - whoIsTalking: 0
-      dialogue: te mais entao
-      textSpeed: 0
+  listaDialogo: []
 --- !u!1 &1822731646
 GameObject:
   m_ObjectHideFlags: 0
