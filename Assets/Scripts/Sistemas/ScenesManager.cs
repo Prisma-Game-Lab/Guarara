@@ -4,13 +4,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ScenesManager : MonoBehaviour
 {
-    public void GoToScene(string SceneName)
+    [SerializeField] private string nextSceneName;
+    [SerializeField] private Animator transition;
+    [SerializeField] private float time = 1f;
+
+    public void GoToScene()
     {
-        SceneManager.LoadScene(SceneName);
+        StartCoroutine(LoadLevelTransition(nextSceneName));
     }
 
     public void Quit()
     {
         Application.Quit();
+    }
+
+    IEnumerator LoadLevelTransition(string SceneName)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene(SceneName);
     }
 }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class MenuManager : MonoBehaviour
@@ -21,9 +21,9 @@ public class MenuManager : MonoBehaviour
         painelMenuPrincipal.SetActive(false);
         painelAjustes.SetActive(true);
     }
-    
+
     public void FecharAJustes()
-    {   
+    {
         painelAjustes.SetActive(false);
         painelMenuPrincipal.SetActive(true);
     }
