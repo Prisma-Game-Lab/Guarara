@@ -50,10 +50,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8003560512321718030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df73f0a3fb99a6a48b53b8dc2ca188e8, type: 3}
+  m_Script: {fileID: 11500000, guid: a5f476492e0b4b34698c2bee678a7b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 0}
+  dialogoAtual: 0
   nomemc: 
   nomeperso: 
 --- !u!1 &8003560512368505157
@@ -126,8 +127,8 @@ MonoBehaviour:
     hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey hey
     hey hey hey hey hey hey hey hey hey  '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c89adf091cb8cf45a69e913dd441eda, type: 2}
-  m_sharedMaterial: {fileID: 4606302692627104455, guid: 4c89adf091cb8cf45a69e913dd441eda, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -413,8 +414,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Character Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c89adf091cb8cf45a69e913dd441eda, type: 2}
-  m_sharedMaterial: {fileID: 4606302692627104455, guid: 4c89adf091cb8cf45a69e913dd441eda, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
