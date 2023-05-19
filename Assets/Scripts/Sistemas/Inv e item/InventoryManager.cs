@@ -7,10 +7,16 @@ public class InventoryManager : MonoBehaviour
 {
     public List<ItensInv> ItensInv = new List<ItensInv>();
 
+    public List<int> indexPopUp = new List<int>();
+
+    private bool canDisplay = true;
+
     public bool isInvActive = false;
 
     [SerializeField]
     private GameObject inventarioPrefab;
+    [SerializeField]
+    private GameObject popUpPrefab;
     [SerializeField]
     private GameObject itemInvPrefab;
 
@@ -33,10 +39,14 @@ public class InventoryManager : MonoBehaviour
     [SerializeField]
     private Color corCimaCaixa;
     [SerializeField]
-    private Color corSelecao;
+    private Color corSelecaoEdit;
+    [SerializeField]
+    private Color corSelecaoMao;
 
     private bool isHandHoldingItem = false;
-    private int indexHolding;
+    public int indexHolding = -1;
+
+    private InventoryScript inventarioObjectScript;
 
     private void Start() 
     {
@@ -57,6 +67,14 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
+        if(indexPopUp.Count != 0)
+        {
+            if(canDisplay)
+            {
+                DisplayPopUp(indexPopUp[0]);
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if(isInvActive)
@@ -72,33 +90,92 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void addIndexPopUp(int index)
+    {
+        indexPopUp.Add(index);
+    }
+
+    private void DisplayPopUp(int index)
+    {
+        canDisplay = false;
+
+        GameObject PopUpObj = Instantiate(popUpPrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        PopUpObj.transform.SetParent(objPai.transform, false); 
+        PopUpScpt PopUpObjScpt = PopUpObj.GetComponent<PopUpScpt>();
+        PopUpObjScpt.inventoryManager = this;
+        PopUpObjScpt.index = index;
+        PopUpObjScpt.imagem = ItensInv[index].image;
+        PopUpObjScpt.nome = ItensInv[index].nameItem;
+        PopUpObjScpt.cor =  ItensInv[index].corTextoPopUp;
+    }
+
+    public void popUpEnded(int index)
+    {
+        for (int i = 0; i < indexPopUp.Count; i++)
+        {
+            if(indexPopUp[i] == index)
+            {
+                indexPopUp.RemoveAt(i);
+                canDisplay = true;
+            }
+        }
+    }
+
     private void CreateInventory()
     {
         Vector3 pos = new Vector3(0f, 0f, 0f);
         inventarioObject = Instantiate(inventarioPrefab, transform.position + pos, Quaternion.identity);
         inventarioObject.GetComponent<RectTransform>().anchoredPosition = pos;
         inventarioObject.transform.SetParent(objPai.transform, false);
-        InventoryScript inventarioObjectScript = inventarioObject.GetComponent<InventoryScript>();
+        inventarioObjectScript = inventarioObject.GetComponent<InventoryScript>();
         inventarioObjectScript.itemInvPrefab = itemInvPrefab;
         inventarioObjectScript.inventoryManager = this;
         inventarioObjectScript.corFundoCaixa = corFundoCaixa;
         inventarioObjectScript.corCimaCaixa = corCimaCaixa;
-        inventarioObjectScript.corSelecao = corSelecao;
+        inventarioObjectScript.corSelecaoEdit = corSelecaoEdit;
+        inventarioObjectScript.corSelecaoMao = corSelecaoMao;
     }
 
     public void ChangeHolding(int index)
     {
-        if(index != indexHolding)
+        if(index == -1)
+        {
+            indexHolding = -1;
+            handImageObj.SetActive(false);
+            isHandHoldingItem = false;
+        }
+        else if(index != indexHolding)
         {
             handImageObj.SetActive(true);
             handImage.sprite = ItensInv[index].image;
             indexHolding = index;
             isHandHoldingItem = true;
+            inventarioObjectScript.ChangeBox(inventarioObjectScript.indexSelecAtual);
         }
         else
         {
+            indexHolding = -1;
             handImageObj.SetActive(false);
             isHandHoldingItem = false;
+            inventarioObjectScript.ChangeBox(inventarioObjectScript.indexSelecAtual);
+        }
+    }
+
+    public void itemUsed(int indexKey)
+    {
+        for (int i = 0; i < ItensInv.Count; i++)
+        {
+            if(ItensInv[i].keyIndex == indexKey)
+            {
+                ItensInv[i].uses -= 1;
+
+                if(ItensInv[i].uses == 0)
+                {
+                    indexHolding = -1;
+                    ItensInv.RemoveAt(i);
+                    ChangeHolding(-1);
+                }
+            }
         }
     }
 
@@ -108,9 +185,12 @@ public class InventoryManager : MonoBehaviour
 public class ItensInv
 {
 
+public int keyIndex;
 public Sprite image;
 public string nameItem;
 public string description;
-public int keyIndex;
+public bool isItemDestroyable;
+public int uses = 1;
+public Color corTextoPopUp;
 
 }

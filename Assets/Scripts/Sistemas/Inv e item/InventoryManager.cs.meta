@@ -5,8 +5,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - inventarioPrefab: {fileID: 6435987466803618955, guid: ab9529ff013004c43a822592c0092ab5, type: 3}
+  - popUpPrefab: {fileID: 8941309456726662791, guid: 7936e616cd952dd4e990a31a09f46381, type: 3}
   - itemInvPrefab: {fileID: 8300623137153035120, guid: a09ee07a227b4394ebe35139cc79923e, type: 3}
-  - descriptionBox: {fileID: 140165556799122419, guid: 51f812dc3f27d294db5ebeb9793ce675, type: 3}
   - itemHandPrefab: {fileID: 3868650881978551501, guid: 39508017999158e4484494c083ee5f53, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}

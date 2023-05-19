@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 public class InventoryScript : MonoBehaviour
 {
     public GameObject itemInvPrefab;
@@ -10,16 +11,19 @@ public class InventoryScript : MonoBehaviour
     
     public Color corFundoCaixa;
     public Color corCimaCaixa;
-    public Color corSelecao;
+    public Color corSelecaoEdit;
+    public Color corSelecaoMao;
 
     private GameObject gridObj;
     
     [SerializeField]
     private List<ActiveItens> activeItens = new List<ActiveItens>();
 
-    private int indexSelecAtual;
+    public int indexSelecAtual;
 
     private Vector3 FirstPos;
+
+    private int prevIndexSelected = -1;
 
     private void Start() 
     {
@@ -107,13 +111,27 @@ public class InventoryScript : MonoBehaviour
 
     }
 
-    private void ChangeBox(int calc)
+    public void ChangeBox(int calc)
     {
+
         activeItens[indexSelecAtual].descriptionItem.SetActive(false);
         activeItens[indexSelecAtual].fundo.color = corFundoCaixa;
         indexSelecAtual = calc; 
-        activeItens[indexSelecAtual].fundo.color = corSelecao;    
+        activeItens[indexSelecAtual].fundo.color = corSelecaoEdit;    
         activeItens[indexSelecAtual].descriptionItem.SetActive(true);
+
+        var iHold = inventoryManager.indexHolding;
+
+        if(iHold != -1)
+        {
+            if(prevIndexSelected != -1)
+            {
+                activeItens[prevIndexSelected].fundo.color = corFundoCaixa;
+            }
+
+            activeItens[iHold].fundo.color = corSelecaoMao;
+            prevIndexSelected = iHold;
+        }
     }
 
 }
