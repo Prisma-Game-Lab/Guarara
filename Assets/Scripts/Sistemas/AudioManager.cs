@@ -12,6 +12,9 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] sounds;
 
+    public Sound[] sfx;
+
+
     void Awake()
     {
         if (instance != null)
@@ -33,11 +36,33 @@ public class AudioManager : MonoBehaviour
 
             s.source.outputAudioMixerGroup = mixerGroup;
         }
+
+        foreach (Sound s in sfx)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+            s.source.loop = s.loop;
+            s.source.volume = PlayerPrefs.GetFloat("SfxPref");
+
+            s.source.outputAudioMixerGroup = mixerGroup;
+        }
     }
 
-    public void Play(string sound)
+    public void PlaySound(string sound)
     {
         Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+
+        s.source.Play();
+    }
+
+    public void PlaySfx(string sound)
+    {
+        Sound s = Array.Find(sfx, item => item.name == sound);
         if (s == null)
         {
             Debug.LogWarning("Sound: " + name + " not found!");
@@ -59,9 +84,26 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
+    public void StopSfx(string sound)
+    {
+        Sound s = Array.Find(sfx, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+
+        s.source.Stop();
+    }
+
     public void StopAllSounds()
     {
         foreach (Sound s in sounds)
+        {
+            s.source.Stop();
+        }
+
+        foreach (Sound s in sfx)
         {
             s.source.Stop();
         }
