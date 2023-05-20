@@ -53,10 +53,10 @@ public class InventoryScript : MonoBehaviour
 
                 activeItens.Add(novoItem);
 
-                if(i == 0)
+                if(i == 0 || i == inventoryManager.indexHolding)
                 {
-                    ChangeBox(0);
-                    indexSelecAtual = 0;  
+                    ChangeBox(i);
+                    indexSelecAtual = i;  
                 }
                 
             }else
@@ -120,7 +120,7 @@ public class InventoryScript : MonoBehaviour
         activeItens[indexSelecAtual].fundo.color = corSelecaoEdit;    
         activeItens[indexSelecAtual].descriptionItem.SetActive(true);
 
-        var iHold = inventoryManager.indexHolding;
+        int iHold = inventoryManager.indexHolding;
 
         if(iHold != -1 && iHold < activeItens.Count)
         {
