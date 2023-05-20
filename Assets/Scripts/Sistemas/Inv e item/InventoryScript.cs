@@ -122,7 +122,7 @@ public class InventoryScript : MonoBehaviour
 
         var iHold = inventoryManager.indexHolding;
 
-        if(iHold != -1)
+        if(iHold != -1 && iHold < activeItens.Count)
         {
             if(prevIndexSelected != -1)
             {
