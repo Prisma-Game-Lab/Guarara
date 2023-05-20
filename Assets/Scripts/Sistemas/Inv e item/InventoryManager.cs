@@ -42,8 +42,7 @@ public class InventoryManager : MonoBehaviour
     private Color corSelecaoEdit;
     [SerializeField]
     private Color corSelecaoMao;
-
-    private bool isHandHoldingItem = false;
+    
     public int indexHolding = -1;
 
     private InventoryScript inventarioObjectScript;
@@ -142,21 +141,18 @@ public class InventoryManager : MonoBehaviour
         {
             indexHolding = -1;
             handImageObj.SetActive(false);
-            isHandHoldingItem = false;
         }
         else if(index != indexHolding)
         {
             handImageObj.SetActive(true);
             handImage.sprite = ItensInv[index].image;
             indexHolding = index;
-            isHandHoldingItem = true;
             inventarioObjectScript.ChangeBox(inventarioObjectScript.indexSelecAtual);
         }
         else
         {
             indexHolding = -1;
             handImageObj.SetActive(false);
-            isHandHoldingItem = false;
             inventarioObjectScript.ChangeBox(inventarioObjectScript.indexSelecAtual);
         }
     }
@@ -174,9 +170,31 @@ public class InventoryManager : MonoBehaviour
                     indexHolding = -1;
                     ItensInv.RemoveAt(i);
                     ChangeHolding(-1);
+                    recalculatePopUpIndex(i);
                 }
             }
         }
+    }
+
+    private void recalculatePopUpIndex(int index)
+    {
+        int indexRemove = 0;
+
+       for (int i = 0; i < indexPopUp.Count; i++)
+        {
+            if(indexPopUp[i] == index)
+            {
+                indexRemove = i;
+            }
+
+            if(indexPopUp[i] > index)
+            {
+              indexPopUp[i] -= 1;  
+            }
+        } 
+
+        
+        indexPopUp.RemoveAt(indexRemove);
     }
 
 }
