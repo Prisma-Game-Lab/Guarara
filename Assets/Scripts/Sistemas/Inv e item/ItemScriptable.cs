@@ -82,7 +82,7 @@ public class ItemScriptable : MonoBehaviour
                 item.uses = uses;
                 item.corTextoPopUp = corTextoPopUp;
 
-                inventoryManager.addIndexPopUp(inventoryManager.ItensInv.Count);
+                inventoryManager.addIndexPopUp(inventoryManager.ItensInv.   Count);
 
                 inventoryManager.ItensInv.Add(item);
 

@@ -112,10 +112,10 @@ public class InventoryManager : MonoBehaviour
     {
         for (int i = 0; i < indexPopUp.Count; i++)
         {
+            canDisplay = true;
             if(indexPopUp[i] == index)
             {
                 indexPopUp.RemoveAt(i);
-                canDisplay = true;
             }
         }
     }
@@ -178,7 +178,7 @@ public class InventoryManager : MonoBehaviour
 
     private void recalculatePopUpIndex(int index)
     {
-        int indexRemove = 0;
+        int indexRemove = -1;
 
        for (int i = 0; i < indexPopUp.Count; i++)
         {
@@ -193,8 +193,10 @@ public class InventoryManager : MonoBehaviour
             }
         } 
 
-        
+        if(indexRemove != -1)
+        {        
         indexPopUp.RemoveAt(indexRemove);
+        }
     }
 
 }

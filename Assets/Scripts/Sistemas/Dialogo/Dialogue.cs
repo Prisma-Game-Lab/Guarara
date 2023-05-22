@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Dialogue : MonoBehaviour
 {
     [SerializeField]
+    private GameObject playerConfig;
+    [SerializeField]
     private GameObject dialogPrefab;
     [SerializeField]
     private float yPosAdd;
@@ -17,7 +19,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField]
     private string NomePersonagem;
     [SerializeField]
-    private string NomeMainCharacter = "Galo da Nu (mc)";
+    private Sprite SpritePersonagem;
 
     [SerializeField]
     private int dialogoAtual;
@@ -98,8 +100,10 @@ public class Dialogue : MonoBehaviour
         dialogueBoxOBJ.GetComponent<RectTransform>().anchoredPosition = pos;
         DialogueBoxScpt dialogueBoxScript = dialogueBoxOBJ.GetComponentInChildren<DialogueBoxScpt>();
         dialogueBoxScript.dialogue = this;
-        dialogueBoxScript.nomemc = NomeMainCharacter;
+        dialogueBoxScript.nomemc = playerConfig.name;
+        dialogueBoxScript.spritemc = playerConfig.GetComponent<SpriteRenderer>().sprite;
         dialogueBoxScript.nomeperso = NomePersonagem;
+        dialogueBoxScript.spriteperso = SpritePersonagem;
         dialogueBoxScript.dialogoAtual = dialogoAtual;
     }
 

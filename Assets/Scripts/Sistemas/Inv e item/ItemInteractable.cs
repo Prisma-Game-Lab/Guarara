@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Reflection;
+using System.Linq;
 
 public class ItemInteractable : MonoBehaviour
 {
@@ -111,21 +112,55 @@ public class ItemInteractable : MonoBehaviour
         {
             foreach (var funcaoSelecionavel in funcoesSelecionaveis)
             {
-                try 
+                try
                 {
-                    MethodInfo methodInfo = funcaoSelecionavel.script.GetType().GetMethod(funcaoSelecionavel.nomeDaFuncao, BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic);
-                    if (methodInfo != null)
+                    GameObject scriptObject = funcaoSelecionavel.scriptObject;
+                    string scriptName = funcaoSelecionavel.scriptName;
+                    string functionName = funcaoSelecionavel.functionName;
+                    List<FunctionArgument> functionArguments = funcaoSelecionavel.functionArguments;
+
+                    MonoBehaviour[] scripts = scriptObject.GetComponents<MonoBehaviour>();
+                    MonoBehaviour script = scripts.FirstOrDefault(s => s.GetType().Name == scriptName);
+
+                    if (script != null)
                     {
-                        methodInfo.Invoke(funcaoSelecionavel.script, null);
+                        MethodInfo methodInfo = script.GetType().GetMethod(functionName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+                        if (methodInfo != null)
+                        {
+                            List<object> args = new List<object>();
+                            ParameterInfo[] parameters = methodInfo.GetParameters();
+
+                            if (parameters.Length == functionArguments.Count)
+                            {
+                                for (int i = 0; i < parameters.Length; i++)
+                                {
+                                    FunctionArgument argument = functionArguments[i];
+                                    Type argumentType = parameters[i].ParameterType;
+
+                                    object value = Convert.ChangeType(argument.argumentValue, argumentType);
+                                    args.Add(value);
+                                }
+
+                            methodInfo.Invoke(script, args.ToArray());
+                            }
+                            else
+                            {
+                                Debug.LogError("Número incorreto de argumentos para o método " + functionName + " no script " + scriptName);
+                            }
+                        }
+                        else
+                        {
+                            Debug.LogError("Método " + functionName + " não encontrado no script " + scriptName);
+                        }
                     }
                     else
                     {
-                        Debug.LogError("Método " + funcaoSelecionavel.nomeDaFuncao + " não encontrado no script " + funcaoSelecionavel.script);
+                        Debug.LogError("Script " + scriptName + " não encontrado no GameObject");
                     }
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError("Erro ao invocar o método " + funcaoSelecionavel.nomeDaFuncao + ": " + e.Message);
+                    Debug.LogError("Erro ao invocar o método " + funcaoSelecionavel.functionName + ": " + e.Message);
                 }
             }
         }
@@ -134,15 +169,57 @@ public class ItemInteractable : MonoBehaviour
 }
 
 [Serializable]
+public class FunctionArgument
+{
+    public string argumentType;
+    public string argumentValue;
+}
+
+[Serializable]
 public class FuncaoSelecionavel
 {
-    public MonoBehaviour script;
-    public string nomeDaFuncao;
+    public GameObject scriptObject;
+    public string scriptName;
+    public string functionName;
+    public List<FunctionArgument> functionArguments;
 }
 
 [CustomEditor(typeof(ItemInteractable))]
 public class FuncoesManagerEditor : Editor
 {
+    private void CreateField(Rect rect, SerializedProperty property, Type type)
+    {
+        if (type == typeof(int))
+        {
+            int value;
+            if (int.TryParse(property.stringValue, out value))
+                value = EditorGUI.IntField(rect, value);
+            property.stringValue = value.ToString();
+        }
+        else if (type == typeof(float))
+        {
+            float value;
+            if (float.TryParse(property.stringValue, out value))
+                value = EditorGUI.FloatField(rect, value);
+            property.stringValue = value.ToString();
+        }
+        else if (type == typeof(string))
+        {
+            property.stringValue = EditorGUI.TextField(rect, property.stringValue);
+        }
+        else if (type == typeof(bool))
+        {
+            bool value;
+            if (bool.TryParse(property.stringValue, out value))
+                value = EditorGUI.Toggle(rect, value);
+            property.stringValue = value.ToString();
+        }
+        else
+        {
+            EditorGUI.HelpBox(rect, "Tipo de argumento não suportado: " + type.Name, MessageType.Error);
+        }
+    }
+
     private ReorderableList funcoesSelecionaveisList;
 
     private void OnEnable()
@@ -159,21 +236,115 @@ public class FuncoesManagerEditor : Editor
         funcoesSelecionaveisList.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
         {
             SerializedProperty elemento = funcoesSelecionaveisProperty.GetArrayElementAtIndex(index);
-            SerializedProperty scriptProperty = elemento.FindPropertyRelative("script");
-            SerializedProperty nomeDaFuncaoProperty = elemento.FindPropertyRelative("nomeDaFuncao");
+            SerializedProperty scriptObjectProperty = elemento.FindPropertyRelative("scriptObject");
 
             float lineHeight = EditorGUIUtility.singleLineHeight;
             float spacing = 2f;
             rect.y += spacing;
+            rect.height = lineHeight;
 
-            EditorGUI.PropertyField(new Rect(rect.x, rect.y, rect.width - 80, lineHeight), scriptProperty, GUIContent.none);
-            EditorGUI.PropertyField(new Rect(rect.x + rect.width - 75, rect.y, 70, lineHeight), nomeDaFuncaoProperty, GUIContent.none);
+            float labelWidth = 150; // Aumentado de 100 para 150
+            float fieldWidth = rect.width - labelWidth;
+
+            EditorGUI.LabelField(new Rect(rect.x, rect.y, labelWidth, lineHeight), "GameObject");
+            EditorGUI.PropertyField(new Rect(rect.x + labelWidth, rect.y, fieldWidth, lineHeight), scriptObjectProperty, GUIContent.none);
+
+            GameObject scriptObject = scriptObjectProperty.objectReferenceValue as GameObject;
+
+            if (scriptObject != null)
+            {
+                MonoBehaviour[] scripts = scriptObject.GetComponents<MonoBehaviour>();
+                List<string> options = new List<string>();
+                foreach (MonoBehaviour script in scripts)
+                {
+                    options.Add(script.GetType().Name);
+                }
+
+                SerializedProperty scriptNameProperty = elemento.FindPropertyRelative("scriptName");
+                int previousSelectedIndex = options.IndexOf(scriptNameProperty.stringValue);
+
+                rect.y += lineHeight + spacing;
+                EditorGUI.LabelField(new Rect(rect.x, rect.y, labelWidth, lineHeight), "Script");
+                int selectedIndex = EditorGUI.Popup(new Rect(rect.x + labelWidth, rect.y, fieldWidth, lineHeight), previousSelectedIndex, options.ToArray());
+                if (selectedIndex >= 0)
+                {
+                    scriptNameProperty.stringValue = options[selectedIndex];
+                }
+
+                if (scriptNameProperty.stringValue != null)
+                {
+                    Type scriptType = Type.GetType(scriptNameProperty.stringValue + ", Assembly-CSharp");
+                    if (scriptType != null)
+                    {
+                        MethodInfo[] methods = scriptType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic);
+
+                        List<string> methodNames = new List<string>();
+
+                        foreach (MethodInfo method in methods)
+                        {
+                            if (method.DeclaringType == scriptType)
+                            {
+                                methodNames.Add(method.Name);
+                            }
+                        }
+
+                        SerializedProperty functionNameProperty = elemento.FindPropertyRelative("functionName");
+                        int previousMethodIndex = methodNames.IndexOf(functionNameProperty.stringValue);
+
+                        rect.y += lineHeight + spacing;
+                        EditorGUI.LabelField(new Rect(rect.x, rect.y, labelWidth, lineHeight), "Nome da Função");
+                        int methodIndex = EditorGUI.Popup(new Rect(rect.x + labelWidth, rect.y, fieldWidth, lineHeight), previousMethodIndex, methodNames.ToArray());
+
+                        SerializedProperty functionArguments = elemento.FindPropertyRelative("functionArguments");
+
+                        if (methodIndex >= 0)
+                        {
+                            functionNameProperty.stringValue = methodNames[methodIndex];
+                
+                            MethodInfo method = methods[methodIndex];
+
+                            ParameterInfo[] parameters = method.GetParameters();
+
+                            while (functionArguments.arraySize < parameters.Length)
+                            {
+                                functionArguments.InsertArrayElementAtIndex(functionArguments.arraySize);
+                            }
+                            while (functionArguments.arraySize > parameters.Length)
+                            {
+                                functionArguments.DeleteArrayElementAtIndex(functionArguments.arraySize - 1);
+                            }
+
+                            for (int i = 0; i < parameters.Length; i++)
+                            {
+                                ParameterInfo parameter = parameters[i];
+                                SerializedProperty argument = functionArguments.GetArrayElementAtIndex(i);
+
+                                SerializedProperty argumentType = argument.FindPropertyRelative("argumentType");
+                                argumentType.stringValue = parameter.ParameterType.Name;
+
+                                SerializedProperty argumentValue = argument.FindPropertyRelative("argumentValue");
+
+                                rect.y += lineHeight + spacing;
+                                EditorGUI.LabelField(new Rect(rect.x, rect.y, labelWidth, lineHeight), parameter.Name);
+                                CreateField(new Rect(rect.x + labelWidth, rect.y, fieldWidth, lineHeight), argumentValue, parameter.ParameterType);
+                            }
+                        }
+                    }
+                }
+            }
         };
 
         funcoesSelecionaveisList.elementHeightCallback = index =>
         {
             SerializedProperty elemento = funcoesSelecionaveisProperty.GetArrayElementAtIndex(index);
-            return EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing * 2;
+            SerializedProperty scriptObjectProperty = elemento.FindPropertyRelative("scriptObject");
+            SerializedProperty scriptNameProperty = elemento.FindPropertyRelative("scriptName");
+            SerializedProperty functionNameProperty = elemento.FindPropertyRelative("functionName");
+            SerializedProperty functionArguments = elemento.FindPropertyRelative("functionArguments");
+
+            int numberOfLines = 3 + functionArguments.arraySize;
+        
+            return (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * numberOfLines;
         };
     }
 
@@ -194,3 +365,4 @@ public class FuncoesManagerEditor : Editor
         serializedObject.ApplyModifiedProperties();
     }
 }
+

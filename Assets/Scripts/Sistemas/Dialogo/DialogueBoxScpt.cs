@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialogueBoxScpt : MonoBehaviour
@@ -10,10 +11,13 @@ public class DialogueBoxScpt : MonoBehaviour
     
     public int dialogoAtual;
     public string nomemc;
+    public Sprite spritemc;
     public string nomeperso;
+    public Sprite spriteperso;
 
     private TextMeshProUGUI dText;
     private TextMeshProUGUI cNome; 
+    private Image sprite; 
 
     private bool clickedNext;
 
@@ -28,6 +32,7 @@ public class DialogueBoxScpt : MonoBehaviour
     {
         dText = transform.Find("Dtext").GetComponent<TextMeshProUGUI>();
         cNome = transform.Find("Cname").GetComponent<TextMeshProUGUI>();
+        sprite = transform.Find("Char").GetComponent<Image>();
         StartCoroutine(dialogo());
     }
     
@@ -66,9 +71,11 @@ public class DialogueBoxScpt : MonoBehaviour
 
             if(dialogue.listaDialogo[dialogoAtual].inFactDialogue[i].whoIsTalking == CharacterType.Player)
             {
+                sprite.sprite = spritemc;
                 cNome.text = nomemc;
             }else
             {
+                sprite.sprite = spriteperso;
                 cNome.text = nomeperso;     
             }
         
