@@ -236,6 +236,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &106063366 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5009131636334803582, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+  m_PrefabInstance: {fileID: 1620951144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &161366525
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +528,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448377234}
   m_CullTransparentMesh: 1
+--- !u!1 &603653422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 603653424}
+  - component: {fileID: 603653423}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: SceneManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &603653423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603653422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f14f7628a911c44bcd8d455906aab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: 
+  transition: {fileID: 106063366}
+  time: 1
+--- !u!4 &603653424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603653422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 734, y: 248.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &606908988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,13 +1234,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: a671a66c4651c1943a292b355f666e52, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1842915109}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: Jogar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2155,6 +2207,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5009131636841622908, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131636841622908, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131636841622908, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131636841622908, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131636841622909, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131636841622911, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5009131637412374334, guid: 4170cb300ee2a464596e6282af709854, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2205,6 +2281,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5009131637412374721, guid: 4170cb300ee2a464596e6282af709854, type: 3}
       propertyPath: sceneName
+      value: Cena_Teste
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374721, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: nextSceneName
       value: Cena_Teste
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2770,7 +2850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a671a66c4651c1943a292b355f666e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cenaInicial: 
+  cenaInicial: Cena_Teste
   painelMenuPrincipal: {fileID: 1126411328}
   painelAjustes: {fileID: 1162554261}
 --- !u!4 &1842915110

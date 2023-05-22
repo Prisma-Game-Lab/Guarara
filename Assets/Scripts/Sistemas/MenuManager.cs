@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
 public class MenuManager : MonoBehaviour
@@ -9,11 +8,15 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private string cenaInicial;
     [SerializeField] private GameObject painelMenuPrincipal;
     [SerializeField] private GameObject painelAjustes;
+    ScenesManager sceneLoader;
 
-
+    private void Start()
+    {
+        sceneLoader = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<ScenesManager>();
+    }
     public void Jogar()
     {
-        SceneManager.LoadScene(cenaInicial);
+        sceneLoader.GoToScene(cenaInicial);
     }
 
     public void AbrirAjustes()
