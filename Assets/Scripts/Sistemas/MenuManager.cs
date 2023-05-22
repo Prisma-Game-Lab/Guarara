@@ -12,7 +12,7 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        sceneLoader = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<ScenesManager>();
+        sceneLoader = GameObject.Find("SceneManager").GetComponent<ScenesManager>();
     }
     public void Jogar()
     {
