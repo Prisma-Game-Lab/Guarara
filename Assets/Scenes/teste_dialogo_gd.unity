@@ -3271,21 +3271,48 @@ MonoBehaviour:
     - whoIsTalking: 1
       dialogue: "Boa tarde chefia! Primeira vez no Bar Guaran\xE1? Se quiser recomenda\xE7\xF5es
         de pratos, sugiro come\xE7ar com nosso delicioso a\xE7a\xED com guaran\xE1!
-        Hahaha"
+        Hahaha!"
       textSpeed: 0
     - whoIsTalking: 0
-      dialogue: "Boa tarde. Voc\xEA \xE9 o Manoel, gerente do bar, certo?! N\xE3o
+      dialogue: "Boa tarde. Voc\xEA \xE9 o Manoel, gerente do bar, certo? N\xE3o
         vim como cliente, a Sra. Fulana me contratou para solucionar o incidente
         que ocorreu na sexta passada."
       textSpeed: 0
-  - inFactDialogue:
     - whoIsTalking: 1
       dialogue: "Eita. Se o senhor j\xE1 sabe at\xE9 o meu nome, a coisa t\xE1 feia.
         Mas c\xEA parece ser bom mesmo, a dona disse que foi voc\xEA quem resolveu
-        o caso da padaria do Jo\xE3o. Deve ser de confian\xE7a."
+        o caso da padaria do Jo\xE3o. Deve ser de confian\xE7a..."
       textSpeed: 0
     - whoIsTalking: 0
       dialogue: "Pode ter certeza de que o caso est\xE1 em boas patas."
+      textSpeed: 0
+    - whoIsTalking: 0
+      dialogue: "O bar n\xE3o deveria estar fechado?.."
+      textSpeed: 0
+    - whoIsTalking: 1
+      dialogue: "Sim, realmente. Mas a dona Fulana preferiu n\xE3o interromper o
+        com\xE9rcio pra n\xE3o piorar mais a situa\xE7\xE3o financeira, sabe com\xE9
+        n\xE9\u2026"
+      textSpeed: 0
+    - whoIsTalking: 1
+      dialogue: "Por si s\xF3 o movimento foi diminuindo, n\xF3s reduzimo a quantidade
+        de funcion\xE1rio tamb\xE9m, at\xE9 as coisas se acertar pelo menos."
+      textSpeed: 0
+    - whoIsTalking: 0
+      dialogue: Entendo.
+      textSpeed: 0
+    - whoIsTalking: 0
+      dialogue: "Fui informado de que a chave estaria com voc\xEA.."
+      textSpeed: 0
+    - whoIsTalking: 1
+      dialogue: "Ah! \xC9 pra j\xE1 meu chefe!"
+      textSpeed: 0
+    - whoIsTalking: 1
+      dialogue: "\xC9 s\xF3 seguir a direita, se precisar de um caf\xE9zinho ou qualquer
+        coisa, t\xF4 \xE0 disposi\xE7\xE3o!"
+      textSpeed: 0
+    - whoIsTalking: 1
+      dialogue: Grato.
       textSpeed: 0
 --- !u!4 &788800096681249171
 Transform:
