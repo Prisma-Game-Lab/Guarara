@@ -199,6 +199,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12675390}
   m_CullTransparentMesh: 1
+--- !u!1 &39759911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39759913}
+  - component: {fileID: 39759912}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: SceneManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &39759912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39759911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f14f7628a911c44bcd8d455906aab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: 
+  transition: {fileID: 106063366}
+  time: 1
+--- !u!4 &39759913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39759911}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 734, y: 248.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &45590029
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,53 +575,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448377234}
   m_CullTransparentMesh: 1
---- !u!1 &603653422
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 603653424}
-  - component: {fileID: 603653423}
-  m_Layer: 0
-  m_Name: SceneManager
-  m_TagString: SceneManager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &603653423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603653422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f14f7628a911c44bcd8d455906aab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: InvDialogTest
-  transition: {fileID: 106063366}
-  time: 1
---- !u!4 &603653424
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603653422}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 734, y: 248.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &606908988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,7 +1598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a671a66c4651c1943a292b355f666e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cenaInicial: Cena_Teste_1
+  cenaInicial: InvDialogTest
   painelMenuPrincipal: {fileID: 1126411328}
   painelAjustes: {fileID: 1726337046}
 --- !u!1 &1162554261
@@ -2350,12 +2350,16 @@ PrefabInstance:
       value: SceneLoader
       objectReference: {fileID: 0}
     - target: {fileID: 5009131637412374721, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374721, guid: 4170cb300ee2a464596e6282af709854, type: 3}
       propertyPath: sceneName
       value: Cena_Teste
       objectReference: {fileID: 0}
     - target: {fileID: 5009131637412374721, guid: 4170cb300ee2a464596e6282af709854, type: 3}
       propertyPath: nextSceneName
-      value: 
+      value: InvDialogTest
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4170cb300ee2a464596e6282af709854, type: 3}
@@ -2967,7 +2971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a671a66c4651c1943a292b355f666e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cenaInicial: Prototipo
+  cenaInicial: InvDialogTest
   painelMenuPrincipal: {fileID: 1126411328}
   painelAjustes: {fileID: 1162554261}
 --- !u!4 &1842915110

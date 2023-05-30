@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ScenesManager : MonoBehaviour
 {
-    [SerializeField] private string nextSceneName;
     [SerializeField] private Animator transition;
     [SerializeField] private float time = 1f;
 

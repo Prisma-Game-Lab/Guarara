@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private string cenaInicial;
+    [SerializeField] public string cenaInicial;
     [SerializeField] private GameObject painelMenuPrincipal;
     [SerializeField] private GameObject painelAjustes;
-    ScenesManager sceneLoader;
+    private ScenesManager sceneLoader;
 
     private void Start()
     {
-        sceneLoader = GameObject.Find("SceneManager").GetComponent<ScenesManager>();
+        sceneLoader = GameObject.FindWithTag("SceneManager").GetComponent<ScenesManager>();
     }
     public void Jogar()
     {
