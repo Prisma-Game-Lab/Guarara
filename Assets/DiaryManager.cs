@@ -4,39 +4,85 @@ using UnityEngine;
 
 public class DiaryManager : MonoBehaviour
 {
-    [SerializeField] private GameObject[] pages;
-    private int currentPage;
+    [SerializeField] private GameObject[] pagesRight;
+    [SerializeField] private GameObject[] pagesLeft;
+    private int currentPageRight;
+    private int currentPageLeft;
 
     public GameObject setButton1;
     public GameObject setButton2;
+    private bool wasClicked = false;
     
     public void OnClick () //Essa funcao vai ficar no evento OnClick do inspector do botao que e o diario
     {
-        currentPage = 0;
-		foreach (var page in pages ) 
+        if (wasClicked==false)              //O diário é ativado e desativado no mesmo botão
         {
-			page.SetActive(false);
-		}
+            currentPageRight = 0;
+		    foreach (var pageRight in pagesRight ) 
+            {
+			    pageRight.SetActive(false);
+		    }
 
-        Debug.Log("está funcionando");
-		pages[currentPage].SetActive(true);
-        setButton1.SetActive(true);
-        setButton2.SetActive(true);
+            pagesRight[currentPageRight].SetActive(true);
+            setButton1.SetActive(true);
+            wasClicked = true;
+        }
+        else if (wasClicked==true)
+        {
+            pagesRight[currentPageRight].SetActive(false);
+            pagesLeft[currentPageLeft].SetActive(false);
+            setButton1.SetActive(false);
+            setButton2.SetActive(false);
+            wasClicked = false;
+        }
+        
+        
     }
 
-	private void SetPage(int page) 
+	private void SetPageRight(int pageRight) 
 	{
-		pages[currentPage].SetActive(false);
-		currentPage = page;
-		pages[currentPage].SetActive(true);
+		pagesRight[currentPageRight].SetActive(false);
+		currentPageRight = pageRight;
+		pagesRight[currentPageRight].SetActive(true);
 	}
 
-	public void GotoNextPage()
+    
+	private void SetPageLeft(int pageLeft) 
+	{
+		pagesLeft[currentPageLeft].SetActive(false);
+		currentPageLeft = pageLeft;
+		pagesLeft[currentPageLeft].SetActive(true);
+	}
+
+    public void ActiveLeftPages ()
     {
-		SetPage(currentPage + 1);
+         currentPageLeft = 0;
+		foreach (var pageLeft in pagesLeft ) 
+        {
+            pageLeft.SetActive(false);
+		}
+
+        pagesLeft[currentPageLeft].SetActive(true);
+        setButton2.SetActive(true);
+    }
+	public void GotoNextPage()
+    {   //Preciso de um "for" que limite o acréscimo de páginas
+
+        for(int i = currentPageRight; i < pagesRight.Length;i++)
+        {
+            SetPageRight(i);
+            SetPageLeft(i);
+        }
+		
     }
 	public void GotoPreviousPage()
     {
-		SetPage(currentPage - 1);
+        for(int i = currentPageLeft; i>0 ;i--)
+        {
+            SetPageRight(i);
+            SetPageLeft(i);
+        }
+        //Preciso de um "for" que limite o acréscimo de páginas
+		
     }
 }
