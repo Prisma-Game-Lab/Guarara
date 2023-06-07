@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private string cenaInicial;
+    [SerializeField] public string cenaInicial;
     [SerializeField] private GameObject painelMenuPrincipal;
     [SerializeField] private GameObject painelAjustes;
+    private ScenesManager sceneLoader;
 
-
+    private void Start()
+    {
+        sceneLoader = GameObject.FindWithTag("SceneManager").GetComponent<ScenesManager>();
+    }
     public void Jogar()
     {
-        SceneManager.LoadScene(cenaInicial);
+        sceneLoader.GoToScene(cenaInicial);
     }
 
     public void AbrirAjustes()

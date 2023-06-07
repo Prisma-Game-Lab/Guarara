@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,28 +13,30 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     private Animator animator;
+    private PlayerInput input;
 
     [SerializeField]
     private InventoryManager inventoryManager;
 
-    void Start()
+    void Awake()
     {
-        inventoryManager = GameObject.Find("Sistemas/Inventory Manager").GetComponent<InventoryManager>();   
+        input = new PlayerInput();
+        inventoryManager = GameObject.Find("Sistemas/Inventory Manager").GetComponent<InventoryManager>();
 
         rb = GetComponent<Rigidbody2D>();
-        if(GetComponent<Animator>() != null)
+        if (GetComponent<Animator>() != null)
         {
             animator = GetComponent<Animator>();
         }
     }
     void Update()
     {
-        if(inventoryManager.isInvActive == false)
+        if (inventoryManager.isInvActive == false)
         {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
 
-            if(animator != null)
+            if (animator != null)
             {
                 animator.SetFloat("Horizontal", movement.x);
                 animator.SetFloat("Vertical", movement.y);
@@ -49,6 +52,30 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        rb.velocity = movement * speed;
+    }
+
+    private void OnEnable()
+    {
+        input.Enable();
+        input.Player.Movement.performed += Movement;
+        input.Player.Movement.canceled += NoMovement;
+    }
+
+    private void OnDisable()
+    {
+        input.Disable();
+        input.Player.Movement.performed -= Movement;
+        input.Player.Movement.canceled -= NoMovement;
+    }
+
+    private void Movement(InputAction.CallbackContext context)
+    {
+        movement = context.ReadValue<Vector2>();
+    }
+
+    private void NoMovement(InputAction.CallbackContext context)
+    {
+        movement = Vector2.zero;
     }
 }
