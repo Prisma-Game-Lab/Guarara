@@ -21,8 +21,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField]
     private Sprite SpritePersonagem;
 
-    [SerializeField]
-    private int dialogoAtual;
+    public int dialogoAtual;
 
     private Transform canvasTransform; 
 
@@ -30,6 +29,8 @@ public class Dialogue : MonoBehaviour
     private bool clickedNext;
     
     private GameObject dialogueBoxAtual;
+
+    public bool isDialogueActive = false;
 
     public List<DialogueList> listaDialogo = new List<DialogueList>();
 
@@ -85,6 +86,7 @@ public class Dialogue : MonoBehaviour
                 Destroy(dialogObject);
                 dialogObject = null;
                 podeIniciarD = false;
+                isDialogueActive = true;
             }
 
             yield return null;
@@ -112,7 +114,8 @@ public class Dialogue : MonoBehaviour
 public enum CharacterType
 {
         Player,
-        NPC
+        NPC,
+        Narrador
 }
 
 public enum TextSpeed
@@ -125,7 +128,7 @@ public enum TextSpeed
 [System.Serializable]
 public class DialogueList
 {
-
+public List<GameObject> itensActive = new List<GameObject>();
 public List<DialogueIF> inFactDialogue = new List<DialogueIF>();
 
 }
@@ -141,3 +144,5 @@ public string dialogue;
 public TextSpeed textSpeed;
 
 }
+
+

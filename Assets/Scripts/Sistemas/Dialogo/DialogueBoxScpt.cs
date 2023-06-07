@@ -69,14 +69,20 @@ public class DialogueBoxScpt : MonoBehaviour
         {
             dialogoAtivo = true;
 
-            if(dialogue.listaDialogo[dialogoAtual].inFactDialogue[i].whoIsTalking == CharacterType.Player)
+            CharacterType wit = dialogue.listaDialogo[dialogoAtual].inFactDialogue[i].whoIsTalking;
+
+            if(wit == CharacterType.Player)
             {
                 sprite.sprite = spritemc;
                 cNome.text = nomemc;
-            }else
+            }else if (wit == CharacterType.NPC)
             {
                 sprite.sprite = spriteperso;
                 cNome.text = nomeperso;     
+            }else
+            {
+                sprite.sprite = null;
+                cNome.text = "Narrador";                
             }
         
             fullText = dialogue.listaDialogo[dialogoAtual].inFactDialogue[i].dialogue;
@@ -94,6 +100,22 @@ public class DialogueBoxScpt : MonoBehaviour
             
         }
 
+        for (int i = 0; i < dialogue.listaDialogo[dialogoAtual].itensActive.Count; i++)
+        {
+            GameObject item = dialogue.listaDialogo[dialogoAtual].itensActive[i];
+            if(item != null)
+            {
+                item.SetActive(true);
+            }
+        }
+
+        if(dialogoAtual + 1 <= dialogue.listaDialogo.Count)
+        {
+            dialogue.dialogoAtual += 1;
+        }
+
+        dialogue.isDialogueActive = false;
+        
         Destroy(this.gameObject);
     }
 
