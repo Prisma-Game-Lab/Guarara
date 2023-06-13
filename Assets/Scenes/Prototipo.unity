@@ -5310,6 +5310,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4508045974923220161, guid: c78eeddfd1899de4c877042bf6c60383, type: 3}
+      propertyPath: NPCNames.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508045974923220161, guid: c78eeddfd1899de4c877042bf6c60383, type: 3}
+      propertyPath: NPCNames.Array.data[0]
+      value: Mico Manuel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508045974923220161, guid: c78eeddfd1899de4c877042bf6c60383, type: 3}
+      propertyPath: OnTalk.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508045974923220161, guid: c78eeddfd1899de4c877042bf6c60383, type: 3}
+      propertyPath: OnTalk.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4508045974923220161, guid: c78eeddfd1899de4c877042bf6c60383, type: 3}
+      propertyPath: OnTalk.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6485678154335080465, guid: c78eeddfd1899de4c877042bf6c60383, type: 3}
       propertyPath: m_Name
       value: Player

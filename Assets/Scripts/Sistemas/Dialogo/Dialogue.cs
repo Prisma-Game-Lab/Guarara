@@ -34,6 +34,8 @@ public class Dialogue : MonoBehaviour
 
     public List<DialogueList> listaDialogo = new List<DialogueList>();
 
+    public string NPCname;
+
     private void Start() 
     {
         canvasTransform = GameObject.Find("Canvas").transform;
@@ -54,6 +56,7 @@ public class Dialogue : MonoBehaviour
             podeIniciarD = true;
             StartCoroutine(WaitingClick());
         }
+        NPCname = collision.gameObject.name;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
