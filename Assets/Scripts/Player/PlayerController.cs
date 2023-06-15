@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private PlayerInput input;
     private InventoryManager inventoryManager;
+    private bool facingRight = true;
 
     void Awake()
     {
@@ -55,11 +56,26 @@ public class PlayerController : MonoBehaviour
             // código correspondente a animação
             if (animator != null)
             {
-                animator.SetFloat("Horizontal", movement.x);
-                animator.SetFloat("Vertical", movement.y);
                 animator.SetFloat("Speed", movement.magnitude);
+                if (movement.x > 0 && !facingRight)
+                {
+                    Flip();
+                }
+                else if (movement.x < 0 && facingRight)
+                {
+                    Flip();
+                }
             }
         }
+    }
+
+    // gira o sprite dependendo da direção na qual o jogador está andando (esquerda ou direita)
+    private void Flip()
+    {
+        Vector2 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+        facingRight = !facingRight;
     }
 
     public void Interact(InputAction.CallbackContext context)
