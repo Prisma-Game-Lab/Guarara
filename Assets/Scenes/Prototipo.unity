@@ -5085,77 +5085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd42fb33b7a92f545afb42b9c086c562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItensInv:
-  - keyIndex: 0
-    image: {fileID: 0}
-    nameItem: 
-    description: 
-    isItemDestroyable: 0
-    uses: 0
-    corTextoPopUp: {r: 0, g: 0, b: 0, a: 0}
-  - keyIndex: 0
-    image: {fileID: 0}
-    nameItem: 
-    description: 
-    isItemDestroyable: 0
-    uses: 0
-    corTextoPopUp: {r: 0, g: 0, b: 0, a: 0}
-  - keyIndex: 0
-    image: {fileID: 0}
-    nameItem: 
-    description: 
-    isItemDestroyable: 0
-    uses: 0
-    corTextoPopUp: {r: 0, g: 0, b: 0, a: 0}
-  - keyIndex: 0
-    image: {fileID: 0}
-    nameItem: 
-    description: 
-    isItemDestroyable: 0
-    uses: 0
-    corTextoPopUp: {r: 0, g: 0, b: 0, a: 0}
-  - keyIndex: 0
-    image: {fileID: 0}
-    nameItem: 
-    description: 
-    isItemDestroyable: 0
-    uses: 0
-    corTextoPopUp: {r: 0, g: 0, b: 0, a: 0}
-  - keyIndex: 0
-    image: {fileID: 0}
-    nameItem: 
-    description: 
-    isItemDestroyable: 0
-    uses: 0
-    corTextoPopUp: {r: 0, g: 0, b: 0, a: 0}
-  - keyIndex: 0
-    image: {fileID: 0}
-    nameItem: 
-    description: 
-    isItemDestroyable: 0
-    uses: 0
-    corTextoPopUp: {r: 0, g: 0, b: 0, a: 0}
-  - keyIndex: 0
-    image: {fileID: 0}
-    nameItem: 
-    description: 
-    isItemDestroyable: 0
-    uses: 0
-    corTextoPopUp: {r: 0, g: 0, b: 0, a: 0}
-  - keyIndex: 0
-    image: {fileID: 0}
-    nameItem: 
-    description: 
-    isItemDestroyable: 0
-    uses: 0
-    corTextoPopUp: {r: 0, g: 0, b: 0, a: 0}
-  - keyIndex: 0
-    image: {fileID: 0}
-    nameItem: 
-    description: 
-    isItemDestroyable: 0
-    uses: 0
-    corTextoPopUp: {r: 0, g: 0, b: 0, a: 0}
+  ItensInv: []
   indexPopUp: 
   isInvActive: 0
   inventarioPrefab: {fileID: 6435987466803618955, guid: ab9529ff013004c43a822592c0092ab5, type: 3}
