@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         input = new PlayerInput();
-        inventoryManager = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
+        inventoryManager = FindObjectOfType<InventoryManager>();
 
         rb = GetComponent<Rigidbody2D>();
         if (GetComponent<Animator>() != null)

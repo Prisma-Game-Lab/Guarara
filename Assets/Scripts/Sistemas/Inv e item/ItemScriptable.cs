@@ -33,7 +33,7 @@ public class ItemScriptable : MonoBehaviour
 
     private void Start() 
     {
-        inventoryManager = GameObject.Find("Sistemas/Inventory Manager").GetComponent<InventoryManager>();
+        inventoryManager = FindObjectOfType<InventoryManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
