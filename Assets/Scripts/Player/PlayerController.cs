@@ -6,47 +6,24 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
 
-    // variáveis públicas
-    public float speed = 5f;
-
-    // variáveis privadas
+    // variáveis 
+    [SerializeField]
+    private float speed = 5f;
     private Rigidbody2D rb;
     private Vector2 movement;
     private Animator animator;
     private PlayerInput input;
-
-    [SerializeField]
     private InventoryManager inventoryManager;
 
     void Awake()
     {
         input = new PlayerInput();
         inventoryManager = FindObjectOfType<InventoryManager>();
-
         rb = GetComponent<Rigidbody2D>();
+
         if (GetComponent<Animator>() != null)
         {
             animator = GetComponent<Animator>();
-        }
-    }
-    void Update()
-    {
-        if (inventoryManager.isInvActive == false)
-        {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
-
-            if (animator != null)
-            {
-                animator.SetFloat("Horizontal", movement.x);
-                animator.SetFloat("Vertical", movement.y);
-                animator.SetFloat("Speed", movement.magnitude);
-            }
-        }
-        else
-        {
-            movement.x = 0f;
-            movement.y = 0f;
         }
     }
 
@@ -59,23 +36,34 @@ public class PlayerController : MonoBehaviour
     {
         input.Enable();
         input.Player.Movement.performed += Movement;
-        input.Player.Movement.canceled += NoMovement;
     }
 
     private void OnDisable()
     {
         input.Disable();
         input.Player.Movement.performed -= Movement;
-        input.Player.Movement.canceled -= NoMovement;
     }
 
-    private void Movement(InputAction.CallbackContext context)
+    // função de movimento do jogador
+    public void Movement(InputAction.CallbackContext context)
     {
-        movement = context.ReadValue<Vector2>();
+        // só movimenta se não estiver no inventário
+        if (!inventoryManager.isInvActive)
+        {
+            movement = context.ReadValue<Vector2>();
+
+            // código correspondente a animação
+            if (animator != null)
+            {
+                animator.SetFloat("Horizontal", movement.x);
+                animator.SetFloat("Vertical", movement.y);
+                animator.SetFloat("Speed", movement.magnitude);
+            }
+        }
     }
 
-    private void NoMovement(InputAction.CallbackContext context)
+    public void Interact(InputAction.CallbackContext context)
     {
-        movement = Vector2.zero;
+
     }
 }

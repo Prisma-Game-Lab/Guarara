@@ -14,12 +14,9 @@ public class DoorScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (Input.GetKeyDown(KeyCode.E) && other.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                sceneLoader.GoToScene(nextSceneName);
-            }
+            Debug.Log("Transicionou de cena");
         }
     }
 }
