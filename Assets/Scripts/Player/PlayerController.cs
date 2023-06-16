@@ -67,6 +67,11 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            movement = Vector2.zero;
+            animator.SetFloat("Speed", 0);
+        }
     }
 
     // gira o sprite dependendo da direção na qual o jogador está andando (esquerda ou direita)
