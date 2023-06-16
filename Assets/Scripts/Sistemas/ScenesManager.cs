@@ -14,6 +14,7 @@ public class ScenesManager : MonoBehaviour
         StartCoroutine(LoadLevelTransition(nextSceneName));
     }
 
+    // começa a animação de transição
     IEnumerator LoadLevelTransition(string SceneName)
     {
         transition.SetTrigger("Start");

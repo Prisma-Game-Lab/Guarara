@@ -9,14 +9,15 @@ public class DoorScript : MonoBehaviour
     private ScenesManager sceneLoader;
     void Start()
     {
-        sceneLoader = GameObject.FindWithTag("SceneManager").GetComponent<ScenesManager>();
+        sceneLoader = FindObjectOfType<ScenesManager>();
     }
 
+    // troca de cena quando o jogador passa por uma porta
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.E) && other.tag == "Player")
+        if (other.tag == "Player")
         {
-            Debug.Log("Transicionou de cena");
+            sceneLoader.GoToScene(nextSceneName);
         }
     }
 }

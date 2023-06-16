@@ -228,7 +228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f14f7628a911c44bcd8d455906aab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: 
   transition: {fileID: 106063366}
   time: 1
 --- !u!4 &39759913
@@ -2971,7 +2970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a671a66c4651c1943a292b355f666e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cenaInicial: InvDialogTest
+  cenaInicial: Prototipo
   painelMenuPrincipal: {fileID: 1126411328}
   painelAjustes: {fileID: 1162554261}
 --- !u!4 &1842915110

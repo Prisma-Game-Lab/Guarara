@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public interface IInteractable
+{
+    public void Interact();
+}
+
 public class PlayerController : MonoBehaviour
 {
 
@@ -15,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private PlayerInput input;
     private InventoryManager inventoryManager;
     private bool facingRight = true;
+    private bool isEPressed;
 
     void Awake()
     {
@@ -69,10 +75,16 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            movement = Vector2.zero;
-            animator.SetFloat("Speed", 0);
+            NoMovement();
         }
+
     }
+    public void NoMovement()
+    {
+        movement = Vector2.zero;
+        animator.SetFloat("Speed", 0);
+    }
+
 
     // gira o sprite dependendo da direção na qual o jogador está andando (esquerda ou direita)
     private void Flip()
@@ -83,8 +95,27 @@ public class PlayerController : MonoBehaviour
         facingRight = !facingRight;
     }
 
-    public void Interact(InputAction.CallbackContext context)
+    // para o jogador quando ele encontra uma parede
+    public void OnCollisionEnter2D(Collision2D other)
     {
+        if (other.gameObject.tag == "Parede")
+        {
+            NoMovement();
+        }
 
+    }
+
+    // checa se o jogador tá encostando em um objeto interagivel e se ele vai apertar a tecla de interação
+    public void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Interagivel")
+        {
+            isEPressed = input.Player.Interact.ReadValue<float>() > 0.1f;
+            Debug.Log(isEPressed);
+            if (isEPressed)
+            {
+                other.gameObject.GetComponent<ObjAnalise>().Interact();
+            }
+        }
     }
 }

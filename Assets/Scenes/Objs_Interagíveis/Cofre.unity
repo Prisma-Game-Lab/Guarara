@@ -123,6 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &302436643
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5009131637412374334, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374334, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0632445
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374334, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.45345944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374334, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.05330819
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374334, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374334, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374334, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374334, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374334, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374334, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374334, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374720, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_Name
+      value: SceneLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009131637412374720, guid: 4170cb300ee2a464596e6282af709854, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4170cb300ee2a464596e6282af709854, type: 3}
 --- !u!1 &450979262
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  previousSceneName: 
+  previousSceneName: Prototipo_Foda
 --- !u!50 &450979264
 Rigidbody2D:
   serializedVersion: 4
@@ -256,6 +317,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 6eed087a-161e-4a6a-97da-ee412ec87446
     m_ActionName: Player Hand/Exit[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e41249eb-83d7-4b27-a4e8-b79fc2edc382
+    m_ActionName: Player/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player Hand
@@ -302,7 +367,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: b0d4c3c6097481c49a71a673b31cab97, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 63e95a2a561216043b25098a0c58b5a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -322,11 +387,11 @@ Transform:
   m_GameObject: {fileID: 450979262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.62, y: -2.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &450979268
 BoxCollider2D:
@@ -345,7 +410,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.6, y: 3.6}
+    oldSize: {x: 20.48, y: 20.48}
     newSize: {x: 3.6, y: 3.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -486,7 +551,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1061578651 stripped
 Transform:
@@ -559,7 +624,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1289435584
 GameObject:
@@ -655,7 +720,7 @@ RectTransform:
   m_Children:
   - {fileID: 1061578651}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -697,7 +762,7 @@ MonoBehaviour:
   inventarioPrefab: {fileID: 6435987466803618955, guid: ab9529ff013004c43a822592c0092ab5, type: 3}
   popUpPrefab: {fileID: 8941309456726662791, guid: 7936e616cd952dd4e990a31a09f46381, type: 3}
   itemInvPrefab: {fileID: 8300623137153035120, guid: a09ee07a227b4394ebe35139cc79923e, type: 3}
-  itemHandPrefab: {fileID: 3868650881978551501, guid: 39508017999158e4484494c083ee5f53, type: 3}
+  itemHandPrefab: {fileID: 0}
   itemHandPos: {x: 0, y: 0, z: 0}
   corFundoCaixa: {r: 0, g: 0, b: 0, a: 0}
   corCimaCaixa: {r: 0, g: 0, b: 0, a: 0}
@@ -717,7 +782,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1896491821
 PrefabInstance:
@@ -942,5 +1007,5 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

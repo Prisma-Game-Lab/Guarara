@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8765308124388796193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8765308124388796195}
+  - component: {fileID: 8765308124388796194}
+  m_Layer: 0
+  m_Name: InventoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8765308124388796195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8765308124388796193}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 940.73645, y: 523.7035, z: 4.8502016}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8765308124388796194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8765308124388796193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd42fb33b7a92f545afb42b9c086c562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItensInv: []
+  indexPopUp: 
+  isInvActive: 0
+  inventarioPrefab: {fileID: 6435987466803618955, guid: ab9529ff013004c43a822592c0092ab5, type: 3}
+  popUpPrefab: {fileID: 8941309456726662791, guid: 7936e616cd952dd4e990a31a09f46381, type: 3}
+  itemInvPrefab: {fileID: 8300623137153035120, guid: a09ee07a227b4394ebe35139cc79923e, type: 3}
+  itemHandPrefab: {fileID: 3868650881978551501, guid: 39508017999158e4484494c083ee5f53, type: 3}
+  itemHandPos: {x: 800, y: -400, z: 0}
+  corFundoCaixa: {r: 0.24528301, g: 0.040263426, b: 0.047458045, a: 1}
+  corCimaCaixa: {r: 0.5, g: 0.26132074, b: 0.26132074, a: 1}
+  corSelecaoEdit: {r: 0.010466317, g: 0.1878238, b: 0.7924528, a: 1}
+  corSelecaoMao: {r: 0.38645113, g: 0.9150943, b: 0.18474545, a: 1}
+  indexHolding: -1

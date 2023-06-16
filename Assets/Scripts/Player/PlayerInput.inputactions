@@ -16,12 +16,12 @@
                 },
                 {
                     "name": "Interact",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "e41249eb-83d7-4b27-a4e8-b79fc2edc382",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -172,12 +172,12 @@
                 },
                 {
                     "name": "Exit",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "6eed087a-161e-4a6a-97da-ee412ec87446",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
