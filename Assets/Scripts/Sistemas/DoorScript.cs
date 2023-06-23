@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
+    // variáveis
     [SerializeField]
     private string nextSceneName;
     private ScenesManager sceneLoader;

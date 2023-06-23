@@ -8,7 +8,7 @@ public interface IInteractable
     public void Interact();
 }
 
-public class PlayerController : MonoBehaviour
+public class PlayerControl : MonoBehaviour
 {
 
     // variáveis 
@@ -18,15 +18,18 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private Animator animator;
     private PlayerInput input;
-    private InventoryManager inventoryManager;
+    [SerializeField]
+    private Inventory inventory;
     private bool facingRight = true;
     private bool isEPressed;
+    [SerializeField]
+    private int inventorySize;
 
     void Awake()
     {
         input = new PlayerInput();
-        inventoryManager = FindObjectOfType<InventoryManager>();
         rb = GetComponent<Rigidbody2D>();
+        inventory.InitalizeInventory(inventorySize);
 
         if (GetComponent<Animator>() != null)
         {
@@ -55,7 +58,7 @@ public class PlayerController : MonoBehaviour
     public void Movement(InputAction.CallbackContext context)
     {
         // só movimenta se não estiver no inventário
-        if (!inventoryManager.isInvActive)
+        if (!inventory.isActiveAndEnabled)
         {
             movement = context.ReadValue<Vector2>();
 
@@ -118,4 +121,19 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    // public void Inventory(InputAction.CallbackContext context)
+    // {
+    //     if (context.performed)
+    //     {
+    //         if (!inventory.isActiveAndEnabled)
+    //         {
+    //             inventory.Show();
+    //         }
+    //         else
+    //         {
+    //             inventory.Hide();
+    //         }
+    //     }
+    // }
 }
