@@ -15,7 +15,6 @@ public class ObjAnalise : MonoBehaviour, IInteractable
     // ao interagir com o objeto o jogador troca de cena
     public void Interact()
     {
-        Debug.Log("Mudou de cena");
         sceneLoader.GoToScene(objSceneName);
     }
 }

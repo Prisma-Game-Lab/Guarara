@@ -22,14 +22,11 @@ public class PlayerControl : MonoBehaviour
     private Inventory inventory;
     private bool facingRight = true;
     private bool isEPressed;
-    [SerializeField]
-    private int inventorySize;
 
     void Awake()
     {
         input = new PlayerInput();
         rb = GetComponent<Rigidbody2D>();
-        inventory.InitalizeInventory(inventorySize);
 
         if (GetComponent<Animator>() != null)
         {
@@ -114,26 +111,29 @@ public class PlayerControl : MonoBehaviour
         if (other.gameObject.tag == "Interagivel")
         {
             isEPressed = input.Player.Interact.ReadValue<float>() > 0.1f;
-            Debug.Log(isEPressed);
             if (isEPressed)
             {
-                other.gameObject.GetComponent<ObjAnalise>().Interact();
+                if (other.gameObject.TryGetComponent(out IInteractable interactObj))
+                {
+                    interactObj.Interact();
+                }
             }
         }
     }
 
-    // public void Inventory(InputAction.CallbackContext context)
-    // {
-    //     if (context.performed)
-    //     {
-    //         if (!inventory.isActiveAndEnabled)
-    //         {
-    //             inventory.Show();
-    //         }
-    //         else
-    //         {
-    //             inventory.Hide();
-    //         }
-    //     }
-    // }
+    public void Inventory(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (inventory.isActiveAndEnabled)
+            {
+                inventory.Hide();
+            }
+            else
+            {
+                inventory.Show();
+                inventory.ListItems();
+            }
+        }
+    }
 }
