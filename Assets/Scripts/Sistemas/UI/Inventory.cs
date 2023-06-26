@@ -2,16 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using TMPro;
 
 public class Inventory : MonoBehaviour
 {
     // variáveis
     [SerializeField]
     private Transform contentPanel;
-    public GameObject inventoryItem;
+    [SerializeField]
+    private TMP_Text descriptionPanel;
 
     [SerializeField]
     List<Item> listOfItems = new List<Item>();
+
+    private void Update()
+    {
+        ShowDescription();
+    }
 
     public void AddItem(Item item)
     {
@@ -50,6 +58,21 @@ public class Inventory : MonoBehaviour
             itemIcon.sprite = item.itemIcon;
             // itemName.text = item.itemName;
             index++;
+        }
+    }
+
+    // mostra a descrição dos itens
+    public void ShowDescription()
+    {
+        GameObject selected = EventSystem.current.currentSelectedGameObject;
+        int index = int.Parse(selected.name[selected.name.Length - 1].ToString());
+        if (index < listOfItems.Count)
+        {
+            descriptionPanel.text = listOfItems[int.Parse(selected.name[selected.name.Length - 1].ToString())].itemDescription;
+        }
+        else
+        {
+            descriptionPanel.text = "";
         }
     }
 }
