@@ -38,17 +38,26 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Interact"",
-                    ""type"": ""Value"",
+                    ""type"": ""Button"",
                     ""id"": ""e41249eb-83d7-4b27-a4e8-b79fc2edc382"",
-                    ""expectedControlType"": ""Axis"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Inventory"",
                     ""type"": ""Button"",
                     ""id"": ""9679687b-1dd0-42f1-a8a8-3ab7015f415d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""01352a00-f6d2-48f9-b09e-b51383e761fa"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -187,17 +196,28 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Inventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7222d99e-c7be-497f-adc9-b80a117c22af"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
         {
-            ""name"": ""Player Hand"",
-            ""id"": ""e488ddd7-995d-4415-a7c5-5e3153e9d775"",
+            ""name"": ""Hand"",
+            ""id"": ""3c0609be-e8e5-4b17-af15-85063271a346"",
             ""actions"": [
                 {
                     ""name"": ""Movement"",
                     ""type"": ""Value"",
-                    ""id"": ""efe9f9dc-73bd-463f-a894-5c79bfa2bde8"",
+                    ""id"": ""1002ebf4-1b7d-41de-b95b-a9b31e1b37ae"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -206,26 +226,26 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
-                    ""id"": ""9ce0e425-7936-42a8-9360-0c8c7644b6aa"",
+                    ""id"": ""046b13c9-c208-4cda-baee-bc5a9218bf73"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Exit"",
-                    ""type"": ""Value"",
-                    ""id"": ""6eed087a-161e-4a6a-97da-ee412ec87446"",
-                    ""expectedControlType"": ""Axis"",
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""ed7d97e2-33f2-4d76-b05d-5b5d57bd14bc"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": ""WASD"",
-                    ""id"": ""7fa1b1ea-590b-4267-98a5-2b65cd365bc9"",
+                    ""id"": ""df57a282-eb88-4f34-a1ff-e412002f979e"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -236,7 +256,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""dd49d02d-3d30-45b6-a57c-266adde050eb"",
+                    ""id"": ""dfd2ffc7-902c-486e-8f6e-e83bedbb2a43"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -247,7 +267,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""118afe82-d7a8-4b66-955f-96f84a14bced"",
+                    ""id"": ""7fa39cea-3b4e-47b1-b0b3-b9511f3c3972"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -258,7 +278,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""dae5f926-7bb9-4b7a-a2fa-34322c91e914"",
+                    ""id"": ""4b13a319-c2d9-437b-812a-369b54fca59e"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -269,7 +289,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""4dc7461f-02a2-4566-8747-7c92f789e02a"",
+                    ""id"": ""e090605e-2f67-4f09-aef2-d20881a345c2"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -280,7 +300,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Arrow"",
-                    ""id"": ""0b001959-839e-4be0-8548-26469b964f9e"",
+                    ""id"": ""de20e96c-7638-423f-afda-a2f785b04170"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -291,7 +311,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""09d64a12-a15f-49b7-b0fb-9263924f39c6"",
+                    ""id"": ""1a2e9d1a-a51d-47c3-9734-53c6f6ff7fe4"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -302,7 +322,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""7059ec26-2063-44c6-be5d-977f27f4a3a0"",
+                    ""id"": ""46364b40-247e-47c5-bc8f-e882fa36609e"",
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -313,7 +333,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""188c4f95-be4a-489a-8f8c-2fcae98d29fb"",
+                    ""id"": ""fa52ca27-a803-4206-ba67-930924335c9b"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -324,7 +344,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""884ca12b-7060-4f98-b891-4f976e5af13b"",
+                    ""id"": ""60e03871-2eb6-46a2-bbc0-423e020552e8"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -335,7 +355,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e4de3387-36f9-45bb-b325-8179eb6e6381"",
+                    ""id"": ""550ae337-4298-454d-b63d-3b6a44013cb0"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -346,12 +366,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b6f61726-b96b-48de-9fb1-d50dc139a3b0"",
+                    ""id"": ""4653e290-04e9-47ec-bca3-4363e529e9b8"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Exit"",
+                    ""action"": ""Escape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -365,11 +385,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
-        // Player Hand
-        m_PlayerHand = asset.FindActionMap("Player Hand", throwIfNotFound: true);
-        m_PlayerHand_Movement = m_PlayerHand.FindAction("Movement", throwIfNotFound: true);
-        m_PlayerHand_Interact = m_PlayerHand.FindAction("Interact", throwIfNotFound: true);
-        m_PlayerHand_Exit = m_PlayerHand.FindAction("Exit", throwIfNotFound: true);
+        m_Player_Escape = m_Player.FindAction("Escape", throwIfNotFound: true);
+        // Hand
+        m_Hand = asset.FindActionMap("Hand", throwIfNotFound: true);
+        m_Hand_Movement = m_Hand.FindAction("Movement", throwIfNotFound: true);
+        m_Hand_Interact = m_Hand.FindAction("Interact", throwIfNotFound: true);
+        m_Hand_Escape = m_Hand.FindAction("Escape", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -434,6 +455,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Inventory;
+    private readonly InputAction m_Player_Escape;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -441,6 +463,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Inventory => m_Wrapper.m_Player_Inventory;
+        public InputAction @Escape => m_Wrapper.m_Player_Escape;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -459,6 +482,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Inventory.started += instance.OnInventory;
             @Inventory.performed += instance.OnInventory;
             @Inventory.canceled += instance.OnInventory;
+            @Escape.started += instance.OnEscape;
+            @Escape.performed += instance.OnEscape;
+            @Escape.canceled += instance.OnEscape;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -472,6 +498,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Inventory.started -= instance.OnInventory;
             @Inventory.performed -= instance.OnInventory;
             @Inventory.canceled -= instance.OnInventory;
+            @Escape.started -= instance.OnEscape;
+            @Escape.performed -= instance.OnEscape;
+            @Escape.canceled -= instance.OnEscape;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -490,40 +519,40 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     }
     public PlayerActions @Player => new PlayerActions(this);
 
-    // Player Hand
-    private readonly InputActionMap m_PlayerHand;
-    private List<IPlayerHandActions> m_PlayerHandActionsCallbackInterfaces = new List<IPlayerHandActions>();
-    private readonly InputAction m_PlayerHand_Movement;
-    private readonly InputAction m_PlayerHand_Interact;
-    private readonly InputAction m_PlayerHand_Exit;
-    public struct PlayerHandActions
+    // Hand
+    private readonly InputActionMap m_Hand;
+    private List<IHandActions> m_HandActionsCallbackInterfaces = new List<IHandActions>();
+    private readonly InputAction m_Hand_Movement;
+    private readonly InputAction m_Hand_Interact;
+    private readonly InputAction m_Hand_Escape;
+    public struct HandActions
     {
         private @PlayerInput m_Wrapper;
-        public PlayerHandActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_PlayerHand_Movement;
-        public InputAction @Interact => m_Wrapper.m_PlayerHand_Interact;
-        public InputAction @Exit => m_Wrapper.m_PlayerHand_Exit;
-        public InputActionMap Get() { return m_Wrapper.m_PlayerHand; }
+        public HandActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_Hand_Movement;
+        public InputAction @Interact => m_Wrapper.m_Hand_Interact;
+        public InputAction @Escape => m_Wrapper.m_Hand_Escape;
+        public InputActionMap Get() { return m_Wrapper.m_Hand; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PlayerHandActions set) { return set.Get(); }
-        public void AddCallbacks(IPlayerHandActions instance)
+        public static implicit operator InputActionMap(HandActions set) { return set.Get(); }
+        public void AddCallbacks(IHandActions instance)
         {
-            if (instance == null || m_Wrapper.m_PlayerHandActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_PlayerHandActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_HandActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_HandActionsCallbackInterfaces.Add(instance);
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
-            @Exit.started += instance.OnExit;
-            @Exit.performed += instance.OnExit;
-            @Exit.canceled += instance.OnExit;
+            @Escape.started += instance.OnEscape;
+            @Escape.performed += instance.OnEscape;
+            @Escape.canceled += instance.OnEscape;
         }
 
-        private void UnregisterCallbacks(IPlayerHandActions instance)
+        private void UnregisterCallbacks(IHandActions instance)
         {
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
@@ -531,36 +560,37 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
-            @Exit.started -= instance.OnExit;
-            @Exit.performed -= instance.OnExit;
-            @Exit.canceled -= instance.OnExit;
+            @Escape.started -= instance.OnEscape;
+            @Escape.performed -= instance.OnEscape;
+            @Escape.canceled -= instance.OnEscape;
         }
 
-        public void RemoveCallbacks(IPlayerHandActions instance)
+        public void RemoveCallbacks(IHandActions instance)
         {
-            if (m_Wrapper.m_PlayerHandActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_HandActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IPlayerHandActions instance)
+        public void SetCallbacks(IHandActions instance)
         {
-            foreach (var item in m_Wrapper.m_PlayerHandActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_HandActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_PlayerHandActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_HandActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public PlayerHandActions @PlayerHand => new PlayerHandActions(this);
+    public HandActions @Hand => new HandActions(this);
     public interface IPlayerActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnInventory(InputAction.CallbackContext context);
+        void OnEscape(InputAction.CallbackContext context);
     }
-    public interface IPlayerHandActions
+    public interface IHandActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
-        void OnExit(InputAction.CallbackContext context);
+        void OnEscape(InputAction.CallbackContext context);
     }
 }

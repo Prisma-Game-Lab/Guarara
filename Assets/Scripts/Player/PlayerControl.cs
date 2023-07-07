@@ -14,19 +14,21 @@ public class PlayerControl : MonoBehaviour
     // variáveis 
     [SerializeField]
     private float speed = 5f;
+    private Inventory inventory;
     private Rigidbody2D rb;
     private Vector2 movement;
     private Animator animator;
     private PlayerInput input;
-    [SerializeField]
-    private Inventory inventory;
     private bool facingRight = true;
     private bool isEPressed;
+    [HideInInspector]
+    public bool analisando = false;
 
     void Awake()
     {
         input = new PlayerInput();
         rb = GetComponent<Rigidbody2D>();
+        inventory = GameObject.Find("Canvas").transform.GetChild(0).transform.GetChild(0).GetComponent<Inventory>();
 
         if (GetComponent<Animator>() != null)
         {
@@ -38,24 +40,31 @@ public class PlayerControl : MonoBehaviour
     {
         rb.velocity = movement * speed;
     }
+    private void Update()
+    {
+        if (this.gameObject.name == "Player")
+        {
+            input.Player.Enable();
+            input.Hand.Disable();
+        }
+        Debug.Log(input.Hand.enabled);
+    }
 
     private void OnEnable()
     {
         input.Enable();
-        input.Player.Movement.performed += Movement;
     }
 
     private void OnDisable()
     {
         input.Disable();
-        input.Player.Movement.performed -= Movement;
     }
 
     // função de movimento do jogador
     public void Movement(InputAction.CallbackContext context)
     {
         // só movimenta se não estiver no inventário
-        if (!inventory.isActiveAndEnabled)
+        if (!analisando && !inventory.isActiveAndEnabled)
         {
             movement = context.ReadValue<Vector2>();
 
@@ -123,7 +132,7 @@ public class PlayerControl : MonoBehaviour
 
     public void Inventory(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && !analisando)
         {
             if (inventory.isActiveAndEnabled)
             {
@@ -134,6 +143,35 @@ public class PlayerControl : MonoBehaviour
                 inventory.Show();
                 inventory.ListItems();
             }
+        }
+    }
+
+    public void Exit(InputAction.CallbackContext context)
+    {
+        var papai = this.transform.parent.gameObject;
+        papai.SetActive(false);
+        analisando = false;
+    }
+
+    public void Pause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Pausou");
+        }
+    }
+
+    public void SwitchActions()
+    {
+        if (input.Player.enabled)
+        {
+            input.Player.Disable();
+            input.Hand.Enable();
+        }
+        else
+        {
+            input.Player.Enable();
+            input.Hand.Disable();
         }
     }
 }

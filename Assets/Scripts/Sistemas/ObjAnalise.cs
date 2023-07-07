@@ -2,19 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjAnalise : MonoBehaviour, IInteractable
+public class ObjAnalise : MonoBehaviour
 {
+    // variáveis
     [SerializeField]
-    private string objSceneName;
-    private ScenesManager sceneLoader;
-    void Start()
+    private GameObject maozinha;
+
+    private void Awake()
     {
-        sceneLoader = FindObjectOfType<ScenesManager>();
+        Instantiate(maozinha, transform.position, Quaternion.identity);
     }
 
-    // ao interagir com o objeto o jogador troca de cena
-    public void Interact()
-    {
-        sceneLoader.GoToScene(objSceneName);
-    }
 }

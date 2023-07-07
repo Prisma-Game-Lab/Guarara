@@ -9,16 +9,18 @@ public class HandScript : MonoBehaviour
 
     [SerializeField]
     private float speed;
-    [SerializeField]
-    private string previousSceneName;
     private Rigidbody2D rb;
     private Vector2 movement;
-    private ScenesManager sm;
+    private GameObject papai;
+    private PlayerControl player;
+    private PlayerInput input;
 
     private void Awake()
     {
+        input = new PlayerInput();
         rb = GetComponent<Rigidbody2D>();
-        sm = FindObjectOfType<ScenesManager>();
+        papai = this.transform.parent.gameObject;
+        player = GameObject.FindWithTag("Player").GetComponent<PlayerControl>();
     }
 
     private void FixedUpdate()
@@ -26,10 +28,20 @@ public class HandScript : MonoBehaviour
         rb.velocity = movement * speed;
     }
 
+    private void OnEnable()
+    {
+        input.Enable();
+    }
+    private void OnDisable()
+    {
+        input.Disable();
+    }
+
     // função de movimentar a mão
     public void Movement(InputAction.CallbackContext context)
     {
         movement = context.ReadValue<Vector2>();
+        Debug.Log("Movimentou");
     }
 
     // função de interagir com um objeto da cena
@@ -38,12 +50,11 @@ public class HandScript : MonoBehaviour
 
     }
 
-    // função de retornar para a cena anterior
+    // função de fechar a análise
     public void Exit(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            sm.GoToScene(previousSceneName);
-        }
+        papai.SetActive(false);
+        player.analisando = false;
+        Debug.Log("saiu");
     }
 }

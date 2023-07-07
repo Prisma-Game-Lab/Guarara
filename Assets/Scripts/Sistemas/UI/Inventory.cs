@@ -14,7 +14,7 @@ public class Inventory : MonoBehaviour
     private TMP_Text descriptionPanel;
 
     [SerializeField]
-    List<Item> listOfItems = new List<Item>();
+    private InventoryItems scriptObj;
 
     private void Update()
     {
@@ -23,12 +23,12 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        listOfItems.Add(item);
+        scriptObj.list.Add(item);
     }
 
     public void RemoveItem(Item item)
     {
-        listOfItems.Remove(item);
+        scriptObj.list.Remove(item);
     }
 
     // faz o L
@@ -47,7 +47,7 @@ public class Inventory : MonoBehaviour
     public void ListItems()
     {
         int index = 0;
-        foreach (var item in listOfItems)
+        foreach (var item in scriptObj.list)
         {
             Image itemIcon = contentPanel.GetChild(index).transform.Find("ItemIcon").GetComponent<Image>();
             Text itemName = contentPanel.GetChild(index).transform.Find("ItemName").GetComponent<Text>();
@@ -66,9 +66,9 @@ public class Inventory : MonoBehaviour
     {
         GameObject selected = EventSystem.current.currentSelectedGameObject;
         int index = int.Parse(selected.name[selected.name.Length - 1].ToString());
-        if (index < listOfItems.Count)
+        if (index < scriptObj.list.Count)
         {
-            descriptionPanel.text = listOfItems[int.Parse(selected.name[selected.name.Length - 1].ToString())].itemDescription;
+            descriptionPanel.text = scriptObj.list[int.Parse(selected.name[selected.name.Length - 1].ToString())].itemDescription;
         }
         else
         {
