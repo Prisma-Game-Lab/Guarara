@@ -21,16 +21,6 @@ public class Inventory : MonoBehaviour
         ShowDescription();
     }
 
-    public void AddItem(Item item)
-    {
-        scriptObj.list.Add(item);
-    }
-
-    public void RemoveItem(Item item)
-    {
-        scriptObj.list.Remove(item);
-    }
-
     // faz o L
     public void Show()
     {
@@ -62,7 +52,7 @@ public class Inventory : MonoBehaviour
     }
 
     // mostra a descrição dos itens
-    public void ShowDescription()
+    private void ShowDescription()
     {
         GameObject selected = EventSystem.current.currentSelectedGameObject;
         int index = int.Parse(selected.name[selected.name.Length - 1].ToString());

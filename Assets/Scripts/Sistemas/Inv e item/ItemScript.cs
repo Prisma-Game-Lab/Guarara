@@ -7,18 +7,13 @@ public class ItemScript : MonoBehaviour, IInteractable
     // variáveis
     public Item item;
     [SerializeField]
-    private Inventory inventory;
+    private InventoryItems inventoryScriptObj;
     [SerializeField]
     private GameObject popUp;
     private GameObject objPopUp;
-    private void Awake()
-    {
-        inventory = GameObject.Find("Canvas").transform.GetChild(0).transform.GetChild(0).GetComponent<Inventory>();
-    }
-
     void PickUp()
     {
-        inventory.AddItem(item);
+        inventoryScriptObj.list.Add(item);
         Destroy(gameObject);
     }
 

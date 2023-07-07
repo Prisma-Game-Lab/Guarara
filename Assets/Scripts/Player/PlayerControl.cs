@@ -47,7 +47,6 @@ public class PlayerControl : MonoBehaviour
             input.Player.Enable();
             input.Hand.Disable();
         }
-        Debug.Log(input.Hand.enabled);
     }
 
     private void OnEnable()
