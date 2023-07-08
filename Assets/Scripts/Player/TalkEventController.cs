@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TalkEventController : MonoBehaviour
+/* public class TalkEventController : MonoBehaviour
 {
     public UnityEvent OnTalk; //Esse evento é ativado quando o player interage com um NPC importante para a lore do jogo
     [SerializeField] public string[] NPCNames;//Esse array contém o nome dos NPCs principais
@@ -30,5 +30,9 @@ public class TalkEventController : MonoBehaviour
         return isInList;
     } 
 
+<<<<<<< Updated upstream
 }
  */
+=======
+} */
+>>>>>>> Stashed changes
