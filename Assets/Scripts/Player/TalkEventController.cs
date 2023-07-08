@@ -30,9 +30,5 @@ using UnityEngine.Events;
         return isInList;
     } 
 
-<<<<<<< Updated upstream
-}
+
  */
-=======
-} */
->>>>>>> Stashed changes
