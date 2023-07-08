@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< Updated upstream:Assets/Scripts/Dialogue.cs.meta
-guid: ce99cb1a2824628439bae5cd0df724aa
-========
-guid: a14797124b16d1f4a88d930554837fb6
->>>>>>>> Stashed changes:Assets/DialogueTrigger.cs.meta
+guid: f929222abc6cb254891cf3fb23c55253
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
