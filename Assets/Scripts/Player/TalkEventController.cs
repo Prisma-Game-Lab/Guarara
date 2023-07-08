@@ -16,7 +16,8 @@ using UnityEngine.Events;
            OnTalk?.Invoke();
         }
     }
-    private bool checkList() //Verifica se o NPC existe na lista de NPCs que carregam informações.
+    //Colocar em outro script
+    public bool checkList() //Verifica se o NPC existe na lista de NPCs que carregam informações.
     {
         name = gameObject.GetComponent<Dialogue>().NPCname;
         for(int i = 0; i < NPCNames.Length; i++)
