@@ -11,12 +11,12 @@ public class ShowPopUp : MonoBehaviour
         if(PopUp.activeInHierarchy == true)
         {
             PopUp.SetActive(false);
-            Debug.Log("colidiu!");
+            
         }
         else
         {
             PopUp.SetActive(true);
-            Debug.Log("colidiu!");
+            
         }
         
         

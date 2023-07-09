@@ -30,6 +30,6 @@ using UnityEngine.Events;
             }
         return isInList;
     } 
-
+}
 
  */
