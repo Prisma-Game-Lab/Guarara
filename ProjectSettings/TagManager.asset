@@ -8,6 +8,7 @@ TagManager:
   - Parede
   - Interagivel
   - Inventory
+  - NPC
   layers:
   - Default
   - TransparentFX

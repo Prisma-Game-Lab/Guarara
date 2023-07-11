@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
 
    public void StartDialogue (Dialogue dialogue)
    {
-        Debug.Log("conversando");
+        Debug.Log("conversando com "+ dialogue.name);
    }
  
 }

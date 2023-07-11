@@ -7,13 +7,13 @@ public class IsNearEvent : MonoBehaviour
 {
    public UnityEvent NearNPC;
    public bool wasCollided = false;
-   public string characterName;
+   public string characterTag;
    
    public void OnCollisionEnter2D (Collision2D collision)
     {
         NearNPC?.Invoke();
         wasCollided = true;
-        characterName = collision.gameObject.name;
+        characterTag = gameObject.tag;  
     }
     public void OnCollisionExit2D (Collision2D collision)
     {
