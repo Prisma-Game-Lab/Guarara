@@ -48,6 +48,7 @@ public class MenuManager : MonoBehaviour
 
     public void Pausar()
     {
+        Time.timeScale = 0;
         canvasPause.SetActive(true);
     }
 
@@ -70,6 +71,7 @@ public class MenuManager : MonoBehaviour
 
     public void RetomarJogo()
     {
+        Time.timeScale = 1;
         canvasPause.SetActive(false);
     }
 
