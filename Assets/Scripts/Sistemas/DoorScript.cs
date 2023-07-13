@@ -7,6 +7,10 @@ public class DoorScript : MonoBehaviour
     // variáveis
     [SerializeField]
     private string nextSceneName;
+    [SerializeField]
+    private Vector3 nextPlayerPosition;
+    [SerializeField]
+    private PlayerPosition playerPosition;
     private ScenesManager sceneLoader;
     void Start()
     {
@@ -19,6 +23,7 @@ public class DoorScript : MonoBehaviour
         if (other.tag == "Player")
         {
             sceneLoader.GoToScene(nextSceneName);
+            playerPosition.playerPosition = nextPlayerPosition;
         }
     }
 }

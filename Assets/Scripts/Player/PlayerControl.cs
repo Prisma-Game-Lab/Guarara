@@ -23,12 +23,15 @@ public class PlayerControl : MonoBehaviour
     private bool isEPressed;
     [HideInInspector]
     public bool analisando = false;
+    [SerializeField]
+    private PlayerPosition playerPositionOnLoad;
 
     void Awake()
     {
         input = new PlayerInput();
         rb = GetComponent<Rigidbody2D>();
-        inventory = GameObject.Find("Canvas").transform.GetChild(0).transform.GetChild(0).GetComponent<Inventory>();
+        // inventory = GameObject.Find("Canvas").transform.GetChild(0).transform.GetChild(0).GetComponent<Inventory>();
+        transform.position = playerPositionOnLoad.playerPosition;
 
         if (GetComponent<Animator>() != null)
         {
@@ -63,7 +66,7 @@ public class PlayerControl : MonoBehaviour
     public void Movement(InputAction.CallbackContext context)
     {
         // só movimenta se não estiver no inventário
-        if (!analisando && !inventory.isActiveAndEnabled)
+        if (!analisando)
         {
             movement = context.ReadValue<Vector2>();
 
