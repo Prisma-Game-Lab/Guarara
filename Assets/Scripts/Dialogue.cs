@@ -7,7 +7,6 @@ public class Dialogue //Essa classe será passada para o script do DialogueManag
 {
     public string name;
     public Sprite charProfile;
-
     [TextArea(3,10)]
     public string[] sentences;
 }

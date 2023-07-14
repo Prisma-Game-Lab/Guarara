@@ -5,14 +5,14 @@ using UnityEngine.Events;
 
 public class DialogueEvent : MonoBehaviour
 {
-   public UnityEvent DialogueStart;
+   public UnityEvent OnRightButtonPressed;
    
 
    public void StartConversation ()
     {
         if(GetComponent<IsNearEvent>().wasCollided == true && GetComponent<IsNearEvent>().characterTag=="NPC")
         {
-            DialogueStart?.Invoke();
+            OnRightButtonPressed?.Invoke();
             Debug.Log("começar diálogo!");
         }
     }
