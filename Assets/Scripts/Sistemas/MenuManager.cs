@@ -14,11 +14,12 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject canvasPause;
     private ScenesManager sceneLoader;
 
-    //funções do menu inicial
+    //funï¿½ï¿½es do menu inicial
 
     private void Start()
     {
         sceneLoader = GameObject.FindWithTag("SceneManager").GetComponent<ScenesManager>();
+        AudioManager.instance.PlaySound("musicaMenu");
     }
    
     public void Jogar()
@@ -44,7 +45,7 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    //funções do menu de pausa ingame
+    //funï¿½ï¿½es do menu de pausa ingame
 
     public void Pausar()
     {

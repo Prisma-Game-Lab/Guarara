@@ -1598,8 +1598,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cenaInicial: InvDialogTest
+  menuPrincipal: 
   painelMenuPrincipal: {fileID: 1126411328}
   painelAjustes: {fileID: 1726337046}
+  painelPause: {fileID: 0}
+  painelConfig: {fileID: 0}
+  canvasPause: {fileID: 0}
 --- !u!1 &1162554261
 GameObject:
   m_ObjectHideFlags: 0
@@ -2552,7 +2556,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 0}
-  sounds: []
+  sounds:
+  - name: musicaMenu
+    clip: {fileID: 8300000, guid: 0222ca7970faa5c4da59622e5431f3d9, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   sfx: []
 --- !u!4 &1662754676
 Transform:
@@ -2971,8 +2984,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cenaInicial: Prototipo
+  menuPrincipal: 
   painelMenuPrincipal: {fileID: 1126411328}
   painelAjustes: {fileID: 1162554261}
+  painelPause: {fileID: 0}
+  painelConfig: {fileID: 0}
+  canvasPause: {fileID: 0}
 --- !u!4 &1842915110
 Transform:
   m_ObjectHideFlags: 0
