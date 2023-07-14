@@ -13,7 +13,6 @@ public class DialogueEvent : MonoBehaviour
         if(GetComponent<IsNearEvent>().wasCollided == true && GetComponent<IsNearEvent>().characterTag=="NPC")
         {
             OnRightButtonPressed?.Invoke();
-            Debug.Log("começar diálogo!");
         }
     }
    void Update ()
