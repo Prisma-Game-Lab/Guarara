@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5b0f5accfe38f6c44a16e8569bc3c21a
+guid: a4ca4e83db15f824b86d54deb179cc23
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,112 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Camadabaixo-bar_0
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f99936f65d60e37448ce3e1fd185ff65
-      internalID: -1255326561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Camadabaixo-bar_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3cb436e5863eaee4e8076af2b7da13dd
-      internalID: -1586828398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Camadabaixo-bar_2
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e81a074b3e25c2468b03eace2e990cc
-      internalID: -903254806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Camadabaixo-bar_3
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 892e6ccef486f8448a372372c731e11c
-      internalID: 108234939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Camadabaixo-bar_4
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 356f25df4e2c1374290294821fa09f71
-      internalID: 888012688
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Camadabaixo-bar_5
+      name: Tile set bar playteste_0
       rect:
         serializedVersion: 2
         x: 0
@@ -224,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2de1b02ad7630248ae9822ff9912c71
-      internalID: -1336026927
+      spriteID: 54cf819c0264a344ba3ace4c0a137b06
+      internalID: 1828927342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_6
+      name: Tile set bar playteste_1
       rect:
         serializedVersion: 2
         x: 32
@@ -245,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fed7aef6afa802845914a2f008183d88
-      internalID: -1616577328
+      spriteID: 91cc8025a1cdc724eb55785d40f4bb4f
+      internalID: 1353982989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_7
+      name: Tile set bar playteste_2
       rect:
         serializedVersion: 2
         x: 64
@@ -266,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84116db3857ec68459984c2b01c00ac8
-      internalID: 1879354865
+      spriteID: c809c9d4dd656c64483c739faf832c09
+      internalID: 1720240207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_8
+      name: Tile set bar playteste_3
       rect:
         serializedVersion: 2
         x: 96
@@ -287,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4482c894fd3af1141a01ac559fa5b881
-      internalID: 1429076431
+      spriteID: b5b238af64a03d14cb719c1d65d4f261
+      internalID: 820722867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_9
+      name: Tile set bar playteste_4
       rect:
         serializedVersion: 2
         x: 128
@@ -308,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fafb8b2f4d10aee4dbdaf62b80baf56f
-      internalID: -1308314890
+      spriteID: 4be2aa33299699740a268f1799708f5d
+      internalID: -632605025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_10
+      name: Tile set bar playteste_5
       rect:
         serializedVersion: 2
         x: 160
@@ -329,14 +224,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3bef3fa1fd0f1f4985b597405e1dbd5
-      internalID: -1410130845
+      spriteID: a37cfbe27d4bf8b44b9aa7683e523415
+      internalID: -777781326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_11
+      name: Tile set bar playteste_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890c68ebf68a4804380f641bec20f902
+      internalID: 103651590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile set bar playteste_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0fd1c55d33252c43ad3c430ccf1438f
+      internalID: 516001625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tile set bar playteste_8
       rect:
         serializedVersion: 2
         x: 64
@@ -350,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b90809b797739dc45b6a417fc7e8e980
-      internalID: -1976047005
+      spriteID: 29a07b8a4af9f564e9d4a8ce420d411b
+      internalID: 156544748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_12
+      name: Tile set bar playteste_9
       rect:
         serializedVersion: 2
         x: 96
@@ -371,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60e4f57425331fb43ac8769b2437d83b
-      internalID: 1103766337
+      spriteID: d9dcaa60a9eaa3f4f8c4b1e9610d6c16
+      internalID: -1363881730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_13
+      name: Tile set bar playteste_10
       rect:
         serializedVersion: 2
         x: 128
@@ -392,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c19089180e776dc4799c1151ca41e496
-      internalID: 502076451
+      spriteID: e16b2c67bf044114a894f1ae8126b16c
+      internalID: -938621265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_14
+      name: Tile set bar playteste_11
       rect:
         serializedVersion: 2
         x: 160
@@ -413,8 +350,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf4f1bb6a6faf1b4f89c0cedb913cd03
-      internalID: -1859446154
+      spriteID: 2b7d69bb69cfb5847ab1eef5e8adda36
+      internalID: 554156481
       vertices: []
       indices: 
       edges: []
@@ -430,21 +367,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Camadabaixo-bar_0: -1255326561
-      Camadabaixo-bar_1: -1586828398
-      Camadabaixo-bar_10: -1410130845
-      Camadabaixo-bar_11: -1976047005
-      Camadabaixo-bar_12: 1103766337
-      Camadabaixo-bar_13: 502076451
-      Camadabaixo-bar_14: -1859446154
-      Camadabaixo-bar_2: -903254806
-      Camadabaixo-bar_3: 108234939
-      Camadabaixo-bar_4: 888012688
-      Camadabaixo-bar_5: -1336026927
-      Camadabaixo-bar_6: -1616577328
-      Camadabaixo-bar_7: 1879354865
-      Camadabaixo-bar_8: 1429076431
-      Camadabaixo-bar_9: -1308314890
+      Tile set bar playteste_0: 1828927342
+      Tile set bar playteste_1: 1353982989
+      Tile set bar playteste_10: -938621265
+      Tile set bar playteste_11: 554156481
+      Tile set bar playteste_2: 1720240207
+      Tile set bar playteste_3: 820722867
+      Tile set bar playteste_4: -632605025
+      Tile set bar playteste_5: -777781326
+      Tile set bar playteste_6: 103651590
+      Tile set bar playteste_7: 516001625
+      Tile set bar playteste_8: 156544748
+      Tile set bar playteste_9: -1363881730
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5b0f5accfe38f6c44a16e8569bc3c21a
+guid: ae4ff37180d2d6a499752eb990b4656c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Camadabaixo-bar_0
+      name: Camadabaixo-casa_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5860bba8691107844b14c318bd716579
+      internalID: -1720536312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camadabaixo-casa_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8c13b9515de6d449a7d5d63762f45d
+      internalID: -671129218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camadabaixo-casa_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80aec121776e0c3418c3187d35a3549b
+      internalID: 1735068729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camadabaixo-casa_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9097bb7f69556841bdafe9e74d08c2d
+      internalID: -1716621485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camadabaixo-casa_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d59a37d51f5fc644a965e68071b3918
+      internalID: 2127960032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camadabaixo-casa_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294b66099ef00f247b960b5b3e517860
+      internalID: 1666572723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Camadabaixo-casa_6
       rect:
         serializedVersion: 2
         x: 32
@@ -119,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f99936f65d60e37448ce3e1fd185ff65
-      internalID: -1255326561
+      spriteID: 7545a3f15735ec84597566a659110623
+      internalID: -476578462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_1
+      name: Camadabaixo-casa_7
       rect:
         serializedVersion: 2
         x: 64
@@ -140,14 +266,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cb436e5863eaee4e8076af2b7da13dd
-      internalID: -1586828398
+      spriteID: 69f1cb6e04ec4da419cc384f1ac32532
+      internalID: -1426689334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_2
+      name: Camadabaixo-casa_8
       rect:
         serializedVersion: 2
         x: 96
@@ -161,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e81a074b3e25c2468b03eace2e990cc
-      internalID: -903254806
+      spriteID: 3a218a42ce982e043826a3979338aa4a
+      internalID: 144808965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_3
+      name: Camadabaixo-casa_9
       rect:
         serializedVersion: 2
         x: 128
@@ -182,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 892e6ccef486f8448a372372c731e11c
-      internalID: 108234939
+      spriteID: 3553a89aa9249ca449551046daa24abd
+      internalID: 569175956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_4
+      name: Camadabaixo-casa_10
       rect:
         serializedVersion: 2
         x: 160
@@ -203,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 356f25df4e2c1374290294821fa09f71
-      internalID: 888012688
+      spriteID: 453022ed59a45f84e93ee1d9cb36d8a9
+      internalID: -602558309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_5
+      name: Camadabaixo-casa_11
       rect:
         serializedVersion: 2
         x: 0
@@ -224,77 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2de1b02ad7630248ae9822ff9912c71
-      internalID: -1336026927
+      spriteID: d1adc91158d3163438dd845e2f181735
+      internalID: -276811023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_6
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fed7aef6afa802845914a2f008183d88
-      internalID: -1616577328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Camadabaixo-bar_7
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84116db3857ec68459984c2b01c00ac8
-      internalID: 1879354865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Camadabaixo-bar_8
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4482c894fd3af1141a01ac559fa5b881
-      internalID: 1429076431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Camadabaixo-bar_9
+      name: Camadabaixo-casa_12
       rect:
         serializedVersion: 2
         x: 128
@@ -308,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fafb8b2f4d10aee4dbdaf62b80baf56f
-      internalID: -1308314890
+      spriteID: ef9901d804a1eb64bbd4b121e0d9b134
+      internalID: 971353951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_10
+      name: Camadabaixo-casa_13
       rect:
         serializedVersion: 2
         x: 160
@@ -329,17 +392,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3bef3fa1fd0f1f4985b597405e1dbd5
-      internalID: -1410130845
+      spriteID: 7b2c14a27af85914ca4fe4bd0466ce44
+      internalID: 1072786896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_11
+      name: Camadabaixo-casa_14
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 0
         width: 32
         height: 32
@@ -350,14 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b90809b797739dc45b6a417fc7e8e980
-      internalID: -1976047005
+      spriteID: a8052b59aeabfe14e8928a0af420fee4
+      internalID: -1481876287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_12
+      name: Camadabaixo-casa_15
       rect:
         serializedVersion: 2
         x: 96
@@ -371,14 +434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60e4f57425331fb43ac8769b2437d83b
-      internalID: 1103766337
+      spriteID: 586b5a9b399284640ac121ce115daaa7
+      internalID: 2052478099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Camadabaixo-bar_13
+      name: Camadabaixo-casa_16
       rect:
         serializedVersion: 2
         x: 128
@@ -392,29 +455,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c19089180e776dc4799c1151ca41e496
-      internalID: 502076451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Camadabaixo-bar_14
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf4f1bb6a6faf1b4f89c0cedb913cd03
-      internalID: -1859446154
+      spriteID: a62c52d6eb53f784b9a1c8dab7619090
+      internalID: 650434480
       vertices: []
       indices: 
       edges: []
@@ -430,21 +472,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Camadabaixo-bar_0: -1255326561
-      Camadabaixo-bar_1: -1586828398
-      Camadabaixo-bar_10: -1410130845
-      Camadabaixo-bar_11: -1976047005
-      Camadabaixo-bar_12: 1103766337
-      Camadabaixo-bar_13: 502076451
-      Camadabaixo-bar_14: -1859446154
-      Camadabaixo-bar_2: -903254806
-      Camadabaixo-bar_3: 108234939
-      Camadabaixo-bar_4: 888012688
-      Camadabaixo-bar_5: -1336026927
-      Camadabaixo-bar_6: -1616577328
-      Camadabaixo-bar_7: 1879354865
-      Camadabaixo-bar_8: 1429076431
-      Camadabaixo-bar_9: -1308314890
+      Camadabaixo-casa_0: -1720536312
+      Camadabaixo-casa_1: -671129218
+      Camadabaixo-casa_10: -602558309
+      Camadabaixo-casa_11: -276811023
+      Camadabaixo-casa_12: 971353951
+      Camadabaixo-casa_13: 1072786896
+      Camadabaixo-casa_14: -1481876287
+      Camadabaixo-casa_15: 2052478099
+      Camadabaixo-casa_16: 650434480
+      Camadabaixo-casa_2: 1735068729
+      Camadabaixo-casa_3: -1716621485
+      Camadabaixo-casa_4: 2127960032
+      Camadabaixo-casa_5: 1666572723
+      Camadabaixo-casa_6: -476578462
+      Camadabaixo-casa_7: -1426689334
+      Camadabaixo-casa_8: 144808965
+      Camadabaixo-casa_9: 569175956
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
