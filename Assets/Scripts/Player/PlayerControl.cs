@@ -30,8 +30,11 @@ public class PlayerControl : MonoBehaviour
     {
         input = new PlayerInput();
         rb = GetComponent<Rigidbody2D>();
-        // inventory = GameObject.Find("Canvas").transform.GetChild(0).transform.GetChild(0).GetComponent<Inventory>();
-        transform.position = playerPositionOnLoad.playerPosition;
+        inventory = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Inventory>();
+        if (this.gameObject.name == "Player")
+        {
+            transform.position = playerPositionOnLoad.playerPosition;
+        }
 
         if (GetComponent<Animator>() != null)
         {
