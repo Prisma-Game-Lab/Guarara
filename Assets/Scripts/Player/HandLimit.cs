@@ -27,4 +27,8 @@ public class HandLimit : MonoBehaviour
             transform.localPosition = new Vector3(transform.localPosition.x, -maxYMovement, transform.localPosition.z);
         }
     }
+    private void OnEnable()
+    {
+        transform.position = Vector3.zero;
+    }
 }
