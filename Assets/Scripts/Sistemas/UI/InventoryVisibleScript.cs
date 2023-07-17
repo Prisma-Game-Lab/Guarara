@@ -11,26 +11,22 @@ public class InventoryVisibleScript : MonoBehaviour
     private Transform contentPanel;
     [SerializeField]
     private InventoryItems scriptObj;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
     {
         ListItems();
     }
-
-    public void AddItem(Item item)
+    // faz o L
+    public void Show()
     {
-        scriptObj.list.Add(item);
+        gameObject.SetActive(true);
     }
 
-    public void RemoveItem(Item item)
+    // desfaz o L
+    public void Hide()
     {
-        scriptObj.list.Remove(item);
+        gameObject.SetActive(false);
     }
 
     // mostra os itens em cada slot

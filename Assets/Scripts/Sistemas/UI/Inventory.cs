@@ -15,6 +15,17 @@ public class Inventory : MonoBehaviour
 
     [SerializeField]
     private InventoryItems scriptObj;
+    private List<Transform> inventorySlots = new List<Transform>();
+    private Transform content;
+    private void Awake()
+    {
+        // pega todos os slots do inventário e coloca em uma lista
+        content = this.transform.GetChild(0).transform.GetChild(0).transform;
+        foreach (Transform child in content)
+        {
+            inventorySlots.Add(child);
+        }
+    }
 
     private void Update()
     {
@@ -40,13 +51,10 @@ public class Inventory : MonoBehaviour
         foreach (var item in scriptObj.list)
         {
             Image itemIcon = contentPanel.GetChild(index).transform.Find("ItemIcon").GetComponent<Image>();
-            Text itemName = contentPanel.GetChild(index).transform.Find("ItemName").GetComponent<Text>();
 
             itemIcon.enabled = true;
-            // itemName.enabled = true;
 
             itemIcon.sprite = item.itemIcon;
-            // itemName.text = item.itemName;
             index++;
         }
     }
@@ -55,10 +63,10 @@ public class Inventory : MonoBehaviour
     private void ShowDescription()
     {
         GameObject selected = EventSystem.current.currentSelectedGameObject;
-        int index = int.Parse(selected.name[selected.name.Length - 1].ToString());
+        int index = inventorySlots.IndexOf(selected.transform);
         if (index < scriptObj.list.Count)
         {
-            descriptionPanel.text = scriptObj.list[int.Parse(selected.name[selected.name.Length - 1].ToString())].itemDescription;
+            descriptionPanel.text = scriptObj.list[index].itemDescription;
         }
         else
         {

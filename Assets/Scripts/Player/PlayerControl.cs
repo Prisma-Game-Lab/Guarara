@@ -15,6 +15,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     private float speed = 5f;
     private Inventory inventory;
+    private InventoryVisibleScript inventoryVisible;
     private Rigidbody2D rb;
     private Vector2 movement;
     private Animator animator;
@@ -31,6 +32,7 @@ public class PlayerControl : MonoBehaviour
         input = new PlayerInput();
         rb = GetComponent<Rigidbody2D>();
         inventory = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Inventory>();
+        inventoryVisible = GameObject.Find("Canvas").transform.GetChild(1).GetComponent<InventoryVisibleScript>();
         if (this.gameObject.name == "Player")
         {
             transform.position = playerPositionOnLoad.playerPosition;
@@ -69,7 +71,7 @@ public class PlayerControl : MonoBehaviour
     public void Movement(InputAction.CallbackContext context)
     {
         // só movimenta se não estiver no inventário
-        if (!analisando)
+        if (!analisando && !inventory.isActiveAndEnabled)
         {
             movement = context.ReadValue<Vector2>();
 
@@ -142,10 +144,12 @@ public class PlayerControl : MonoBehaviour
             if (inventory.isActiveAndEnabled)
             {
                 inventory.Hide();
+                inventoryVisible.Show();
             }
             else
             {
                 inventory.Show();
+                inventoryVisible.Hide();
                 inventory.ListItems();
             }
         }
