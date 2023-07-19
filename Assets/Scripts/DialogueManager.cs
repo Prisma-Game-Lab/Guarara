@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -9,8 +10,11 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
     public GameObject dialogueBox;
     public GameObject continueButton;
+    public Image defaultImage;
+    private int index;
 
     public Queue<string> sentences;
+    private Conversation currentConversation;
     
     void Start()
     {
@@ -18,12 +22,9 @@ public class DialogueManager : MonoBehaviour
     }
 
    public void StartDialogue (Dialogue dialogue)
-   {
-        dialogueBox.SetActive(true);
-        continueButton.SetActive(true);     
-
-        Debug.Log("Começando diálogo com "+ dialogue.name);
+   {     
         nameText.text = dialogue.name;
+        defaultImage.sprite = dialogue.charProfile;
 
         sentences.Clear();
 
@@ -36,9 +37,10 @@ public class DialogueManager : MonoBehaviour
    }
    public void DisplayNextSentence ()
    {
+        
         if(sentences.Count == 0)
         {
-            EndDialogue();
+            NextDialogue();
             return;
         }
         string sentence = sentences.Dequeue();
@@ -46,11 +48,31 @@ public class DialogueManager : MonoBehaviour
         Debug.Log(sentence);
 
    }
-   void EndDialogue ()
+   void EndConversation ()
    {
-        Debug.Log("Fim do diálogo!");
         continueButton.SetActive(false);
         dialogueBox.SetActive(false);   
    }
+
+   public void StartConversation (Conversation conversation)
+   {
+        index = 0;
+        currentConversation = conversation;
+        dialogueBox.SetActive(true);
+        continueButton.SetActive(true);
+        StartDialogue(currentConversation.GetDialogueByIndex(index));
+        index++;
+   }
+   private void NextDialogue ()
+   {
+        if(index < currentConversation.GetDialogues().Length)
+        {
+            StartDialogue(currentConversation.GetDialogueByIndex(index));
+            index++;
+            return;
+        }
+        EndConversation();
+   }
+
  
 }
