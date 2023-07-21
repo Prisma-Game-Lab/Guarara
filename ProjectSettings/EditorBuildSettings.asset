@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/cenasJogo/Escritorio.unity
     guid: f9838d50e4014c5499a638dbe10b980a
+  - enabled: 1
+    path: Assets/Scenes/cenasJogo/Cozinha.unity
+    guid: 6a2002413679a31409452a0d7a68c123
   m_configObjects: {}
