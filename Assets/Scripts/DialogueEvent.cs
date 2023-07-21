@@ -2,25 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
+
 
 public class DialogueEvent : MonoBehaviour
 {
-   public UnityEvent OnRightButtonPressed;
-   
+   public UnityEvent OnEKeyPressed;
+   public InputActionAsset action;
+   private InputAction interactionAction;
 
    public void StartConversation ()
     {
         if(GetComponent<IsNearEvent>().wasCollided == true && GetComponent<IsNearEvent>().characterTag=="NPC")
         {
-            OnRightButtonPressed?.Invoke();
+            OnEKeyPressed?.Invoke();
         }
     }
-   void Update ()
+   private void OnEPressed(InputAction.CallbackContext context)
+   {
+        StartConversation();
+   }
+   /* void Update ()
     {
         if(Input.GetMouseButtonDown(1))
         {
             StartConversation();    
         }
-    }
-
+    } */
+   void Awake()
+   {
+        action.FindActionMap("Player").FindAction("Interact").performed += OnEPressed;
+   }
 }
