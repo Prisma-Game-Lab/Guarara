@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class MenuManager : MonoBehaviour
@@ -19,7 +20,10 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         sceneLoader = GameObject.FindWithTag("SceneManager").GetComponent<ScenesManager>();
-        AudioManager.instance.PlaySound("musicaMenu");
+        if(SceneManager.GetActiveScene().name == "Menu")
+        {
+            AudioManager.instance.PlaySound("musicaMenu");
+        }
     }
    
     public void Jogar()
