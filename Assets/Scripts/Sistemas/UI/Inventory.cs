@@ -36,6 +36,7 @@ public class Inventory : MonoBehaviour
     public void Show()
     {
         gameObject.SetActive(true);
+        AudioManager.instance.PlaySfx("maleta");
     }
 
     // desfaz o L
