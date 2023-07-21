@@ -13,13 +13,48 @@ MonoBehaviour:
   m_Name: Conversa
   m_EditorClassIdentifier: 
   dialogues:
-  - name: Mico Manuel
+  - name: ???
     charProfile: {fileID: 21300000, guid: 3c0112ee663031d47833574a6ff5dc1c, type: 3}
     sentences:
-    - "Bom dia, Detetive Guaran\xE1!"
-    - Quem bom que chegou!
-    - "O bar est\xE1 uma confus\xE3o por causa do roubo"
+    - "Boa tarde Chefia! Primeira vez no Bar Guaran\xE1?"
+    - "Se quiser recomenda\xE7\xF5es de pratos, sugiro come\xE7ar com nosso delicioso
+      a\xE7a\xED de guaran\xE1! Hahaha!"
   - name: "Detetive Guar\xE1"
     charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
     sentences:
-    - "Tem raz\xE3o"
+    - "Boa tarde. Voc\xEA \xE9 o Manoel, gerente do bar, certo? "
+    - "N\xE3o vim como cliente, a Sra. M\xE1rcia me contratou para solucionar o incidente
+      que ocorreu na sexta passada."
+  - name: Mico Manoel
+    charProfile: {fileID: 21300000, guid: 3c0112ee663031d47833574a6ff5dc1c, type: 3}
+    sentences:
+    - Vixe.
+    - "Se o senhor j\xE1 sabe at\xE9 o meu nome a coisa t\xE1 feia.. "
+    - "Mas c\xEA parece ser bom mesmo, a dona disse que foi voc\xEA quem resolveu
+      o caso da padaria do Jo\xE3o e achou o Boi Verde. Deve ser de confian\xE7a."
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Pode ter certeza de que o caso est\xE1 em \xF3timas patas."
+    - ...
+    - "O bar n\xE3o deveria estar fechado?"
+  - name: Mico Manoel
+    charProfile: {fileID: 21300000, guid: 3c0112ee663031d47833574a6ff5dc1c, type: 3}
+    sentences:
+    - "Sim, realmente. Mas a dona M\xE1rcia preferiu n\xE3o interromper o com\xE9rcio
+      pra n\xE3o piorar mais a situa\xE7\xE3o financeira... sabe com\xE9 n\xE9?"
+    - "Por si s\xF3 o movimento foi diminuindo, n\xF3s reduzimo a quantidade de funcion\xE1rio
+      tamb\xE9m, at\xE9 as coisa se acertar pelo menos."
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - Entendo.
+    - "Preciso seguir com a investiga\xE7\xE3o. Voc\xEA sabe onde est\xE1 a chave
+      para a casa?"
+  - name: Mico Manoel
+    charProfile: {fileID: 21300000, guid: 3c0112ee663031d47833574a6ff5dc1c, type: 3}
+    sentences:
+    - Ih, bem que a patroa mencionou a chave.. mas eu acabei perdendo em algum lugar
+      do bar...
+    - "Mas tenho certeza de que c\xEA acha! J\xE1 que voc\xEA \xE9 t\xE3o bom nisso,
+      vou deixar esse desafio pra voc\xEA! Hahaha!"
