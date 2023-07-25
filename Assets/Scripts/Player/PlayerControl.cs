@@ -31,8 +31,8 @@ public class PlayerControl : MonoBehaviour
     {
         input = new PlayerInput();
         rb = GetComponent<Rigidbody2D>();
-        inventory = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Inventory>();
-        inventoryVisible = GameObject.Find("Canvas").transform.GetChild(1).GetComponent<InventoryVisibleScript>();
+        inventory = GameObject.Find("InventoryCanvas").transform.GetChild(0).GetComponent<Inventory>();
+        inventoryVisible = GameObject.Find("InventoryCanvas").transform.GetChild(1).GetComponent<InventoryVisibleScript>();
         if (this.gameObject.name == "Player")
         {
             transform.position = playerPositionOnLoad.playerPosition;
