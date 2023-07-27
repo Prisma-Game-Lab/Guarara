@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 7e7c917ce2da26b459ea2533649a894e
   - enabled: 1
+    path: Assets/Scenes/cenasJogo/Tutorial.unity
+    guid: 9cda34a52703541489d17379d002ab06
+  - enabled: 1
     path: Assets/Scenes/cenasJogo/Bar.unity
     guid: 72a905a5eeeeedc43b999ebd06749812
   - enabled: 1
