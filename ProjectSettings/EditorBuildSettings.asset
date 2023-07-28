@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/cenasJogo/Sala.unity
     guid: c08d168a81bfe0144a9518b3ea8461a0
   - enabled: 1
+    path: Assets/Scenes/cenasJogo/Quarto.unity
+    guid: ba23c089763260244aa3d39a69f0eda1
+  - enabled: 1
     path: Assets/Scenes/cenasJogo/Escritorio.unity
     guid: f9838d50e4014c5499a638dbe10b980a
   - enabled: 1
