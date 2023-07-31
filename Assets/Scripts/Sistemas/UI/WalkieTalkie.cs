@@ -14,7 +14,7 @@ public class WalkieTalkie : MonoBehaviour
         }
         else
         {
-            //o que for necessário para o diálogo aparecer
+            //o que for necessário para o diálogo que nega a ação aparecer
         }
    }
 }
