@@ -20,7 +20,7 @@ public class DoorScript : MonoBehaviour
     // troca de cena quando o jogador passa por uma porta
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.name == "Player")
         {
             sceneLoader.GoToScene(nextSceneName);
             playerPosition.playerPosition = nextPlayerPosition;

@@ -28,9 +28,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4087267149123557435}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.4, y: -1.11, z: 0}
-  m_LocalScale: {x: 1.5495496, y: 1.5495496, z: 1.5495496}
+  m_LocalScale: {x: 1.0997614, y: 0.95164675, z: 1.3959905}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.21026194, y: -0.37146306}
+  m_Offset: {x: -0.013773888, y: 0.015890822}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -112,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43930113, y: 0.42528355}
+  m_Size: {x: 0.83227724, y: 0.61228216}
   m_EdgeRadius: 0
 --- !u!114 &4087267149123557432
 MonoBehaviour:
@@ -128,7 +128,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 7f6b4e30c76db184694b4dea94660c81, type: 2}
   inventoryScriptObj: {fileID: 11400000, guid: ec945ca77ecbe9947b2e6771b38b32e1, type: 2}
-  popUp: {fileID: 2219866467371073336, guid: 4ed9570d915cfa341b58ed03882aa556, type: 3}
 --- !u!114 &6165466024887844072
 MonoBehaviour:
   m_ObjectHideFlags: 0

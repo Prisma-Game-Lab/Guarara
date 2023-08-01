@@ -15,14 +15,14 @@ public class DialogueManager : MonoBehaviour
 
     public Queue<string> sentences;
     private Conversation currentConversation;
-    
+
     void Start()
     {
         sentences = new Queue<string>();
     }
 
-   public void StartDialogue (Dialogue dialogue)
-   {     
+    public void StartDialogue(Dialogue dialogue)
+    {
         nameText.text = dialogue.name;
         defaultImage.sprite = dialogue.charProfile;
 
@@ -34,11 +34,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         DisplayNextSentence();
-   }
-   public void DisplayNextSentence ()
-   {
-        
-        if(sentences.Count == 0)
+    }
+    public void DisplayNextSentence()
+    {
+
+        if (sentences.Count == 0)
         {
             NextDialogue();
             return;
@@ -47,32 +47,32 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = sentence;
         Debug.Log(sentence);
 
-   }
-   void EndConversation ()
-   {
+    }
+    public void EndConversation()
+    {
         continueButton.SetActive(false);
-        dialogueBox.SetActive(false);   
-   }
+        dialogueBox.SetActive(false);
+    }
 
-   public void StartConversation (Conversation conversation)
-   {
+    public void StartConversation(Conversation conversation)
+    {
         index = 0;
         currentConversation = conversation;
         dialogueBox.SetActive(true);
         continueButton.SetActive(true);
         StartDialogue(currentConversation.GetDialogueByIndex(index));
         index++;
-   }
-   private void NextDialogue ()
-   {
-        if(index < currentConversation.GetDialogues().Length)
+    }
+    private void NextDialogue()
+    {
+        if (index < currentConversation.GetDialogues().Length)
         {
             StartDialogue(currentConversation.GetDialogueByIndex(index));
             index++;
             return;
         }
         EndConversation();
-   }
+    }
 
- 
+
 }
