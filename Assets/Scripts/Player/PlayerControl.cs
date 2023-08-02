@@ -126,8 +126,8 @@ public class PlayerControl : MonoBehaviour
     {
         if (other.gameObject.tag == "Interagivel")
         {
+            Debug.Log(other.gameObject.tag);
             isEPressed = input.Player.Interact.ReadValue<float>() > 0.1f;
-            Debug.Log("encostando no item");
             if (isEPressed)
             {
                 if (other.gameObject.TryGetComponent(out IInteractable interactObj))
