@@ -8,7 +8,6 @@ public class IsNearEvent : MonoBehaviour
     public UnityEvent NearNPC;
     public bool wasCollided = false;
     public string characterTag;
-    [SerializeField]
     private ItemScript scriptItem;
 
     private void Awake()

@@ -45,7 +45,7 @@ public class DialogueManager : MonoBehaviour
         }
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
-        Debug.Log(sentence);
+        // Debug.Log(sentence);
 
     }
     public void EndConversation()
