@@ -59,6 +59,7 @@ public class MenuManager : MonoBehaviour
 
     public void MenuPrincipal()
     {
+        Time.timeScale = 1; //coloquei isso aqui pra consertar o bug de nao ir ao menu princial na cena Bar, n sei se isso eh o ideal
         sceneLoader.GoToScene(menuPrincipal);
     }
 
