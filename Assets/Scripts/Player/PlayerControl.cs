@@ -16,6 +16,8 @@ public class PlayerControl : MonoBehaviour
     private float speed = 5f;
     private Inventory inventory;
     private InventoryVisibleScript inventoryVisible;
+    private bool canPass = true;
+    private GameObject dialogueBox;
     private Rigidbody2D rb;
     private Vector2 movement;
     private Animator animator;
@@ -33,6 +35,7 @@ public class PlayerControl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         inventory = GameObject.Find("InventoryCanvas").transform.GetChild(0).GetComponent<Inventory>();
         inventoryVisible = GameObject.Find("InventoryCanvas").transform.GetChild(1).GetComponent<InventoryVisibleScript>();
+        dialogueBox = GameObject.Find("DialogueCanvas").transform.GetChild(0).gameObject;
         if (this.gameObject.name == "Player")
         {
             transform.position = playerPositionOnLoad.playerPosition;
@@ -55,6 +58,7 @@ public class PlayerControl : MonoBehaviour
             input.Player.Enable();
             input.Hand.Disable();
         }
+        PassNextSentence();
     }
 
     private void OnEnable()
@@ -71,7 +75,7 @@ public class PlayerControl : MonoBehaviour
     public void Movement(InputAction.CallbackContext context)
     {
         // só movimenta se não estiver no inventário
-        if (!analisando && !inventory.isActiveAndEnabled)
+        if (!analisando && !inventory.isActiveAndEnabled && !dialogueBox.activeInHierarchy)
         {
             movement = context.ReadValue<Vector2>();
 
@@ -124,9 +128,8 @@ public class PlayerControl : MonoBehaviour
     // checa se o jogador tá encostando em um objeto interagivel e se ele vai apertar a tecla de interação
     public void OnCollisionStay2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Interagivel")
+        if (other.gameObject.tag == "Interagivel" || other.gameObject.tag == "NPC")
         {
-            Debug.Log(other.gameObject.tag);
             isEPressed = input.Player.Interact.ReadValue<float>() > 0.1f;
             if (isEPressed)
             {
@@ -134,6 +137,22 @@ public class PlayerControl : MonoBehaviour
                 {
                     interactObj.Interact();
                 }
+            }
+        }
+    }
+    private void PassNextSentence()
+    {
+        if (dialogueBox.activeInHierarchy)
+        {
+            isEPressed = input.Player.Interact.ReadValue<float>() > 0.1f;
+            if (isEPressed && canPass)
+            {
+                dialogueBox.GetComponent<NextSentence>().Interact();
+                canPass = false;
+            }
+            if (!isEPressed)
+            {
+                canPass = true;
             }
         }
     }
