@@ -29,6 +29,7 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
+        ListItems();
         ShowDescription();
     }
 
