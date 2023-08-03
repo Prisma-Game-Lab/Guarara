@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] public string menuPrincipal;
     [SerializeField] private GameObject painelMenuPrincipal;
     [SerializeField] private GameObject painelAjustes;
+    [SerializeField] private GameObject painelCreditos;
     [SerializeField] private GameObject painelPause;
     [SerializeField] private GameObject painelConfig;
     [SerializeField] private GameObject canvasPause;
@@ -40,6 +41,18 @@ public class MenuManager : MonoBehaviour
     public void FecharAJustes()
     {
         painelAjustes.SetActive(false);
+        painelMenuPrincipal.SetActive(true);
+    }
+
+    public void AbrirCreditos()
+    {
+        painelMenuPrincipal.SetActive(false);
+        painelCreditos.SetActive(true);
+    }
+
+    public void FecharCreditos()
+    {
+        painelCreditos.SetActive(false);
         painelMenuPrincipal.SetActive(true);
     }
 
