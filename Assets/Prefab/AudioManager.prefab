@@ -56,7 +56,88 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   sfx:
-  - name: botao
+  - name: caderno
+    clip: {fileID: 8300000, guid: 5447ee6cb4021d146a10bff535aded7c, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: cadernoAdd
+    clip: {fileID: 8300000, guid: 076444092c570494a9a364e183a30792, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: cadernoPagina
+    clip: {fileID: 8300000, guid: 5f815d0f04fac7d4389a0a04b83c675a, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: dialogoA
+    clip: {fileID: 8300000, guid: a9e376e5f35f5a74d9c0504c741532db, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: dialogoB
+    clip: {fileID: 8300000, guid: 8de342685421e954ea577c178d68baac, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: item
+    clip: {fileID: 8300000, guid: 6644c7df0d1cbd34297c001839880b99, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: maleta
+    clip: {fileID: 8300000, guid: e35cd11557d6bb34ea0b41b47269eade, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: passoDir
+    clip: {fileID: 8300000, guid: b9896ec0de86ee244a3697b36129890e, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: passoEsq
+    clip: {fileID: 8300000, guid: c9b6345a4cdcea34080d80cdce27a1c9, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: botaoA
     clip: {fileID: 8300000, guid: 8cc7d5b0657649c4c8b9e39cc17ce7f2, type: 3}
     volume: 1
     volumeVariance: 0
@@ -65,7 +146,7 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: botao2
+  - name: botaoB
     clip: {fileID: 8300000, guid: 8b88c4fca99b1fe47b82c389b7ed8893, type: 3}
     volume: 1
     volumeVariance: 0
@@ -83,17 +164,8 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: chave
-    clip: {fileID: 8300000, guid: 6644c7df0d1cbd34297c001839880b99, type: 3}
-    volume: 1
-    volumeVariance: 0
-    pitch: 0
-    pitchVariance: 0
-    loop: 0
-    mixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: maleta
-    clip: {fileID: 8300000, guid: fb27dcd5d71c9a44985b0707a9db8693, type: 3}
+  - name: walkieTalkie
+    clip: {fileID: 8300000, guid: bbe654936df9e3f4492267307fa44d28, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 0
