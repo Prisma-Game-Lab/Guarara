@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DiaryManager : MonoBehaviour
 {
-    [SerializeField] private GameObject[] pagesRight;
-    [SerializeField] private GameObject[] pagesLeft;
+    [SerializeField] public GameObject[] pagesRight;
+    [SerializeField] public GameObject[] pagesLeft;
     private int currentPageRight;
     private int currentPageLeft;
 
