@@ -5,32 +5,27 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 
-public class DialogueEvent : MonoBehaviour, IInteractable
+public class DialogueEvent : MonoBehaviour
 {
-    public UnityEvent OnEKeyPressed;
-    public InputActionAsset action;
-    private InputAction interactionAction;
+   public UnityEvent OnEKeyPressed;
+   public InputActionAsset action;
+   private InputAction interactionAction;
 
-    public void StartConversation()
+   public void StartConversation ()
     {
-        if (GetComponent<IsNearEvent>().wasCollided == true && GetComponent<IsNearEvent>().characterTag == "Player")
+        if(GetComponent<IsNearEvent>().wasCollided == true && GetComponent<IsNearEvent>().characterTag=="NPC")
         {
             OnEKeyPressed?.Invoke();
         }
     }
-    public void Interact()
-    {
+   private void OnEPressed(InputAction.CallbackContext context)
+   {
         StartConversation();
-    }
-    /* void Update ()
-     {
-         if(Input.GetMouseButtonDown(1))
-         {
-             StartConversation();    
-         }
-     } */
-    //    void Awake()
-    //    {
-    //         action.FindActionMap("Player").FindAction("Interact").performed += OnEPressed;
-    //    }
+   }
+
+   void Awake()
+   {
+        action.FindActionMap("Player").FindAction("Interact").performed += OnEPressed;
+        
+   }
 }

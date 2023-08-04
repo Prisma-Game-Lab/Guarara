@@ -1795,19 +1795,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 463696593}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1575066219}
-        m_TargetAssemblyTypeName: DiaryManager, Assembly-CSharp
-        m_MethodName: OnClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &463696593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2602,6 +2590,7 @@ MonoBehaviour:
   menuPrincipal: Menu
   painelMenuPrincipal: {fileID: 0}
   painelAjustes: {fileID: 0}
+  painelCreditos: {fileID: 0}
   painelPause: {fileID: 1102203439}
   painelConfig: {fileID: 167670622}
   canvasPause: {fileID: 1575325181}
@@ -5105,6 +5094,7 @@ MonoBehaviour:
   menuPrincipal: Menu
   painelMenuPrincipal: {fileID: 0}
   painelAjustes: {fileID: 0}
+  painelCreditos: {fileID: 0}
   painelPause: {fileID: 1102203439}
   painelConfig: {fileID: 167670622}
   canvasPause: {fileID: 0}
@@ -8882,6 +8872,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98187dddbec4ded448fecf0eec527e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1575066219}
+        m_TargetAssemblyTypeName: DiaryManager, Assembly-CSharp
+        m_MethodName: ActiveDiary
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  action2: {fileID: -944628639613478452, guid: 8a4ccf91140767040a623567ff0f9041, type: 3}
   pagesRight:
   - {fileID: 2086889837}
   - {fileID: 2086889837}

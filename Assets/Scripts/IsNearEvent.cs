@@ -22,7 +22,7 @@ public class IsNearEvent : MonoBehaviour
             NearNPC?.Invoke();
             wasCollided = true;
         }
-        characterTag = collision.gameObject.tag;
+        characterTag = gameObject.tag;
     }
     public void OnCollisionExit2D(Collision2D collision)
     {

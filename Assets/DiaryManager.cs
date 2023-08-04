@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class DiaryManager : MonoBehaviour
 {
+    public UnityEvent QPressed;
+    private InputAction interactionAction;
+    public InputActionAsset action2;
     [SerializeField] public GameObject[] pagesRight;
     [SerializeField] public GameObject[] pagesLeft;
     private int currentPageRight;
@@ -13,7 +18,7 @@ public class DiaryManager : MonoBehaviour
     public GameObject setButton2;
     private bool wasClicked = false;
     
-    public void OnClick () //Essa funcao vai ficar no evento OnClick do inspector do botao que e o diario
+    public void ActiveDiary () //Essa funcao vai ficar no evento OnClick do inspector do botao que e o diario
     {
         if (wasClicked==false)              //O diário é ativado e desativado no mesmo botão
         {
@@ -38,7 +43,15 @@ public class DiaryManager : MonoBehaviour
         
         
     }
+    public void OnQPressed (InputAction.CallbackContext context)
+    {
+        QPressed?.Invoke();
+    }
 
+    void Awake ()
+    {
+        action2.FindActionMap("Player").FindAction("Interact").performed += OnQPressed;
+    }
 	private void SetPageRight(int pageRight) 
 	{
 		pagesRight[currentPageRight].SetActive(false);
