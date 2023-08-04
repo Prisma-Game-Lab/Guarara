@@ -34,26 +34,26 @@ public class MenuManager : MonoBehaviour
 
     public void AbrirAjustes()
     {
-        painelMenuPrincipal.SetActive(false);
+        //painelMenuPrincipal.SetActive(false);
         painelAjustes.SetActive(true);
     }
 
     public void FecharAJustes()
     {
         painelAjustes.SetActive(false);
-        painelMenuPrincipal.SetActive(true);
+        //painelMenuPrincipal.SetActive(true);
     }
 
     public void AbrirCreditos()
     {
-        painelMenuPrincipal.SetActive(false);
+        //painelMenuPrincipal.SetActive(false);
         painelCreditos.SetActive(true);
     }
 
     public void FecharCreditos()
     {
         painelCreditos.SetActive(false);
-        painelMenuPrincipal.SetActive(true);
+        //painelMenuPrincipal.SetActive(true);
     }
 
     public void SairJogo()
