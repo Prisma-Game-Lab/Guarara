@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/LogoPrisma.unity
+    guid: 6ffbc6c0f8815f7419ff809ff86c87e6
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 7e7c917ce2da26b459ea2533649a894e
   - enabled: 1
