@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 8929638321133130857}
   - component: {fileID: 8929638321133130855}
   - component: {fileID: 8929638321133130856}
+  - component: {fileID: 1795103183}
+  - component: {fileID: 1795103190}
   m_Layer: 0
   m_Name: Mico Golden Lion
   m_TagString: NPC
@@ -190,7 +192,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4296aabac4f0ad641964747ce7827c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: {fileID: 0}
+  characterDialogues: {fileID: 11400000, guid: cda27d11e7f092b47bbf6561d9c8f5ea, type: 2}
+  isAutomatic: 0
+  isFirstTime: 1
 --- !u!114 &8929638321133130856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 493a06bfa3baa5942aa4f920a6a08757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnRightButtonPressed:
+  OnEKeyPressed:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8929638321133130855}
@@ -218,6 +222,52 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  action: {fileID: -944628639613478452, guid: 8a4ccf91140767040a623567ff0f9041, type: 3}
+--- !u!114 &1795103183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8929638321133130863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eaa701ad082f304da3ac236020bdc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DiaryEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1795103183}
+        m_TargetAssemblyTypeName: UpdateDiary, Assembly-CSharp
+        m_MethodName: OnUpdateDiary
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  NecessaryItems:
+  - {fileID: 0}
+  isEqual: 0
+  folha: {fileID: 0}
+  indexNecessaItems: 0
+--- !u!114 &1795103190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8929638321133130863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77622743123f1114b9795e9a9b8e7c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
 --- !u!1001 &8929638321140189822
 PrefabInstance:
   m_ObjectHideFlags: 0

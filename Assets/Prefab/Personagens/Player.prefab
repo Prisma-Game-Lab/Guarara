@@ -123,7 +123,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &6485678154335080464
 CapsuleCollider2D:
@@ -218,7 +218,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6485678154335080466}
         m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: Pause
+        m_MethodName: OpenDiary
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -258,6 +258,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ed7d97e2-33f2-4d76-b05d-5b5d57bd14bc
     m_ActionName: Hand/Escape[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6485678154335080466}
+        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
+        m_MethodName: OpenDiary
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e575caab-2126-4f52-83b9-7aa879f0069b
+    m_ActionName: Player/Open Diary[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
