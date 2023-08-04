@@ -16,5 +16,7 @@ public class WalkieTalkie : MonoBehaviour
         {
             //o que for necessário para o diálogo que nega a ação aparecer
         }
+
+        AudioManager.instance.PlaySfx("walkieTalkie");
    }
 }

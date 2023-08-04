@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AudioConfig : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class AudioConfig : MonoBehaviour
 
         firstPlayInt = PlayerPrefs.GetInt(firstPlay);
 
+        if (SceneManager.GetActiveScene().name == "Menu")
+            firstPlayInt = 0;
+
         if (firstPlayInt == 0)
         {
             volumeFloat = 0.5f;
@@ -28,7 +32,7 @@ public class AudioConfig : MonoBehaviour
             PlayerPrefs.SetFloat(volumePref, volumeFloat);
 
             sfxFloat = 0.5f;
-            sfxSlider.value = volumeFloat;
+            sfxSlider.value = sfxFloat;
             PlayerPrefs.SetFloat(sfxPref, sfxFloat);
 
             PlayerPrefs.SetInt(firstPlay, -1);
@@ -37,6 +41,7 @@ public class AudioConfig : MonoBehaviour
         else
         {
             volumeFloat = PlayerPrefs.GetFloat(volumePref);
+            Debug.Log(volumeFloat);
             volumeSlider.value = volumeFloat;
 
             sfxFloat = PlayerPrefs.GetFloat(sfxPref);
@@ -72,7 +77,7 @@ public class AudioConfig : MonoBehaviour
     {
         foreach (Sound s in _am.sfx)
         {
-            s.source.volume = volumeSlider.value;
+            s.source.volume = sfxSlider.value;
         }
         SaveSoundSettings();
     }
