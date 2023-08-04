@@ -81,21 +81,42 @@ public class DiaryManager : MonoBehaviour
 	public void GotoNextPage()
     {   //Preciso de um "for" que limite o acréscimo de páginas
 
-        for(int i = currentPageRight; i < pagesRight.Length;i++)
+        if (currentPageRight > pagesRight.Length)
         {
-            SetPageRight(i);
-            SetPageLeft(i);
+            currentPageRight = 0;
         }
+        else 
+        {
+            currentPageRight+=1;
+        }
+        SetPageRight(currentPageRight);
+        SetPageLeft(currentPageRight);
+
+        // for(int i = currentPageRight; i < pagesRight.Length;i++)
+        // {
+
+        // }
 		
     }
 	public void GotoPreviousPage()
     {
-        for(int i = currentPageLeft; i>0 ;i--)
-        {
-            SetPageRight(i);
-            SetPageLeft(i);
-        }
+        // for(int i = currentPageLeft; i>0 ;i--)
+        // {
+        //     SetPageRight(i);
+        //     SetPageLeft(i);
+        // }
         //Preciso de um "for" que limite o acréscimo de páginas
 		
+        if (currentPageLeft < pagesLeft.Length)
+        {
+            currentPageLeft  = 0;
+        }
+        else 
+        {
+            currentPageLeft-=1;
+        }
+        SetPageRight(currentPageLeft);
+        SetPageLeft(currentPageLeft);
+
     }
 }

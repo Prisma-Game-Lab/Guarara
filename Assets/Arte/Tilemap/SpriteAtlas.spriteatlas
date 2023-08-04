@@ -108,6 +108,10 @@ SpriteAtlas:
   - {fileID: -777781326, guid: a4ca4e83db15f824b86d54deb179cc23, type: 3}
   - {fileID: 554156481, guid: a4ca4e83db15f824b86d54deb179cc23, type: 3}
   - {fileID: -938621265, guid: a4ca4e83db15f824b86d54deb179cc23, type: 3}
+  - {fileID: -656071927, guid: 783ea0d3ac328e54ca8b29eaf1ed2947, type: 3}
+  - {fileID: 1606277287, guid: 783ea0d3ac328e54ca8b29eaf1ed2947, type: 3}
+  - {fileID: 1312485574, guid: 783ea0d3ac328e54ca8b29eaf1ed2947, type: 3}
+  - {fileID: -518501173, guid: 783ea0d3ac328e54ca8b29eaf1ed2947, type: 3}
   - {fileID: -2033345447, guid: a0f9cc440cf05bf41a09bb364bb272b0, type: 3}
   - {fileID: 1414882032, guid: a0f9cc440cf05bf41a09bb364bb272b0, type: 3}
   - {fileID: 498106200, guid: a0f9cc440cf05bf41a09bb364bb272b0, type: 3}
@@ -285,6 +289,10 @@ SpriteAtlas:
   - Tile set bar playteste_5
   - Tile set bar playteste_11
   - Tile set bar playteste_10
+  - Objetos misc_0
+  - Objetos misc_1
+  - Objetos misc_2
+  - Objetos misc_3
   - "Jun\xE7\xF5es bar_2"
   - "Jun\xE7\xF5es bar_0"
   - "Jun\xE7\xF5es bar_1"
