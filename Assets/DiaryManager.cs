@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class DiaryManager : MonoBehaviour
 {
     public UnityEvent QPressed;
-    private InputAction interactionAction;
+    // private InputAction interactionAction;
     public InputActionAsset action2;
     [SerializeField] public GameObject[] pagesRight;
     [SerializeField] public GameObject[] pagesLeft;
@@ -17,22 +17,22 @@ public class DiaryManager : MonoBehaviour
     public GameObject setButton1;
     public GameObject setButton2;
     private bool wasClicked = false;
-    
-    public void ActiveDiary () //Essa funcao vai ficar no evento OnClick do inspector do botao que e o diario
+
+    public void ActiveDiary() //Essa funcao vai ficar no evento OnClick do inspector do botao que e o diario
     {
-        if (wasClicked==false)              //O diário é ativado e desativado no mesmo botão
+        if (wasClicked == false)              //O diário é ativado e desativado no mesmo botão
         {
             currentPageRight = 0;
-		    foreach (var pageRight in pagesRight ) 
+            foreach (var pageRight in pagesRight)
             {
-			    pageRight.SetActive(false);
-		    }
+                pageRight.SetActive(false);
+            }
 
             pagesRight[currentPageRight].SetActive(true);
             setButton1.SetActive(true);
             wasClicked = true;
         }
-        else if (wasClicked==true)
+        else if (wasClicked == true)
         {
             pagesRight[currentPageRight].SetActive(false);
             pagesLeft[currentPageLeft].SetActive(false);
@@ -40,54 +40,54 @@ public class DiaryManager : MonoBehaviour
             setButton2.SetActive(false);
             wasClicked = false;
         }
-        
-        
+
+
     }
-    public void OnQPressed (InputAction.CallbackContext context)
+    // public void OnQPressed(InputAction.CallbackContext context)
+    // {
+    //     QPressed?.Invoke();
+    // }
+
+    // void Awake ()
+    // {
+    //     action2.FindActionMap("Player").FindAction("Interact").performed += OnQPressed;
+    // }
+    private void SetPageRight(int pageRight)
     {
-        QPressed?.Invoke();
+        pagesRight[currentPageRight].SetActive(false);
+        currentPageRight = pageRight;
+        pagesRight[currentPageRight].SetActive(true);
     }
 
-    void Awake ()
+
+    private void SetPageLeft(int pageLeft)
     {
-        action2.FindActionMap("Player").FindAction("Interact").performed += OnQPressed;
+        pagesLeft[currentPageLeft].SetActive(false);
+        currentPageLeft = pageLeft;
+        pagesLeft[currentPageLeft].SetActive(true);
     }
-	private void SetPageRight(int pageRight) 
-	{
-		pagesRight[currentPageRight].SetActive(false);
-		currentPageRight = pageRight;
-		pagesRight[currentPageRight].SetActive(true);
-	}
 
-    
-	private void SetPageLeft(int pageLeft) 
-	{
-		pagesLeft[currentPageLeft].SetActive(false);
-		currentPageLeft = pageLeft;
-		pagesLeft[currentPageLeft].SetActive(true);
-	}
-
-    public void ActiveLeftPages ()
+    public void ActiveLeftPages()
     {
-         currentPageLeft = 0;
-		foreach (var pageLeft in pagesLeft ) 
+        currentPageLeft = 0;
+        foreach (var pageLeft in pagesLeft)
         {
             pageLeft.SetActive(false);
-		}
+        }
 
         pagesLeft[currentPageLeft].SetActive(true);
         setButton2.SetActive(true);
     }
-	public void GotoNextPage()
+    public void GotoNextPage()
     {   //Preciso de um "for" que limite o acréscimo de páginas
 
         if (currentPageRight > pagesRight.Length)
         {
             currentPageRight = 0;
         }
-        else 
+        else
         {
-            currentPageRight+=1;
+            currentPageRight += 1;
         }
         SetPageRight(currentPageRight);
         SetPageLeft(currentPageRight);
@@ -96,9 +96,9 @@ public class DiaryManager : MonoBehaviour
         // {
 
         // }
-		
+
     }
-	public void GotoPreviousPage()
+    public void GotoPreviousPage()
     {
         // for(int i = currentPageLeft; i>0 ;i--)
         // {
@@ -106,14 +106,14 @@ public class DiaryManager : MonoBehaviour
         //     SetPageLeft(i);
         // }
         //Preciso de um "for" que limite o acréscimo de páginas
-		
+
         if (currentPageLeft < pagesLeft.Length)
         {
-            currentPageLeft  = 0;
+            currentPageLeft = 0;
         }
-        else 
+        else
         {
-            currentPageLeft-=1;
+            currentPageLeft -= 1;
         }
         SetPageRight(currentPageLeft);
         SetPageLeft(currentPageLeft);

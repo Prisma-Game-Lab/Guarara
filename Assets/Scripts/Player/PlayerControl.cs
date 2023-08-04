@@ -18,6 +18,7 @@ public class PlayerControl : MonoBehaviour
     private InventoryVisibleScript inventoryVisible;
     private bool canPass = true;
     private GameObject dialogueBox;
+    private DiaryManager diaryManager;
     private Rigidbody2D rb;
     private Vector2 movement;
     private Animator animator;
@@ -36,6 +37,7 @@ public class PlayerControl : MonoBehaviour
         inventory = GameObject.Find("InventoryCanvas").transform.GetChild(0).GetComponent<Inventory>();
         inventoryVisible = GameObject.Find("InventoryCanvas").transform.GetChild(1).GetComponent<InventoryVisibleScript>();
         dialogueBox = GameObject.Find("DialogueCanvas").transform.GetChild(0).gameObject;
+        diaryManager = GameObject.FindObjectOfType<DiaryManager>();
         if (this.gameObject.name == "Player")
         {
             transform.position = playerPositionOnLoad.playerPosition;
@@ -154,6 +156,13 @@ public class PlayerControl : MonoBehaviour
             {
                 canPass = true;
             }
+        }
+    }
+    public void OpenDiary(InputAction.CallbackContext context)
+    {
+        if (context.performed && !inventory.isActiveAndEnabled && !dialogueBox.activeInHierarchy)
+        {
+            diaryManager.ActiveDiary();
         }
     }
 

@@ -62,6 +62,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Open Diary"",
+                    ""type"": ""Button"",
+                    ""id"": ""e575caab-2126-4f52-83b9-7aa879f0069b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -216,6 +225,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""99c1351b-3a87-48c6-ae6c-32f576ded7f4"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Open Diary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -397,6 +417,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
         m_Player_Escape = m_Player.FindAction("Escape", throwIfNotFound: true);
+        m_Player_OpenDiary = m_Player.FindAction("Open Diary", throwIfNotFound: true);
         // Hand
         m_Hand = asset.FindActionMap("Hand", throwIfNotFound: true);
         m_Hand_Movement = m_Hand.FindAction("Movement", throwIfNotFound: true);
@@ -467,6 +488,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Inventory;
     private readonly InputAction m_Player_Escape;
+    private readonly InputAction m_Player_OpenDiary;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -475,6 +497,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Inventory => m_Wrapper.m_Player_Inventory;
         public InputAction @Escape => m_Wrapper.m_Player_Escape;
+        public InputAction @OpenDiary => m_Wrapper.m_Player_OpenDiary;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -496,6 +519,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Escape.started += instance.OnEscape;
             @Escape.performed += instance.OnEscape;
             @Escape.canceled += instance.OnEscape;
+            @OpenDiary.started += instance.OnOpenDiary;
+            @OpenDiary.performed += instance.OnOpenDiary;
+            @OpenDiary.canceled += instance.OnOpenDiary;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -512,6 +538,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Escape.started -= instance.OnEscape;
             @Escape.performed -= instance.OnEscape;
             @Escape.canceled -= instance.OnEscape;
+            @OpenDiary.started -= instance.OnOpenDiary;
+            @OpenDiary.performed -= instance.OnOpenDiary;
+            @OpenDiary.canceled -= instance.OnOpenDiary;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -597,6 +626,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnInventory(InputAction.CallbackContext context);
         void OnEscape(InputAction.CallbackContext context);
+        void OnOpenDiary(InputAction.CallbackContext context);
     }
     public interface IHandActions
     {
