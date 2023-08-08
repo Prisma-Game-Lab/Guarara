@@ -19,6 +19,7 @@ public class AudioConfig : MonoBehaviour
     void Start()
     {
         _am = AudioManager.instance;
+        Debug.Log(_am);
 
         firstPlayInt = PlayerPrefs.GetInt(firstPlay);
 
@@ -67,6 +68,7 @@ public class AudioConfig : MonoBehaviour
 
     public void UpdateSound()
     {
+        _am = AudioManager.instance;
         foreach (Sound s in _am.sounds)
         {
             s.source.volume = volumeSlider.value;
@@ -75,6 +77,7 @@ public class AudioConfig : MonoBehaviour
     }
     public void UpdateSfx()
     {
+         _am = AudioManager.instance;
         foreach (Sound s in _am.sfx)
         {
             s.source.volume = sfxSlider.value;
