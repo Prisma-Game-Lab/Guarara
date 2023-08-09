@@ -18,9 +18,8 @@ public class DiaryManager : MonoBehaviour
     public GameObject setButton2;
     private bool wasClicked = false;
 
-    public void ActiveDiary() //Essa funcao vai ficar no evento OnClick do inspector do botao que e o diario
-    {
-        public void ActiveDiary () //Essa funcao vai ficar no evento OnClick do inspector do botao que e o diario
+    
+    public void ActiveDiary () //Essa funcao vai ficar no evento OnClick do inspector do botao que e o diario
     {
         if (wasClicked==false)              //O diário é ativado e desativado no mesmo botão
         {
@@ -46,7 +45,7 @@ public class DiaryManager : MonoBehaviour
         
         
     }
-    public void OnQPressed (InputAction.CallbackContext context)
+   /*  public void OnQPressed (InputAction.CallbackContext context)
     {
         QPressed?.Invoke();
     }
@@ -55,32 +54,7 @@ public class DiaryManager : MonoBehaviour
     {
         action2.FindActionMap("Player").FindAction("Interact").performed += OnQPressed;
     }
-	/* private void SetPageRight(int pageRight) 
-	{
-		pagesRight[pageRight].SetActive(false);
-		pageRight++;
-		pagesRight[pageRight].SetActive(true);
-	}
-
-    
-	private void SetPageLeft(int pageLeft) 
-	{
-		pagesLeft[pageLeft].SetActive(false);
-		pageLeft--;
-		pagesLeft[pageLeft].SetActive(true);
-	} */
-
-    /* public void ActiveLeftPages ()
-    {
-         currentPageLeft = 0;
-		foreach (var pageLeft in pagesLeft ) 
-        {
-            pageLeft.SetActive(false);
-		}
-
-        pagesLeft[currentPageLeft].SetActive(true);
-        setButton2.SetActive(true);
-    } */
+	 */
 	public void GotoNextPage()
     {   
         Debug.Log(currentPageLeft);
