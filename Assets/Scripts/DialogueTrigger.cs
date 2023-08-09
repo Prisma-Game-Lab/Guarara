@@ -9,7 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     public bool isAutomatic;
     public bool isFirstTime = true;
 
-    public void OnStartConversation ()
+    public void OnStartConversation()
     {
         Conversation conversation = characterDialogues.GetConversationByIndex(GetComponent<UpdateDiary>().indexNecessaItems);
         FindObjectOfType<DialogueManager>().StartConversation(conversation);
@@ -18,7 +18,7 @@ public class DialogueTrigger : MonoBehaviour
 
     void Start()
     {
-        if(isAutomatic)
+        if (isAutomatic)
         {
             OnStartConversation();
         }

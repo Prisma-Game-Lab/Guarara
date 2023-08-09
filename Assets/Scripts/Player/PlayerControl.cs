@@ -24,6 +24,7 @@ public class PlayerControl : MonoBehaviour
     private Animator animator;
     private PlayerInput input;
     private bool facingRight = true;
+    private bool canMove = true;
     private bool isEPressed;
     [HideInInspector]
     public bool analisando = false;
@@ -61,6 +62,15 @@ public class PlayerControl : MonoBehaviour
             input.Hand.Disable();
         }
         PassNextSentence();
+
+        if (analisando || inventory.isActiveAndEnabled || (dialogueBox.activeInHierarchy && this.gameObject.name == "Player"))
+        {
+            canMove = false;
+        }
+        else
+        {
+            canMove = true;
+        }
     }
 
     private void OnEnable()
@@ -76,8 +86,8 @@ public class PlayerControl : MonoBehaviour
     // função de movimento do jogador
     public void Movement(InputAction.CallbackContext context)
     {
-        // só movimenta se não estiver no inventário
-        if (!analisando && !inventory.isActiveAndEnabled && !dialogueBox.activeInHierarchy)
+        // só movimenta se não estiver no inventário, com o diário aberto ou com diálogo passando
+        if (canMove)
         {
             movement = context.ReadValue<Vector2>();
 
@@ -173,12 +183,10 @@ public class PlayerControl : MonoBehaviour
             if (inventory.isActiveAndEnabled)
             {
                 inventory.Hide();
-                inventoryVisible.Show();
             }
             else
             {
                 inventory.Show();
-                inventoryVisible.Hide();
                 inventory.ListItems();
             }
         }

@@ -4333,8 +4333,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4296aabac4f0ad641964747ce7827c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: {fileID: 11400000, guid: c18da6453558cec4f8378e6c6f10ea77, type: 2}
+  characterDialogues: {fileID: 11400000, guid: 12fdf7ec6eaaf2d41bbf04c02c95cab4, type: 2}
   isAutomatic: 0
+  isFirstTime: 1
 --- !u!114 &886102713
 MonoBehaviour:
   m_ObjectHideFlags: 0
