@@ -85,8 +85,9 @@ public class DiaryManager : MonoBehaviour
         currentPageLeft++;
         if(currentPageRight<=pagesRight.Length && currentPageLeft<=pagesLeft.Length)
         {
-            SetPageRight(int currentPageRight);
-            SetPageLeft(int currentPageLeft);
+            SetPageRight(currentPageRight);
+            SetPageLeft(currentPageLeft);
+            Debug.Log("passou");
         }
 		
     }
@@ -96,8 +97,9 @@ public class DiaryManager : MonoBehaviour
         currentPageLeft--;
         if(currentPageRight>=0 && currentPageLeft>=0)
         {
-            SetPageRight(int currentPageRight);
-            SetPageLeft(int currentPageLeft);
+            SetPageRight(currentPageRight);
+            SetPageLeft(currentPageLeft);
+            Debug.Log("voltou");
         }
 		
 		
