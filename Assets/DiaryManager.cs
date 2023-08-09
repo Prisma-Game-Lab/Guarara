@@ -53,20 +53,20 @@ public class DiaryManager : MonoBehaviour
     {
         action2.FindActionMap("Player").FindAction("Interact").performed += OnQPressed;
     }
-	private void SetPageRight(int pageRight) 
+	/* private void SetPageRight(int pageRight) 
 	{
-		pagesRight[currentPageRight].SetActive(false);
-		currentPageRight = pageRight;
-		pagesRight[currentPageRight].SetActive(true);
+		pagesRight[pageRight].SetActive(false);
+		pageRight++;
+		pagesRight[pageRight].SetActive(true);
 	}
 
     
 	private void SetPageLeft(int pageLeft) 
 	{
-		pagesLeft[currentPageLeft].SetActive(false);
-		currentPageLeft = pageLeft;
-		pagesLeft[currentPageLeft].SetActive(true);
-	}
+		pagesLeft[pageLeft].SetActive(false);
+		pageLeft--;
+		pagesLeft[pageLeft].SetActive(true);
+	} */
 
     /* public void ActiveLeftPages ()
     {
@@ -80,28 +80,31 @@ public class DiaryManager : MonoBehaviour
         setButton2.SetActive(true);
     } */
 	public void GotoNextPage()
-    {   //Preciso de um "for" que limite o acréscimo de páginas
-        currentPageRight++;
+    {   
         currentPageLeft++;
-        if(currentPageRight<=pagesRight.Length && currentPageLeft<=pagesLeft.Length)
+        currentPageRight++;
+        if(currentPageRight < pagesRight.Length && currentPageLeft < pagesLeft.Length)
         {
-            SetPageRight(currentPageRight);
-            SetPageLeft(currentPageLeft);
+            pagesRight[currentPageRight - 1].SetActive(false);
+            pagesLeft[currentPageLeft - 1].SetActive(false);
+            pagesRight[currentPageRight].SetActive(true);
+            pagesLeft[currentPageLeft].SetActive(true);
             Debug.Log("passou");
         }
 		
     }
 	public void GotoPreviousPage()
     {
-        currentPageRight--;
-        currentPageLeft--;
-        if(currentPageRight>=0 && currentPageLeft>=0)
+        if(currentPageRight > 0 && currentPageLeft > 0)
         {
-            SetPageRight(currentPageRight);
-            SetPageLeft(currentPageLeft);
+            pagesRight[currentPageRight].SetActive(false);
+            pagesLeft[currentPageLeft].SetActive(false);
+            currentPageLeft--;
+            currentPageRight--;
+            pagesRight[currentPageRight].SetActive(true);
+            pagesLeft[currentPageLeft].SetActive(true);
             Debug.Log("voltou");
-        }
-		
+        }	
 		
     }
 }
