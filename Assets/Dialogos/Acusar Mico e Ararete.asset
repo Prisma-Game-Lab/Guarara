@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d94b90530d45d44934c3e4bca563c5, type: 3}
+  m_Name: Acusar Mico e Ararete
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "De acordo com as pistas e interrogat\xF3rios.."
+    - "O Mico Manoel e a Ararete trabalharam juntos para roubar a f\xF3rmula!"
+    - "A Ararete receberia um bom dinheiro por estar trabalhando h\xE1 tanto tempo
+      com a Sra. M\xE1rcia. Com a receita, poderia vender e come\xE7ar uma vida nova
+      em outro lugar."
+    - "O Mico Manoel, interessado no dinheiro, se juntou e ajudou na parte do cofre.
+      Ningu\xE9m desconfiaria j\xE1 que eles t\xEAm acesso ao local."
+    - "Ent\xE3o, para despistar a pol\xEDcia, destru\xEDram o cofre e quebraram a
+      janela para criar pistas que levassem a outros suspeitos!"
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - Prendam eles!
+  - name: Mico Manoel
+    charProfile: {fileID: 21300000, guid: 3c0112ee663031d47833574a6ff5dc1c, type: 3}
+    sentences:
+    - "Ei, espera! N\xE3o aconteceu nada disso! Eu nem tenho a f\xF3rmula!"
+  - name: Ararete
+    charProfile: {fileID: 0}
+    sentences:
+    - Que absurdo! Eu sou inocente! Eu exijo meus direitos!
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - Veremos isso no tribunal.
+  - name: "M\xE1rcia Pintada"
+    charProfile: {fileID: 21300000, guid: 0ab935df8035b5e45a809f84635089b4, type: 3}
+    sentences:
+    - "Eu n\xE3o acredito\u2026"
+    - "Eu confiava tanto neles\u2026"
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - "Bom trabalho Detetive Guar\xE1! Mais um caso resolvido! Agora voc\xEA pode
+      ter seu merecido descanso."

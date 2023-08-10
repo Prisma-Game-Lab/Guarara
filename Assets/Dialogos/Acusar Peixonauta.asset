@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d94b90530d45d44934c3e4bca563c5, type: 3}
+  m_Name: Acusar Peixonauta
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "De acordo com as pistas e interrogat\xF3rios.."
+    - "O Peixonauta roubou a f\xF3rmula!"
+    - "Ele se aproveitou do relacionamento rom\xE2ntico secreto com a Sra. M\xE1rcia
+      para seduzi-la e ganhar sua confian\xE7a."
+    - "N\xE3o \xE9 novidade que o \xFAnico motivo para o restaurante do Sr. Peixonauta
+      n\xE3o ser bem sucedido, \xE9 a concorr\xEAncia com o bar da Sra. M\xE1rcia."
+    - "Ent\xE3o, ele roubou a receita! E muito provavelmente, estava s\xF3 esperando
+      o bar falir para come\xE7ar a implementar o guaran\xE1 em novos pratos!"
+    - "Livre da concorr\xEAncia e com a f\xF3rmula em m\xE3os, o Sr. Peixonauta finalmente
+      teria o triunfo que desejava."
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - Prendam ele!
+  - name: Peixonauta
+    charProfile: {fileID: 21300000, guid: e2d53715306502d4ab52b0478336c196, type: 3}
+    sentences:
+    - "O que?! Marcinha, n\xE3o acredite nele!"
+    - "Eu realmente n\xE3o estou indo bem por sua causa\u2026"
+    - "Mas eu nunca faria isso com voc\xEA!!"
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - Veremos isso no tribunal.
+  - name: "M\xE1rcia Pintada"
+    charProfile: {fileID: 21300000, guid: 0ab935df8035b5e45a809f84635089b4, type: 3}
+    sentences:
+    - "Eu n\xE3o acredito\u2026"
+    - "Esse\u2026 Tra\xEDra! Nunca devia ter confiado nele!!"
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - "Bom trabalho Detetive Guar\xE1! Mais um caso resolvido! Agora voc\xEA pode
+      ter seu merecido descanso."

@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d94b90530d45d44934c3e4bca563c5, type: 3}
+  m_Name: Acusar Lobo
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "De acordo com as pistas e interrogat\xF3rios.."
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - "Espere um momento, Detetive Guar\xE1\u2026"
+    - "Eu analisei as pistas, e na verdade\u2026"
+    - "O culpado \xE9 voc\xEA!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - O que?!
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - "N\xE3o se fa\xE7a de dissimulado. Voc\xEA planejou tudo perfeitamente para
+      ser o respons\xE1vel pelo caso!"
+  - name: "M\xE1rcia Pintada"
+    charProfile: {fileID: 21300000, guid: 0ab935df8035b5e45a809f84635089b4, type: 3}
+    sentences:
+    - Como assim?!
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - "O Detetive Guar\xE1 me deu a amostra de p\xEAlo, mas o DNA presente nela \xE9
+      dele!"
+    - Tudo se encaixa agora.
+    - "Voc\xEA roubou a f\xF3rmula e tentou criar provas que incriminavam os mais
+      prov\xE1veis de serem suspeitos! Depois era s\xF3 inventar uma hist\xF3ria
+      que encaixasse, n\xE3o \xE9?!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "\xC9 isso mesmo."
+  - name: Mico Manoel
+    charProfile: {fileID: 21300000, guid: 3c0112ee663031d47833574a6ff5dc1c, type: 3}
+    sentences:
+    - "C\xEA n\xE3o tem vergonha na cara n\xE3o?!"
+  - name: Coisa Ruim
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - Larga dessa vida!
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Eu fiz isso porque a receita j\xE1 era minha! Ela sempre pertenceu \xE0 minha
+      fam\xEDlia!"
+  - name: "M\xE1rcia Pintada"
+    charProfile: {fileID: 21300000, guid: 0ab935df8035b5e45a809f84635089b4, type: 3}
+    sentences:
+    - "Como \xE9 que \xE9?! Que hist\xF3ria \xE9 essa?!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Voc\xEA nunca se perguntou o motivo do nome do bar ser Guarar\xE1?"
+    - "Minha bisav\xF3 inventou a f\xF3rmula. Mas o s\xF3cio, ganancioso, se aproveitou
+      do pouco conhecimento dela e a excluiu dos neg\xF3cios, ficando com a posse
+      da receita."
+    - "O s\xF3cio era seu bisav\xF4, M\xE1rcia. Eu s\xF3 peguei de volta algo que
+      j\xE1 era meu."
+    - "Enquanto voc\xEA cresceu na sua vida luxuosa, eu tive que batalhar muito para
+      chegar aqui hoje."
+  - name: "M\xE1rcia Pintada"
+    charProfile: {fileID: 21300000, guid: 0ab935df8035b5e45a809f84635089b4, type: 3}
+    sentences:
+    - "\u2026"
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - "Infelizmente, Guar\xE1, isso n\xE3o muda as coisas."
+    - "Tudo ser\xE1 resolvido no tribunal."
+    - "Por favor, se entregue. N\xE3o quero prender um amigo, por mais que voc\xEA
+      mere\xE7a por ter mentido para mim."
+  - name: "Fugitivo Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Sinto muito, Capit\xE3o. Mas eu n\xE3o vou desistir agora."
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - "Guar\xE1!!!"
+  - name: "M\xE1rcia Pintada"
+    charProfile: {fileID: 21300000, guid: 0ab935df8035b5e45a809f84635089b4, type: 3}
+    sentences:
+    - "N\xE3o deixem que ele fuja!!!"
+  - name: Peixonauta
+    charProfile: {fileID: 21300000, guid: e2d53715306502d4ab52b0478336c196, type: 3}
+    sentences:
+    - Peguem ele!!
+  - name: Ararete
+    charProfile: {fileID: 0}
+    sentences:
+    - Segura!!

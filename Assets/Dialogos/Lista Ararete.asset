@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef2545e9d24c3f84da5b59bfd6abcd5d, type: 3}
-  m_Name: Lista Mico Manuel
+  m_Name: Lista Ararete
   m_EditorClassIdentifier: 
   CharacterDialogues:
-  - {fileID: 11400000, guid: f21f8b065102b714e994144e28336c76, type: 2}
-  - {fileID: 11400000, guid: 4e4942e3dbed8184b97ecb6a252ad986, type: 2}
+  - {fileID: 11400000, guid: 3eacbc7d35f51dc4a90b35978c1e1156, type: 2}
+  - {fileID: 11400000, guid: 96107ef4e30eb364fa968a875e955025, type: 2}

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d94b90530d45d44934c3e4bca563c5, type: 3}
+  m_Name: Peixonauta intro
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: ???
+    charProfile: {fileID: 21300000, guid: e2d53715306502d4ab52b0478336c196, type: 3}
+    sentences:
+    - "Sauda\xE7\xF5es, ser terrestre."
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Boa tarde, sou o Detetive Guar\xE1. E o senhor, quem \xE9?"
+  - name: Peixonauta
+    charProfile: {fileID: 21300000, guid: e2d53715306502d4ab52b0478336c196, type: 3}
+    sentences:
+    - "Eu sou o peixonauta, fundador e dono do Aqua Drinks! Cuja especialidade \xE9
+      servir diferentes tipos de bebidas, feitas principalmente de: \xE1gua salgada!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Interessante, mas o que lhe traz at\xE9 aqui?"
+  - name: Peixonauta
+    charProfile: {fileID: 21300000, guid: e2d53715306502d4ab52b0478336c196, type: 3}
+    sentences:
+    - "Estou aqui para ver a maldita da dona M\xE1rcia cair, por anos o guaran\xE1
+      tem sido o maior concorrente da minha \xE1gua salgada."
+    - Mas parece que, no final, eu vou vencer essa guerra! Haha!

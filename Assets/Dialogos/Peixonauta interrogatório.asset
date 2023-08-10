@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d94b90530d45d44934c3e4bca563c5, type: 3}
+  m_Name: "Peixonauta interrogat\xF3rio"
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Acho que voc\xEA gostaria de me explicar o que isso fazia no quarto da Sra.
+      M\xE1rcia, estou certo?"
+  - name: Peixonauta
+    charProfile: {fileID: 21300000, guid: e2d53715306502d4ab52b0478336c196, type: 3}
+    sentences:
+    - "O que \xE9 isso?! Onde voc\xEA conseguiu?!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Creio que voc\xEA consegue me dizer isso."
+  - name: Peixonauta
+    charProfile: {fileID: 21300000, guid: e2d53715306502d4ab52b0478336c196, type: 3}
+    sentences:
+    - "Est\xE1 metendo o focinho onde n\xE3o deve, Detetive Guar\xE1."
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Esse \xE9 meu trabalho, Sr. Peixonauta."
+    - "Caso voc\xEA n\xE3o me d\xEA explica\xE7\xF5es melhores, voc\xEA se torna
+      o n\xFAmero um na lista dos suspeitos. Imagino que n\xE3o queira isso."
+  - name: Peixonauta
+    charProfile: {fileID: 21300000, guid: e2d53715306502d4ab52b0478336c196, type: 3}
+    sentences:
+    - Tudo bem. Eu falo.
+    - "Olha, eu e a M\xE1rcia temos uma rela\xE7\xE3o\u2026 complicada."
+    - "O bar dela realmente sempre foi minha maior concorr\xEAncia. Mas eu\u2026
+      eu\u2026"
+    - Eu me apaixonei!
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - O que?!
+  - name: Peixonauta
+    charProfile: {fileID: 21300000, guid: e2d53715306502d4ab52b0478336c196, type: 3}
+    sentences:
+    - "\xC9 isso mesmo que o senhor ouviu! Eu amo a Sra. M\xE1rcia do tamanho da
+      dificuldade que ela me causa nos neg\xF3cios!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "\u2026"
+    - "Eu definitivamente n\xE3o esperava por isso."

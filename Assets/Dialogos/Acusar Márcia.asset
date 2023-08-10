@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d94b90530d45d44934c3e4bca563c5, type: 3}
+  m_Name: "Acusar M\xE1rcia"
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "De acordo com as pistas e interrogat\xF3rios.."
+    - "A Sra. M\xE1rcia fingiu tudo!"
+    - "O bar estava come\xE7ando a perder sua popularidade, os neg\xF3cios come\xE7aram
+      a cair\u2026"
+    - "O Mico Manoel relatou sobre como a dona M\xE1rcia lamentava pela nova juventude
+      preferir bebidas mais atuais, como o Touro Verde, ao inv\xE9s do cl\xE1ssico
+      Guaran\xE1."
+    - "Ent\xE3o algo precisava para chamar aten\xE7\xE3o! E o que seria melhor do
+      que o roubo da preciosa f\xF3rmula para aumentar a relev\xE2ncia novamente?!"
+    - "Com o furto de fachada, ela teria sua fama de volta e um bom dinheiro do seguro.
+      Depois s\xF3 seria necess\xE1rio dizer que inventou uma \u201Cnova f\xF3rmula\u201D
+      para voltar aos holofotes."
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - Prendam ela!
+  - name: "M\xE1rcia pintada"
+    charProfile: {fileID: 21300000, guid: 0ab935df8035b5e45a809f84635089b4, type: 3}
+    sentences:
+    - O que?! Isso nem faz sentido!!
+    - "N\xE3o foi para isso que eu te paguei, seu insolente! Eu exijo meus advogados!!"
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - Veremos isso no tribunal.
+    - "Bom trabalho Detetive Guar\xE1! Mais um caso resolvido! Agora voc\xEA pode
+      ter seu merecido descanso."

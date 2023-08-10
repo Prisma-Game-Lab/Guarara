@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d94b90530d45d44934c3e4bca563c5, type: 3}
+  m_Name: CoisaRuim intro
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: ???
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - "E a\xED patr\xE3o, tudo suave? C\xEA \xE9 novo na cidade?"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "N\xE3o sou morador novo, sou o detetive que est\xE1 investigando o bar. E
+      voc\xEA \xE9?..."
+  - name: Coisa Ruim
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - "Me chamo Carlo, mas sou conhecido nas ruas como Coisa Ruim heheh\u2026"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "O apelido tem algum motivo\u2026 ruim?"
+  - name: Coisa Ruim
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - "Tudo come\xE7ou depois que eu isolei a bola na altinha\u2026 e ent\xE3o tudo
+      que acontecia de ruim passou a ser culpa minha!"
+    - "Ent\xE3o decidi mudar de vida, t\xE1 ligado? Sumi por um tempo, fiz ENEM,
+      subi na vida e agora s\xF3 paz."
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "O senhor se formou, ent\xE3o?"
+  - name: Coisa Ruim
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - "Eu?? N\xE3o! Hahaha"
+    - "Eu fiz o ENEM, mas nunca disse que passei\u2026 Criei minha pr\xF3pria cole\xE7\xE3o
+      de roupas! Se chama Bejo Fl\xF4, t\xF4 vendendo at\xE9 pro exterior!"
+    - "Essa beca aqui \xF3, \xE9 toda o-r-i-g-i-n-a-l. Se quiser umas regatas \xE9
+      s\xF3 falar comigo, fa\xE7o um precinho amigo pra voc\xEA. Aceito Pix!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Receio que n\xE3o fa\xE7a muito meu estilo de roupa\u2026 Mas agrade\xE7o."

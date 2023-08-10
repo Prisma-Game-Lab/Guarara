@@ -13,11 +13,49 @@ MonoBehaviour:
   m_Name: "Mico Interrogat\xF3rio"
   m_EditorClassIdentifier: 
   dialogues:
-  - name: "Detetive Guar\xE1"
-    charProfile: {fileID: 0}
-    sentences:
-    - ola mico
   - name: Mico Manoel
-    charProfile: {fileID: 0}
+    charProfile: {fileID: 21300000, guid: 3c0112ee663031d47833574a6ff5dc1c, type: 3}
     sentences:
-    - ola guara
+    - "Opa, j\xE1 voltou?! Precisa de alguma coisa, chefia?"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Na verdade, preciso. Para come\xE7ar queria saber se o senhor tem acesso ao
+      escrit\xF3rio?\r"
+  - name: Mico Manoel
+    charProfile: {fileID: 21300000, guid: 3c0112ee663031d47833574a6ff5dc1c, type: 3}
+    sentences:
+    - "Ent\xE3o, eu at\xE9 tenho, mas se a patroa me pega l\xE1, a\xED \xE9 que a
+      coisa fica feia. Meu trabalho \xE9 aqui no bar, n\xE3o l\xE1 em cima."
+    - "Geralmente eu s\xF3 subo pra colocar o dinheiro no final do m\xEAs. Mas vem
+      c\xE1, c\xEA n\xE3o t\xE1 desconfiando de mim n\xE3o, n\xE9?"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Meu trabalho \xE9 desconfiar de todo mundo, Sr. Manoel. Al\xE9m disso, eu
+      encontrei uma bola de p\xEAlo perto do cofre, voc\xEA n\xE3o acha parecido
+      com o seu?"
+  - name: Mico Manoel
+    charProfile: {fileID: 21300000, guid: 3c0112ee663031d47833574a6ff5dc1c, type: 3}
+    sentences:
+    - "N\xE3o ouse comparar essa bola de trapos com o meu pelinho sedoso. Pode at\xE9
+      ser da mesma cor, mas a textura \xE9 completamente diferente!"
+    - "O bar j\xE1 estava come\xE7ando a bater as botas, c\xEA acha que nessa situa\xE7\xE3o
+      eu ia roubar algo da minha patroa que nem tem utilidade pra mim?!"
+    - "Ela vive reclamando sobre como a juventude n\xE3o sabe mais apreciar os sabores
+      tradicionais. Que essa nova bebida Touro Verde fez uma lavagem nos paladares!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Acalme-se Manoel, s\xE3o apenas perguntas. Agora me diga, quem mais tem acesso
+      ao escrit\xF3rio?"
+  - name: Mico Manoel
+    charProfile: {fileID: 21300000, guid: 3c0112ee663031d47833574a6ff5dc1c, type: 3}
+    sentences:
+    - "Claro, a dona M\xE1rcia e a Ararete que trabalha na casa."
+    - "Mas ou\xE7a bem, eu sou um cara honesto. Nunca faria algo assim contra a dona
+      M\xE1rcia."
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Veremos isso. Obrigado pela coopera\xE7\xE3o, preciso seguir com a investiga\xE7\xE3o."

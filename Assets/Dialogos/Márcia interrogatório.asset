@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d94b90530d45d44934c3e4bca563c5, type: 3}
+  m_Name: "M\xE1rcia interrogat\xF3rio"
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Sra. M\xE1rcia, sinto muito pelo inconveniente, mas preciso saber a proced\xEAncia
+      dessa pista\u2026"
+  - name: "M\xE1rcia Pintada"
+    charProfile: {fileID: 21300000, guid: 0ab935df8035b5e45a809f84635089b4, type: 3}
+    sentences:
+    - "Isso?! Ah, n\xE3o \xE9 nada!"
+    - "\xC9 de\u2026 uma antiga roupa de carnaval! Deve ter ca\xEDdo!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Com todo respeito senhora, mas a consist\xEAncia dessa escama com certeza
+      n\xE3o \xE9 de uma roupa. E a cor tamb\xE9m, \xE9 muito parecida com o Sr\u2026"
+  - name: "M\xE1rcia Pintada"
+    charProfile: {fileID: 21300000, guid: 0ab935df8035b5e45a809f84635089b4, type: 3}
+    sentences:
+    - "Eu sei! Eu sei muito bem com quem se parece. Mas n\xE3o \xE9 isso que voc\xEA
+      est\xE1 pensando!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "E o que seria ent\xE3o? C\xE1 entre n\xF3s, ele \xE9 quem mais est\xE1 alegre
+      com a possibilidade de fal\xEAncia do bar\u2026"
+  - name: "M\xE1rcia Pintada"
+    charProfile: {fileID: 21300000, guid: 0ab935df8035b5e45a809f84635089b4, type: 3}
+    sentences:
+    - "De fato, \xE9 a cara dele\u2026 Mas n\xE3o se preocupe, ele \xE9 inofensivo!"
+    - "O Sr. Peixonauta veio aqui para discutirmos sobre\u2026 Neg\xF3cios!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Neg\xF3cios?! Entendi\u2026"
+    - "Bom, seguirei com a investiga\xE7\xE3o. Obrigado."

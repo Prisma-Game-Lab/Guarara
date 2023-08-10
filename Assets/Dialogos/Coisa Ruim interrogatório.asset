@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d94b90530d45d44934c3e4bca563c5, type: 3}
+  m_Name: "Coisa Ruim interrogat\xF3rio"
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: Coisa Ruim
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - "E a\xED chefe, como t\xE1 a investiga\xE7\xE3o?"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Temo que isso seja informa\xE7\xE3o confidencial. Voc\xEA n\xE3o se importa
+      de responder algumas perguntas, n\xE3o \xE9?"
+  - name: Coisa Ruim
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - "Mete bala, paiz\xE3o!"
+  - name: "Detetive Guar\xE1 "
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Ok. Voc\xEA j\xE1 estava na cidade sexta-feira passada?"
+  - name: Coisa Ruim
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - Positivo, chefe! Cheguei na quinta!
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "N\xE3o acha vantajoso a data ser t\xE3o pr\xF3xima do acontecido na sexta??"
+  - name: Coisa Ruim
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - "Poxa amigo, voc\xEA t\xE1 querendo colocar a culpa em mim?!"
+    - "Foi justamente por causa de pessoas como voc\xEA que eu fui embora!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Por favor senhor, n\xE3o leve para o lado pessoal, s\xF3 estou fazendo meu
+      trabalho\u2026"
+  - name: Coisa Ruim
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - "Aham, sei\u2026"
+    - "Pra informa\xE7\xE3o de \u201Cvossa excel\xEAncia\u201D, voltei na quinta
+      porque os pre\xE7os da passagem estavam um pouco melhores nesse dia."
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Voc\xEA n\xE3o mencionou que estava com condi\xE7\xF5es financeiras melhores?"
+  - name: Coisa Ruim
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - "Sim, uai. Mas n\xE3o \xE9 por isso que vou gastar tudo de uma vez! Sou m\xE3o
+      de vaca, muquirana, todos esses termos a\xED, t\xE1 ligado?"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Isso n\xE3o soa hip\xF3crita enquanto voc\xEA usa um cord\xE3o de ouro no
+      seu pesco\xE7o?"
+  - name: Coisa Ruim
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - "Essa belezinha aqui? Ah, sabe com\xE9 n\xE9\u2026 a gente tamb\xE9m merece
+      um agrado \xE0s vezes\u2026"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "N\xE3o sei se consigo entender sua l\xF3gica, Sr. Coisa Ruim. Obrigado pelas
+      respostas, continuarei minha investiga\xE7\xE3o."

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d94b90530d45d44934c3e4bca563c5, type: 3}
+  m_Name: "Ararete interrogat\xF3rio"
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Eu gostaria de fazer algumas perguntas, se voc\xEA n\xE3o se importar."
+  - name: Ararete
+    charProfile: {fileID: 0}
+    sentences:
+    - Claro! Pode perguntar, qualquer coisa para ajudar.
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Suponho que voc\xEA j\xE1 tenha visto o estado do cofre\u2026"
+    - "Ele est\xE1 completamente destru\xEDdo e com muitas marcas de garras."
+  - name: Ararete
+    charProfile: {fileID: 0}
+    sentences:
+    - "J\xE1 entendi o que voc\xEA est\xE1 insinuando, mas pode ter certeza de que
+      n\xE3o fui eu."
+    - "No dia do furto era meu dia de folga. E acho que n\xE3o conseguiria deixar
+      o cofre daquele jeito sozinha\u2026"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "E a janela? N\xE3o acha conveniente voc\xEA ser a respons\xE1vel pela limpeza?!"
+  - name: Ararete
+    charProfile: {fileID: 0}
+    sentences:
+    - "De fato, \xE9 muito conveniente. Mas garanto que eu n\xE3o iria gerar ainda
+      mais trabalho para limpar, hahaha!"
+    - "Sobre a janela em espec\xEDfico, se eu fosse voc\xEA iria atr\xE1s do Coisa
+      Ruim\u2026"
+    - "Ele passou um bom tempo longe da cidade, era cheio de d\xEDvidas\u2026"
+    - "Agora voltou e t\xE1 ostentando por onde passa! Acho muita coincid\xEAncia\u2026"
+    - "Mas n\xE3o tenho nada a esconder, Detetive Guar\xE1. Minha consci\xEAncia
+      est\xE1 limpa!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "Constataremos isso no final. Obrigado pelo seu tempo, continuarei minha investiga\xE7\xE3o."

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d94b90530d45d44934c3e4bca563c5, type: 3}
+  m_Name: Acusar Coisa Ruim
+  m_EditorClassIdentifier: 
+  dialogues:
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
+    sentences:
+    - "De acordo com as pistas e interrogat\xF3rios.."
+    - "O Coisa Ruim foi o respons\xE1vel pelo roubo!"
+    - "Ele passou um per\xEDodo fora da cidade, tempo necess\xE1rio para ele arquitetar
+      seu plano perfeito. Por ser cheio de d\xEDvidas, naturalmente, procurou por
+      uma sa\xEDda."
+    - "Ent\xE3o planejou um disfarce e criou uma marca de roupas para justificar
+      o ganho de dinheiro t\xE3o r\xE1pido em t\xE3o pouco tempo."
+    - Muito provavelmente, o Sr. Carlo - mais conhecido como Coisa Ruim, pela sua
+      fama - fechou um acordo pela venda da receita.
+    - "Recebeu uma parte antes para financiar equipamentos e o pr\xF3prio disfarce,
+      e o resto depois da entrega."
+    - "Temo que a f\xF3rmula j\xE1 esteja nas m\xE3os de outro animal h\xE1 muito
+      tempo."
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - Prendam ele!
+  - name: Coisa Ruim
+    charProfile: {fileID: 21300000, guid: bbc7d20f6523a8c42b0e8fbcb8b9f888, type: 3}
+    sentences:
+    - "\xC9 mentira!!"
+    - "Eu n\xE3o roubei porcaria nenhuma! Eu sou honesto!!"
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - Veremos isso no tribunal.
+  - name: "M\xE1rcia Pintada"
+    charProfile: {fileID: 21300000, guid: 0ab935df8035b5e45a809f84635089b4, type: 3}
+    sentences:
+    - "Minha nossa\u2026"
+    - "Bem que desconfiava dele\u2026"
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - "Bom trabalho Detetive Guar\xE1! Mais um caso resolvido! Agora voc\xEA pode
+      ter seu merecido descanso."
