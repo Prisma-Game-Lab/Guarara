@@ -9,6 +9,7 @@ TagManager:
   - Interagivel
   - Inventory
   - NPC
+  - Acusado
   layers:
   - Default
   - TransparentFX

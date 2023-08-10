@@ -135,6 +135,17 @@ public class PlayerControl : MonoBehaviour
         }
 
     }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Acusado"))
+        {
+            isEPressed = input.Player.Interact.ReadValue<float>() > 0.1f;
+            if (isEPressed)
+            {
+                Debug.Log("acusado");
+            }
+        }
+    }
 
     // checa se o jogador tá encostando em um objeto interagivel e se ele vai apertar a tecla de interação
     public void OnCollisionStay2D(Collision2D other)
