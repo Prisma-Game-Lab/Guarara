@@ -59,7 +59,7 @@ public class DialogueManager : MonoBehaviour
         index = 0;
         currentConversation = conversation;
         dialogueBox.SetActive(true);
-        continueButton.SetActive(true);
+        //continueButton.SetActive(true);
         StartDialogue(currentConversation.GetDialogueByIndex(index));
         index++;
     }
