@@ -13,13 +13,27 @@ MonoBehaviour:
   m_Name: DialogoTutorial
   m_EditorClassIdentifier: 
   dialogues:
-  - name: Fulano
-    charProfile: {fileID: 21300000, guid: 9933ab2cff55aad469471e576b873ac7, type: 3}
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
     sentences:
-    - 1
-    - 2
-  - name: Ciclone
-    charProfile: {fileID: 21300000, guid: c62b0122ded223446bb1d7b068aa8144, type: 3}
+    - "Al\xF4, C\xE2mbio?! T\xE1 na escuta Detetive Guar\xE1?"
+    - "Temos um c\xF3digo 155 na rua dos bobos n\xB0 0, precisamos que voc\xEA venha
+      at\xE9 o local do crime dar uma olhada\u2026"
+    - "A f\xF3rmula do Guaran\xE1 foi roubada do bar Guarar\xE1, da Sra. M\xE1rcia!"
+  - name: "Detetive Guar\xE1"
+    charProfile: {fileID: 21300000, guid: 3693d7aedd418544794429dba30e9d5e, type: 3}
     sentences:
-    - 3
-    - 4
+    - "Aqui \xE9 o Detetive Guar\xE1, estou indo at\xE9 o local do crime, Capit\xE3o!
+      C\xE2mbio, desligo."
+  - name: "Capit\xE3o Torresmo"
+    charProfile: {fileID: 21300000, guid: d4b33c859a84511439bd7aaf67788cdd, type: 3}
+    sentences:
+    - "\xD3timo! Analise as cenas e interrogue os suspeitos. C\xE2mbio."
+    - "Investigue todos os c\xF4modos, se poss\xEDvel. Utilize as teclas WASD para
+      se mover. C\xE2mbio."
+    - "N\xE3o se esque\xE7a de fazer anota\xE7\xF5es no seu caderno e coletar pistas
+      no invent\xE1rio! C\xE2mbio."
+    - "Depois que coletar todas as pistas, estarei dispon\xEDvel para prender o suspeito!
+      Me chame pelo walkie talkie! C\xE2mbio."
+    - "Lembre-se, s\xF3 me ligue se tiver certeza do culpado. Boa sorte Detetive
+      Guar\xE1! C\xE2mbio desligo."
