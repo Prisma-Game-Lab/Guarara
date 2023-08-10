@@ -51,5 +51,9 @@ public class UpdateDiary : MonoBehaviour
          isEqual = false;
       }
    }
+   void Update ()
+   {
+      checkIfIsEqual();
+   }
 }
 
