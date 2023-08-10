@@ -15,7 +15,6 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     private float speed = 5f;
     private Inventory inventory;
-    private InventoryVisibleScript inventoryVisible;
     private bool canPass = true;
     private GameObject dialogueBox;
     private DiaryManager diaryManager;
@@ -36,10 +35,9 @@ public class PlayerControl : MonoBehaviour
         input = new PlayerInput();
         rb = GetComponent<Rigidbody2D>();
         inventory = GameObject.Find("InventoryCanvas").transform.GetChild(0).GetComponent<Inventory>();
-        inventoryVisible = GameObject.Find("InventoryCanvas").transform.GetChild(1).GetComponent<InventoryVisibleScript>();
         dialogueBox = GameObject.Find("DialogueCanvas").transform.GetChild(0).gameObject;
-        diaryManager = GameObject.FindObjectOfType<DiaryManager>();
-        if (this.gameObject.name == "Player")
+        diaryManager = FindObjectOfType<DiaryManager>();
+        if (gameObject.name == "Player")
         {
             transform.position = playerPositionOnLoad.playerPosition;
         }
@@ -56,14 +54,14 @@ public class PlayerControl : MonoBehaviour
     }
     private void Update()
     {
-        if (this.gameObject.name == "Player")
+        if (gameObject.name == "Player")
         {
             input.Player.Enable();
             input.Hand.Disable();
         }
         PassNextSentence();
 
-        if (analisando || inventory.isActiveAndEnabled || (dialogueBox.activeInHierarchy && this.gameObject.name == "Player"))
+        if (analisando || inventory.isActiveAndEnabled || (dialogueBox.activeInHierarchy && gameObject.name == "Player") || diaryManager.wasClicked)
         {
             canMove = false;
         }
@@ -71,6 +69,7 @@ public class PlayerControl : MonoBehaviour
         {
             canMove = true;
         }
+
     }
 
     private void OnEnable()
@@ -130,7 +129,7 @@ public class PlayerControl : MonoBehaviour
     // para o jogador quando ele encontra uma parede
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Parede")
+        if (other.gameObject.CompareTag("Parede"))
         {
             NoMovement();
         }
@@ -140,7 +139,7 @@ public class PlayerControl : MonoBehaviour
     // checa se o jogador tá encostando em um objeto interagivel e se ele vai apertar a tecla de interação
     public void OnCollisionStay2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Interagivel" || other.gameObject.tag == "NPC")
+        if (other.gameObject.CompareTag("Interagivel") || other.gameObject.CompareTag("NPC"))
         {
             isEPressed = input.Player.Interact.ReadValue<float>() > 0.1f;
             if (isEPressed)
@@ -152,6 +151,8 @@ public class PlayerControl : MonoBehaviour
             }
         }
     }
+
+    // passa pra próxima frase com o "E" quando tem diálogo rolando
     private void PassNextSentence()
     {
         if (dialogueBox.activeInHierarchy)
@@ -168,6 +169,8 @@ public class PlayerControl : MonoBehaviour
             }
         }
     }
+
+    // faz um misto quente (abre o diário)
     public void OpenDiary(InputAction.CallbackContext context)
     {
         if (context.performed && !inventory.isActiveAndEnabled && !dialogueBox.activeInHierarchy)
@@ -176,6 +179,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    // abre o inventário
     public void Inventory(InputAction.CallbackContext context)
     {
         if (context.performed && !analisando)
@@ -192,13 +196,15 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    // sai da cena de análise
     public void Exit(InputAction.CallbackContext context)
     {
-        var papai = this.transform.parent.gameObject;
+        var papai = transform.parent.gameObject;
         papai.SetActive(false);
         analisando = false;
     }
 
+    // faz uma coxinha (abre o jogo)
     public void Pause(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -207,6 +213,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    // troca o mapa de ações do jogador entre a mão e o personagem
     public void SwitchActions()
     {
         if (input.Player.enabled)

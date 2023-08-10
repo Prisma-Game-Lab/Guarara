@@ -12,7 +12,6 @@ public class AbreObjAnalise : MonoBehaviour, IInteractable
     private bool aberto = false;
     private GameObject player;
     private PlayerControl playerScript;
-    private GameObject canvas;
 
     private void Update()
     {
@@ -26,8 +25,7 @@ public class AbreObjAnalise : MonoBehaviour, IInteractable
     {
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<PlayerControl>();
-        canvas = GameObject.Find("Canvas");
-        objeto = this.gameObject.transform.GetChild(0).gameObject;
+        objeto = gameObject.transform.GetChild(0).gameObject;
     }
 
 

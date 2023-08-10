@@ -16,17 +16,17 @@ public class DiaryManager : MonoBehaviour
 
     public GameObject setButton1;
     public GameObject setButton2;
-    private bool wasClicked = false;
+    public bool wasClicked = false;
 
-    
-    public void ActiveDiary () //Essa funcao vai ficar no evento OnClick do inspector do botao que e o diario
+
+    public void ActiveDiary() //Essa funcao vai ficar no evento OnClick do inspector do botao que e o diario
     {
-        if (wasClicked==false)              //O diário é ativado e desativado no mesmo botão
+        if (wasClicked == false)              //O diário é ativado e desativado no mesmo botão
         {
-		    foreach (var pageRight in pagesRight ) 
+            foreach (var pageRight in pagesRight)
             {
-			    pageRight.SetActive(false);
-		    }
+                pageRight.SetActive(false);
+            }
 
             pagesRight[currentPageRight].SetActive(true);
             pagesLeft[currentPageLeft].SetActive(true);
@@ -34,7 +34,7 @@ public class DiaryManager : MonoBehaviour
             setButton2.SetActive(true);
             wasClicked = true;
         }
-        else if (wasClicked==true)
+        else if (wasClicked == true)
         {
             pagesRight[currentPageRight].SetActive(false);
             pagesLeft[currentPageLeft].SetActive(false);
@@ -42,38 +42,38 @@ public class DiaryManager : MonoBehaviour
             setButton2.SetActive(false);
             wasClicked = false;
         }
-        
-        
-    }
-   /*  public void OnQPressed (InputAction.CallbackContext context)
-    {
-        QPressed?.Invoke();
-    }
 
-    void Awake ()
-    {
-        action2.FindActionMap("Player").FindAction("Interact").performed += OnQPressed;
+
     }
-	 */
-	public void GotoNextPage()
-    {   
+    /*  public void OnQPressed (InputAction.CallbackContext context)
+     {
+         QPressed?.Invoke();
+     }
+
+     void Awake ()
+     {
+         action2.FindActionMap("Player").FindAction("Interact").performed += OnQPressed;
+     }
+      */
+    public void GotoNextPage()
+    {
         Debug.Log(currentPageLeft);
         Debug.Log(currentPageRight);
-        if(currentPageRight < (pagesRight.Length - 1) && currentPageLeft < (pagesLeft.Length - 1))
+        if (currentPageRight < (pagesRight.Length - 1) && currentPageLeft < (pagesLeft.Length - 1))
         {
             pagesRight[currentPageRight].SetActive(false);
             pagesLeft[currentPageLeft].SetActive(false);
-            pagesRight[currentPageRight+1].SetActive(true);
-            pagesLeft[currentPageLeft+1].SetActive(true);
+            pagesRight[currentPageRight + 1].SetActive(true);
+            pagesLeft[currentPageLeft + 1].SetActive(true);
             currentPageLeft++;
             currentPageRight++;
             Debug.Log("passou");
         }
-		
+
     }
-	public void GotoPreviousPage()
+    public void GotoPreviousPage()
     {
-        if(currentPageRight > 0 && currentPageLeft > 0)
+        if (currentPageRight > 0 && currentPageLeft > 0)
         {
             Debug.Log(currentPageLeft);
             Debug.Log(currentPageRight);
@@ -86,7 +86,7 @@ public class DiaryManager : MonoBehaviour
             pagesRight[currentPageRight].SetActive(true);
             pagesLeft[currentPageLeft].SetActive(true);
             Debug.Log("voltou");
-        }	
-		
+        }
+
     }
 }
