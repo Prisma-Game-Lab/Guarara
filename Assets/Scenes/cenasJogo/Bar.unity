@@ -7828,6 +7828,9 @@ MonoBehaviour:
   nextSceneName: Sala
   nextPlayerPosition: {x: 0.5, y: -4, z: 0}
   playerPosition: {fileID: 11400000, guid: 935a3be984f90a9479cc1b5b704cb493, type: 2}
+  locked: 1
+  key: {fileID: 11400000, guid: 7f6b4e30c76db184694b4dea94660c81, type: 2}
+  inventory: {fileID: 11400000, guid: ec945ca77ecbe9947b2e6771b38b32e1, type: 2}
 --- !u!61 &1517263180
 BoxCollider2D:
   m_ObjectHideFlags: 0
