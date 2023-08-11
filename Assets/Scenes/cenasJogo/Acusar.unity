@@ -210,6 +210,8 @@ GameObject:
   - component: {fileID: 428958489}
   - component: {fileID: 428958490}
   - component: {fileID: 428958491}
+  - component: {fileID: 428958492}
+  - component: {fileID: 428958493}
   m_Layer: 0
   m_Name: Lobo
   m_TagString: Acusado
@@ -310,6 +312,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.142857, y: 7.285714}
   m_EdgeRadius: 0
+--- !u!114 &428958492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428958488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4296aabac4f0ad641964747ce7827c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDialogues: {fileID: 0}
+  isAutomatic: 0
+  isFirstTime: 1
+--- !u!114 &428958493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428958488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493a06bfa3baa5942aa4f920a6a08757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8929638321133130855, guid: e3b55d3121af7e741a0000e0ebf52ee9, type: 3}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: OnStartConversation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  action: {fileID: -944628639613478452, guid: 8a4ccf91140767040a623567ff0f9041, type: 3}
 --- !u!1001 &460078907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -317,6 +362,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1592137564}
     m_Modifications:
+    - target: {fileID: 886102708, guid: 8fa6b80d9617ed94c94262a9f23af036, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 886102709, guid: 8fa6b80d9617ed94c94262a9f23af036, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 651937770276130359, guid: 8fa6b80d9617ed94c94262a9f23af036, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -807,6 +860,8 @@ GameObject:
   - component: {fileID: 732226646}
   - component: {fileID: 732226647}
   - component: {fileID: 732226648}
+  - component: {fileID: 732226649}
+  - component: {fileID: 732226650}
   m_Layer: 0
   m_Name: Onca
   m_TagString: Acusado
@@ -907,6 +962,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4285715, y: 6.285714}
   m_EdgeRadius: 0
+--- !u!114 &732226649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732226645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4296aabac4f0ad641964747ce7827c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDialogues: {fileID: 11400000, guid: 09202026c529e5c47946b0e1a8c3beb6, type: 2}
+  isAutomatic: 0
+  isFirstTime: 1
+--- !u!114 &732226650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732226645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493a06bfa3baa5942aa4f920a6a08757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8929638321133130855, guid: e3b55d3121af7e741a0000e0ebf52ee9, type: 3}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: OnStartConversation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  action: {fileID: -944628639613478452, guid: 8a4ccf91140767040a623567ff0f9041, type: 3}
 --- !u!1001 &775067903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1405,6 +1503,8 @@ GameObject:
   - component: {fileID: 1312046508}
   - component: {fileID: 1312046509}
   - component: {fileID: 1312046510}
+  - component: {fileID: 1312046511}
+  - component: {fileID: 1312046512}
   m_Layer: 0
   m_Name: BeijaFlor
   m_TagString: Acusado
@@ -1505,6 +1605,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.286233, y: 6.3032837}
   m_EdgeRadius: 0
+--- !u!114 &1312046511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312046507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4296aabac4f0ad641964747ce7827c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDialogues: {fileID: 11400000, guid: 184468f5d59d65740a7355fb87ba0755, type: 2}
+  isAutomatic: 0
+  isFirstTime: 1
+--- !u!114 &1312046512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312046507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493a06bfa3baa5942aa4f920a6a08757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8929638321133130855, guid: e3b55d3121af7e741a0000e0ebf52ee9, type: 3}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: OnStartConversation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  action: {fileID: -944628639613478452, guid: 8a4ccf91140767040a623567ff0f9041, type: 3}
 --- !u!1 &1436834684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,6 +1659,8 @@ GameObject:
   - component: {fileID: 1436834685}
   - component: {fileID: 1436834686}
   - component: {fileID: 1436834687}
+  - component: {fileID: 1436834688}
+  - component: {fileID: 1436834689}
   m_Layer: 0
   m_Name: Ararete
   m_TagString: Acusado
@@ -1616,6 +1761,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4971757, y: 5.3715496}
   m_EdgeRadius: 0
+--- !u!114 &1436834688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436834684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4296aabac4f0ad641964747ce7827c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDialogues: {fileID: 11400000, guid: c64ba3fd61beb164f8a058bd02f53eac, type: 2}
+  isAutomatic: 0
+  isFirstTime: 1
+--- !u!114 &1436834689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436834684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493a06bfa3baa5942aa4f920a6a08757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8929638321133130855, guid: e3b55d3121af7e741a0000e0ebf52ee9, type: 3}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: OnStartConversation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  action: {fileID: -944628639613478452, guid: 8a4ccf91140767040a623567ff0f9041, type: 3}
 --- !u!1 &1592137561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,6 +1862,8 @@ GameObject:
   - component: {fileID: 1799582025}
   - component: {fileID: 1799582026}
   - component: {fileID: 1799582027}
+  - component: {fileID: 1799582028}
+  - component: {fileID: 1799582029}
   m_Layer: 0
   m_Name: Mico
   m_TagString: Acusado
@@ -1774,6 +1964,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.729198, y: 5.412492}
   m_EdgeRadius: 0
+--- !u!114 &1799582028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799582024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4296aabac4f0ad641964747ce7827c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDialogues: {fileID: 11400000, guid: cda27d11e7f092b47bbf6561d9c8f5ea, type: 2}
+  isAutomatic: 0
+  isFirstTime: 1
+--- !u!114 &1799582029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799582024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493a06bfa3baa5942aa4f920a6a08757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8929638321133130855, guid: e3b55d3121af7e741a0000e0ebf52ee9, type: 3}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: OnStartConversation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  action: {fileID: -944628639613478452, guid: 8a4ccf91140767040a623567ff0f9041, type: 3}
 --- !u!1 &1917055477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,6 +2018,8 @@ GameObject:
   - component: {fileID: 1917055478}
   - component: {fileID: 1917055479}
   - component: {fileID: 1917055480}
+  - component: {fileID: 1917055481}
+  - component: {fileID: 1917055482}
   m_Layer: 0
   m_Name: Peixe
   m_TagString: Acusado
@@ -1885,6 +2120,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.2418752, y: 5.3715496}
   m_EdgeRadius: 0
+--- !u!114 &1917055481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917055477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4296aabac4f0ad641964747ce7827c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDialogues: {fileID: 11400000, guid: 8a7ef4768101be8439ceaedfe285b29b, type: 2}
+  isAutomatic: 0
+  isFirstTime: 1
+--- !u!114 &1917055482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917055477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493a06bfa3baa5942aa4f920a6a08757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8929638321133130855, guid: e3b55d3121af7e741a0000e0ebf52ee9, type: 3}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: OnStartConversation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  action: {fileID: -944628639613478452, guid: 8a4ccf91140767040a623567ff0f9041, type: 3}
 --- !u!4 &2332595602682445507
 Transform:
   m_ObjectHideFlags: 0
