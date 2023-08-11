@@ -4218,14 +4218,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 338094074}
     m_Modifications:
-    - target: {fileID: 30189711, guid: 8fa6b80d9617ed94c94262a9f23af036, type: 3}
-      propertyPath: m_Size.y
-      value: 7.1916103
-      objectReference: {fileID: 0}
-    - target: {fileID: 30189711, guid: 8fa6b80d9617ed94c94262a9f23af036, type: 3}
-      propertyPath: m_Offset.y
-      value: 5.626521
-      objectReference: {fileID: 0}
     - target: {fileID: 886102708, guid: 8fa6b80d9617ed94c94262a9f23af036, type: 3}
       propertyPath: m_Name
       value: Boladepelos

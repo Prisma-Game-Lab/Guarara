@@ -160,6 +160,7 @@ MonoBehaviour:
   isEqual: 0
   folha: {fileID: 0}
   indexNecessaItems: 0
+  currentItems: {fileID: 0}
 --- !u!1 &5026959382018134040
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +478,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.21805239, y: -0.5088372}
+  m_Offset: {x: -0.21805239, y: 5.626521}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -488,7 +489,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.739345, y: 19.462326}
+  m_Size: {x: 10.739345, y: 7.1916103}
   m_EdgeRadius: 0
 --- !u!114 &30189705
 MonoBehaviour:
