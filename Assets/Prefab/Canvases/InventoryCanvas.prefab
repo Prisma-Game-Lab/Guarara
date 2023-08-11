@@ -606,10 +606,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory Foda
       objectReference: {fileID: 0}
-    - target: {fileID: 4794296599114161407, guid: 94bb57f0ebd1e7243a397d33238bd1b6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4794296599355021936, guid: 94bb57f0ebd1e7243a397d33238bd1b6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
