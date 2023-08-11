@@ -4697,6 +4697,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8929638321133130855, guid: e3b55d3121af7e741a0000e0ebf52ee9, type: 3}
+      propertyPath: characterDialogues
+      value: 
+      objectReference: {fileID: 11400000, guid: 184468f5d59d65740a7355fb87ba0755, type: 2}
     - target: {fileID: 8929638321133130858, guid: e3b55d3121af7e741a0000e0ebf52ee9, type: 3}
       propertyPath: m_RootOrder
       value: 2

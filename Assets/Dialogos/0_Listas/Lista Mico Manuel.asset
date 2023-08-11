@@ -15,3 +15,4 @@ MonoBehaviour:
   CharacterDialogues:
   - {fileID: 11400000, guid: f21f8b065102b714e994144e28336c76, type: 2}
   - {fileID: 11400000, guid: 4e4942e3dbed8184b97ecb6a252ad986, type: 2}
+  - {fileID: 11400000, guid: 90b39544cafb2fa4d92e1317467a10e7, type: 2}
