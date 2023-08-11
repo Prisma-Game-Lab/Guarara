@@ -34,7 +34,7 @@ MonoBehaviour:
     sentences:
     - "Ei, espera! N\xE3o aconteceu nada disso! Eu nem tenho a f\xF3rmula!"
   - name: Ararete
-    charProfile: {fileID: 0}
+    charProfile: {fileID: 21300000, guid: 5c699aca4a1509342a3938d835484ece, type: 3}
     sentences:
     - Que absurdo! Eu sou inocente! Eu exijo meus direitos!
   - name: "Capit\xE3o Torresmo"

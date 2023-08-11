@@ -18,7 +18,7 @@ MonoBehaviour:
     sentences:
     - "Eu gostaria de fazer algumas perguntas, se voc\xEA n\xE3o se importar."
   - name: Ararete
-    charProfile: {fileID: 0}
+    charProfile: {fileID: 21300000, guid: 5c699aca4a1509342a3938d835484ece, type: 3}
     sentences:
     - Claro! Pode perguntar, qualquer coisa para ajudar.
   - name: "Detetive Guar\xE1"
@@ -27,7 +27,7 @@ MonoBehaviour:
     - "Suponho que voc\xEA j\xE1 tenha visto o estado do cofre\u2026"
     - "Ele est\xE1 completamente destru\xEDdo e com muitas marcas de garras."
   - name: Ararete
-    charProfile: {fileID: 0}
+    charProfile: {fileID: 21300000, guid: 5c699aca4a1509342a3938d835484ece, type: 3}
     sentences:
     - "J\xE1 entendi o que voc\xEA est\xE1 insinuando, mas pode ter certeza de que
       n\xE3o fui eu."
@@ -38,7 +38,7 @@ MonoBehaviour:
     sentences:
     - "E a janela? N\xE3o acha conveniente voc\xEA ser a respons\xE1vel pela limpeza?!"
   - name: Ararete
-    charProfile: {fileID: 0}
+    charProfile: {fileID: 21300000, guid: 5c699aca4a1509342a3938d835484ece, type: 3}
     sentences:
     - "De fato, \xE9 muito conveniente. Mas garanto que eu n\xE3o iria gerar ainda
       mais trabalho para limpar, hahaha!"

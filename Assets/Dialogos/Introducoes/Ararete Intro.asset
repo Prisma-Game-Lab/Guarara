@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - name: ???
-    charProfile: {fileID: 0}
+    charProfile: {fileID: 21300000, guid: 5c699aca4a1509342a3938d835484ece, type: 3}
     sentences:
     - "Imagino que voc\xEA seja o respons\xE1vel pela investiga\xE7\xE3o."
   - name: Ararete
-    charProfile: {fileID: 0}
+    charProfile: {fileID: 21300000, guid: 5c699aca4a1509342a3938d835484ece, type: 3}
     sentences:
     - "Ol\xE1, eu sou a Ararete, cuido da casa da Sra. M\xE1rcia, fui a primeira
       funcion\xE1ria dela."
@@ -27,7 +27,7 @@ MonoBehaviour:
     sentences:
     - Isso mesmo, eu sou o detetive do caso.
   - name: Ararete
-    charProfile: {fileID: 0}
+    charProfile: {fileID: 21300000, guid: 5c699aca4a1509342a3938d835484ece, type: 3}
     sentences:
     - "Espero que voc\xEA consiga encontrar a receita e o culpado. Sabe, a dona M\xE1rcia
       realmente depende disso\u2026"
