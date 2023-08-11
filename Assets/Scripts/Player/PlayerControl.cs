@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public interface IInteractable
 {
@@ -210,9 +211,12 @@ public class PlayerControl : MonoBehaviour
     // sai da cena de análise
     public void Exit(InputAction.CallbackContext context)
     {
-        var papai = transform.parent.gameObject;
-        papai.SetActive(false);
-        analisando = false;
+        if(SceneManager.GetActiveScene().name != "Acusar")
+        {
+            var papai = transform.parent.gameObject;
+            papai.SetActive(false);
+            analisando = false;
+        }
     }
 
     // faz uma coxinha (abre o jogo)
