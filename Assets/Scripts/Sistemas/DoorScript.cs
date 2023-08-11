@@ -12,6 +12,12 @@ public class DoorScript : MonoBehaviour
     [SerializeField]
     private PlayerPosition playerPosition;
     private ScenesManager sceneLoader;
+    //Para portas trancadas
+    [Space(15)]
+    public bool locked;
+    public Item key;
+    public InventoryItems inventory;
+
     void Start()
     {
         sceneLoader = FindObjectOfType<ScenesManager>();
@@ -22,8 +28,11 @@ public class DoorScript : MonoBehaviour
     {
         if (other.name == "Player")
         {
-            sceneLoader.GoToScene(nextSceneName);
-            playerPosition.playerPosition = nextPlayerPosition;
+            if(!locked || inventory.list.Contains(key))
+            {    
+                sceneLoader.GoToScene(nextSceneName);
+                playerPosition.playerPosition = nextPlayerPosition;
+            }
         }
     }
 }
