@@ -7,14 +7,14 @@ using UnityEngine.UI;
 public class UpdateDiary : MonoBehaviour
 {
    public UnityEvent DiaryEvent;
-   public GameObject[] NecessaryItems;
+   public Item[] NecessaryItems;
    public bool isEqual = false;
    public Folha folha;
    private int indexPageRight = 0;
    private int indexPageLeft = 1;
    private int wayPage = 0;
    public int indexNecessaItems;
-   private List<Item> currentItems = new List<Item>();
+   public InventoryItems currentItems;
    
    public void DiaryEventActive ()
    {
@@ -39,17 +39,22 @@ public class UpdateDiary : MonoBehaviour
 
    public void checkIfIsEqual ()
    {
-      currentItems = GetComponent<InventoryItems>().list;
-      foreach(Item item in currentItems )
+      foreach (Item item in NecessaryItems)
       {
-         if(item == NecessaryItems[indexNecessaItems])
+         if(currentItems.list.Contains(item))
          {
-            indexNecessaItems++;
             isEqual = true;
-            
+            if(indexNecessaItems <= (NecessaryItems.Length - 1))
+            {
+               indexNecessaItems++;
+            }
+         
+            return;
          }
-         isEqual = false;
+         
       }
+      isEqual = false;
+
    }
    void Update ()
    {
