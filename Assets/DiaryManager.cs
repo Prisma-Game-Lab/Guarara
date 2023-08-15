@@ -33,6 +33,7 @@ public class DiaryManager : MonoBehaviour
             setButton1.SetActive(true);
             setButton2.SetActive(true);
             wasClicked = true;
+            AudioManager.instance.PlaySfx("caderno");
         }
         else if (wasClicked == true)
         {
@@ -68,6 +69,7 @@ public class DiaryManager : MonoBehaviour
             currentPageLeft++;
             currentPageRight++;
             Debug.Log("passou");
+            AudioManager.instance.PlaySfx("cadernoPagina");
         }
 
     }
@@ -86,6 +88,7 @@ public class DiaryManager : MonoBehaviour
             pagesRight[currentPageRight].SetActive(true);
             pagesLeft[currentPageLeft].SetActive(true);
             Debug.Log("voltou");
+            AudioManager.instance.PlaySfx("cadernoPagina");
         }
 
     }

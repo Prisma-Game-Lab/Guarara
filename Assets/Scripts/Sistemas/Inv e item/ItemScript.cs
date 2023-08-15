@@ -18,5 +18,6 @@ public class ItemScript : MonoBehaviour, IInteractable
     public void Interact()
     {
         PickUp();
+        AudioManager.instance.PlaySfx("item");
     }
 }
